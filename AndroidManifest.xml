@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.android.certinstaller">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:label="@string/app_name">
+
+        <activity android:name=".CertInstaller">
+            <intent-filter>
+                <action android:name="android.security.ADD_CREDENTIAL" />
+                <action android:name="android.security.INSTALL_CERT_FROM_SDCARD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
