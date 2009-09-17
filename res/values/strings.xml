@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Certificate Installer</string>
+
+    <!-- Title of dialog to name a credential -->
+    <string name="name_credential_dialog_title">Name the certificate</string>
+    <!-- Description for the credential name input box -->
+    <string name="credential_name">Certificate name:</string>
+    <!-- Title of the credential info -->
+    <!-- Description for the credential password input box -->
+    <string name="credential_password">Password to extract the certificate:</string>
+    <string name="credential_info">Certificate details:</string>
+    <string name="name_credential_hint">The name can contain only letters and numbers.</string>
+    <string name="p12_description">Certificates in PKCS12 keystore.</string>
+
+    <string name="password_error">Please enter the correct password.</string>
+    <string name="password_empty_error">Please enter the password.</string>
+    <string name="name_empty_error">Please enter a name.</string>
+    <string name="name_char_error">Please enter a name that contains only letters and numbers.</string>
+    <string name="storage_error">Unable to save the certificate. Click OK to retry.</string>
+    <string name="unable_to_save_cert">Unable to save the certificate. The credential storage is not enabled or properly initialized.</string>
+    <string name="cert_not_saved">The certificate is not installed.</string>
+
+    <!-- toast message -->
+    <string name="cert_is_added"><xliff:g id="credential">%s</xliff:g> is installed.</string>
+    <!-- toast message -->
+    <string name="cert_too_large_error">Installation failed. Certificate size is too large.</string>
+    <!-- toast message -->
+    <string name="cert_missing_error">Installation failed. Cannot locate the certificate file.</string>
+    <!-- toast message -->
+    <string name="cert_read_error">Installation failed. Cannot read the certificate file.</string>
+</resources>
