@@ -23,8 +23,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.security.CertTool;
-import android.security.Keystore;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
