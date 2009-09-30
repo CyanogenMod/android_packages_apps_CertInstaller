@@ -59,4 +59,6 @@
     <string name="cert_missing_error">Installation failed. Cannot locate the certificate file.</string>
     <!-- toast message -->
     <string name="cert_read_error">Installation failed. Cannot read the certificate file.</string>
+
+    <string name="no_pkcs12_found">No .p12 file found in the SD card.</string>
 </resources>
