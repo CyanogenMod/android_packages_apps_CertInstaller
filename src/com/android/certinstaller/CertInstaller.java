@@ -316,7 +316,8 @@ public class CertInstaller extends PreferenceActivity
         DialogInterface.OnDismissListener onDismissHandler =
                 new DialogInterface.OnDismissListener() {
             public void onDismiss(DialogInterface dialog) {
-                Log.d(TAG, "onDismiss() called");
+                if (isFinishing()) mDialogResult = CANCELLED;
+
                 // Original code without progress bar:
                 //if (mDialogResult == DONE) {
                 //    String passwd = getViewText(R.id.credential_password);
@@ -411,6 +412,8 @@ public class CertInstaller extends PreferenceActivity
         DialogInterface.OnDismissListener onDismissHandler =
                 new DialogInterface.OnDismissListener() {
             public void onDismiss(DialogInterface dialog) {
+                if (isFinishing()) mDialogResult = CANCELLED;
+
                 if (mDialogResult == DONE) {
                     // install everything to system keystore
                     try {
