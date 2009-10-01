@@ -98,8 +98,8 @@ public class CertInstaller extends PreferenceActivity
     private View mView;
     private int mDialogResult = REOPEN;
 
-    private boolean mIsBrowsingSdcard;
-    private SdcardMonitor mSdcardMonitor;
+    private boolean mIsBrowsingSdCard;
+    private SdCardMonitor mSdCardMonitor;
     private File mCertFile;
 
     private CredentialHelper mCredentials;
@@ -124,7 +124,7 @@ public class CertInstaller extends PreferenceActivity
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        stopSdcardMonitor();
+        stopSdCardMonitor();
     }
 
     @Override
@@ -160,7 +160,7 @@ public class CertInstaller extends PreferenceActivity
                                 mCredentials.getName()),
                         Toast.LENGTH_LONG).show();
                 deleteCert(mCertFile);
-                if (!mIsBrowsingSdcard) finish();
+                if (!mIsBrowsingSdCard) finish();
             } else {
                 Log.d(TAG, "credential not saved, err: " + resultCode);
                 toastErrorAndFinish(R.string.cert_not_saved);
@@ -179,9 +179,9 @@ public class CertInstaller extends PreferenceActivity
             mCredentials = new CredentialHelper(intent);
 
             if (!mCredentials.containsAny()) {
-                mIsBrowsingSdcard = true;
+                mIsBrowsingSdCard = true;
                 addPreferencesFromResource(R.xml.pick_file_pref);
-                startSdcardMonitor();
+                startSdCardMonitor();
                 createFileList();
             } else if (mCredentials.isPkcs12KeyStore()) {
                 showDialog(PKCS12_PASSWORD_DIALOG);
@@ -194,7 +194,7 @@ public class CertInstaller extends PreferenceActivity
     private void installAskingKeyStoreAccess() {
         if (mCredentials.isKeyPair()) {
             if (isKeyStoreLocked()) {
-                unlockKeyStore();
+                unlockKeyStoreWithBottomHalf();
                 return;
             }
             saveKeyPair();
@@ -208,7 +208,7 @@ public class CertInstaller extends PreferenceActivity
                 byte[] privatekey = map.get(key);
                 if (privatekey != null) {
                     if (isKeyStoreLocked()) {
-                        unlockKeyStore();
+                        unlockKeyStoreWithBottomHalf();
                         return;
                     }
                     Log.d(TAG, "found matched key: " + privatekey);
@@ -224,7 +224,7 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    private void unlockKeyStore() {
+    private void unlockKeyStoreWithBottomHalf() {
         mBottomHalf = new Runnable() {
             public void run() {
                 if (!isKeyStoreLocked()) {
@@ -270,11 +270,11 @@ public class CertInstaller extends PreferenceActivity
     }
 
     private Map<String, byte[]> getPkeyMap() {
-        byte[] bb = mKeyStore.get(PKEY_MAP_KEY);
-        if (bb != null) {
+        byte[] bytes = mKeyStore.get(PKEY_MAP_KEY);
+        if (bytes != null) {
             try {
                 ObjectInputStream is =
-                        new ObjectInputStream(new ByteArrayInputStream(bb));
+                        new ObjectInputStream(new ByteArrayInputStream(bytes));
                 Map<String, byte[]> map = (Map<String, byte[]>) is.readObject();
                 if (map != null) return map;
             } catch (Exception e) {
@@ -327,7 +327,7 @@ public class CertInstaller extends PreferenceActivity
                 //}
                 //enterPasswdDialogBottomHalf();
 
-                // show progress bar and extract in background thread
+                // show progress bar and extract certs in a background thread
                 if (mDialogResult == DONE) {
                     showDialog(PROGRESS_BAR_DIALOG);
 
@@ -449,24 +449,33 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    public boolean onPreferenceClick(Preference p) {
-        File f = new File(Environment.getExternalStorageDirectory(),
-                p.getTitle().toString());
-        if (f.isDirectory()) {
-            Log.w(TAG, "impossible to pick a directory! " + f);
+    public boolean onPreferenceClick(Preference pref) {
+        File file = new File(Environment.getExternalStorageDirectory(),
+                pref.getTitle().toString());
+        if (file.isDirectory()) {
+            Log.w(TAG, "impossible to pick a directory! " + file);
         } else {
             setAllFilesEnabled(false);
-            installFromSdCard(f);
+            installFromSdCard(file);
         }
         return true;
     }
 
-    private synchronized void createFileList() {
+    private void createFileList() {
+        if (isFinishing()) {
+            Log.d(TAG, "finishing, exit createFileList()");
+            return;
+        }
         try {
-            getPreferenceScreen().removeAll();
+            PreferenceScreen root = getPreferenceScreen();
+            root.removeAll();
             File dir = Environment.getExternalStorageDirectory();
             createPreferencesFor(new File(dir, DOWNLOAD));
             createPreferencesFor(dir);
+            if (root.getPreferenceCount() == 0) {
+                Toast.makeText(this, R.string.no_pkcs12_found,
+                        Toast.LENGTH_SHORT).show();
+            }
         } catch (IOException e) {
             // should not occur
             Log.w(TAG, "createFileList(): " + e);
@@ -488,9 +497,9 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    public boolean accept(File f) {
-        if (!f.isDirectory()) {
-            return f.getPath().endsWith(".p12");
+    public boolean accept(File file) {
+        if (!file.isDirectory()) {
+            return file.getPath().endsWith(".p12");
         } else {
             return false;
         }
@@ -511,21 +520,21 @@ public class CertInstaller extends PreferenceActivity
     private void toastErrorAndFinish(String msg, int duration) {
         Toast.makeText(this, msg, duration).show();
 
-        if (mIsBrowsingSdcard) {
+        if (mIsBrowsingSdCard) {
             setAllFilesEnabled(true);
         } else {
             finish();
         }
     }
 
-    private void installFromSdCard(File f) {
-        Log.d(TAG, "install cert from " + f);
+    private void installFromSdCard(File file) {
+        Log.d(TAG, "install cert from " + file);
 
-        mCertFile = f;
-        if (f.exists()) {
-            long length = f.length();
+        mCertFile = file;
+        if (file.exists()) {
+            long length = file.length();
             if (length < 1000000) {
-                byte[] data = readCert(f);
+                byte[] data = readCert(file);
                 if (data == null) {
                     toastErrorAndFinish(R.string.cert_read_error);
                     return;
@@ -542,10 +551,10 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    private byte[] readCert(File f) {
+    private byte[] readCert(File file) {
         try {
-            byte[] data = new byte[(int) f.length()];
-            FileInputStream fis = new FileInputStream(f);
+            byte[] data = new byte[(int) file.length()];
+            FileInputStream fis = new FileInputStream(file);
             fis.read(data);
             fis.close();
             return data;
@@ -555,9 +564,9 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    private void deleteCert(File f) {
-        if ((f != null) && !f.delete()) {
-            Log.w(TAG, "cannot delete cert: " + f);
+    private void deleteCert(File file) {
+        if ((file != null) && !file.delete()) {
+            Log.w(TAG, "cannot delete cert: " + file);
         }
     }
 
@@ -565,9 +574,9 @@ public class CertInstaller extends PreferenceActivity
         return (mKeyStore.test() != KeyStore.NO_ERROR);
     }
 
-    private TextView showError(int messageId) {
+    private TextView showError(int msgId) {
         TextView v = (TextView) mView.findViewById(R.id.error);
-        v.setText(messageId);
+        v.setText(msgId);
         if (v != null) v.setVisibility(View.VISIBLE);
         return v;
     }
@@ -595,20 +604,20 @@ public class CertInstaller extends PreferenceActivity
         if (v != null) v.setText(textId);
     }
 
-    private void startSdcardMonitor() {
-        mSdcardMonitor = new SdcardMonitor();
-        mSdcardMonitor.startWatching();
+    private void startSdCardMonitor() {
+        if (mSdCardMonitor == null) mSdCardMonitor = new SdCardMonitor();
+        mSdCardMonitor.startWatching();
     }
 
-    private void stopSdcardMonitor() {
-        if (mSdcardMonitor != null) mSdcardMonitor.stopWatching();
+    private void stopSdCardMonitor() {
+        if (mSdCardMonitor != null) mSdCardMonitor.stopWatching();
     }
 
-    private static String toMd5(byte[] bb) {
+    private static String toMd5(byte[] bytes) {
         try {
             MessageDigest algorithm = MessageDigest.getInstance("MD5");
             algorithm.reset();
-            algorithm.update(bb);
+            algorithm.update(bytes);
             return toHexString(algorithm.digest(), "");
         } catch(NoSuchAlgorithmException e){
             // should not occur
@@ -617,9 +626,9 @@ public class CertInstaller extends PreferenceActivity
         }
     }
 
-    private static String toHexString(byte[] bb, String separator) {
+    private static String toHexString(byte[] bytes, String separator) {
         StringBuilder hexString = new StringBuilder();
-        for (byte b : bb) {
+        for (byte b : bytes) {
             hexString.append(Integer.toHexString(0xFF & b)).append(separator);
         }
         return hexString.toString();
@@ -657,12 +666,14 @@ public class CertInstaller extends PreferenceActivity
             return mUserKey;
         }
 
-        private void parseCert(byte[] bb) {
-            if (bb == null) return;
+        private void parseCert(byte[] bytes) {
+            if (bytes == null) return;
             try {
-                CertificateFactory crtFac = CertificateFactory.getInstance("X.509");
+                CertificateFactory crtFactory =
+                        CertificateFactory.getInstance("X.509");
                 X509Certificate crt = (X509Certificate)
-                        crtFac.generateCertificate(new ByteArrayInputStream(bb));
+                        crtFactory.generateCertificate(
+                                new ByteArrayInputStream(bytes));
                 if (isCa(crt)) {
                     Log.d(TAG, "got a CA cert");
                     mCaCerts.add(crt);
@@ -681,11 +692,11 @@ public class CertInstaller extends PreferenceActivity
         private boolean isCa(X509Certificate crt) {
             try {
                 // TODO: add a test about this
-                byte[] bc = crt.getExtensionValue("2.5.29.19");
-                Object o = new ASN1InputStream(bc).readObject();
-                byte[] bc2 = ((DEROctetString) o).getOctets();
-                Object o2 = new ASN1InputStream(bc2).readObject();
-                return new BasicConstraints((ASN1Sequence) o2).isCA();
+                byte[] basicConstraints = crt.getExtensionValue("2.5.29.19");
+                Object obj = new ASN1InputStream(basicConstraints).readObject();
+                basicConstraints = ((DEROctetString) obj).getOctets();
+                obj = new ASN1InputStream(basicConstraints).readObject();
+                return new BasicConstraints((ASN1Sequence) obj).isCA();
             } catch (Exception e) {
                 return false;
             }
@@ -734,12 +745,12 @@ public class CertInstaller extends PreferenceActivity
         CharSequence getDescription() {
             // TODO: create more descriptive string
             StringBuilder sb = new StringBuilder();
-            String nl = "<br>";
+            String newline = "<br>";
             if (mUserKey != null) {
-                sb.append(getString(R.string.one_userkey)).append(nl);
+                sb.append(getString(R.string.one_userkey)).append(newline);
             }
             if (mUserCert != null) {
-                sb.append(getString(R.string.one_usercrt)).append(nl);
+                sb.append(getString(R.string.one_usercrt)).append(newline);
             }
             int n = mCaCerts.size();
             if (n > 0) {
@@ -761,22 +772,22 @@ public class CertInstaller extends PreferenceActivity
         }
 
         Intent createSystemInstallIntent() {
-            Intent i = new Intent(Credentials.SYSTEM_INSTALL_ACTION);
+            Intent intent = new Intent(Credentials.SYSTEM_INSTALL_ACTION);
             if (mUserKey != null) {
-                i.putExtra(Credentials.USER_PRIVATE_KEY + mName,
+                intent.putExtra(Credentials.USER_PRIVATE_KEY + mName,
                         convertToPem(mUserKey));
             }
             if (mUserCert != null) {
-                i.putExtra(Credentials.USER_CERTIFICATE + mName,
+                intent.putExtra(Credentials.USER_CERTIFICATE + mName,
                         convertToPem(mUserCert));
             }
             if (!mCaCerts.isEmpty()) {
                 Object[] cacrts = (Object[])
                         mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
-                i.putExtra(Credentials.CA_CERTIFICATE + mName,
+                intent.putExtra(Credentials.CA_CERTIFICATE + mName,
                         convertToPem(cacrts));
             }
-            return i;
+            return intent;
         }
 
         boolean extractFromPkcs12(String passwd) {
@@ -793,38 +804,39 @@ public class CertInstaller extends PreferenceActivity
             // TODO: add test about this
             java.security.KeyStore keystore =
                     java.security.KeyStore.getInstance("PKCS12");
-            PasswordProtection pp =
+            PasswordProtection passwdProtection =
                     new PasswordProtection(passwd.toCharArray());
             keystore.load(new ByteArrayInputStream(getData(Credentials.PKCS12)),
-                    pp.getPassword());
+                    passwdProtection.getPassword());
 
             Enumeration<String> aliases = keystore.aliases();
             if (!aliases.hasMoreElements()) return false;
 
             String alias = aliases.nextElement();
             Log.d(TAG, "extracted alias = " + alias);
-            PrivateKeyEntry entry =
-                    (PrivateKeyEntry) keystore.getEntry(alias, pp);
+            PrivateKeyEntry entry = (PrivateKeyEntry)
+                    keystore.getEntry(alias, passwdProtection);
             mUserKey = entry.getPrivateKey();
             mUserCert = (X509Certificate) entry.getCertificate();
 
             Certificate[] crts = entry.getCertificateChain();
+            Log.d(TAG, "# certs extracted = " + crts.length);
             List<X509Certificate> caCerts = mCaCerts =
                     new ArrayList<X509Certificate>(crts.length);
             for (Certificate c : crts) {
                 X509Certificate crt = (X509Certificate) c;
                 if (isCa(crt)) caCerts.add(crt);
             }
-            Log.d(TAG, "caCerts.length = " + mCaCerts.size());
+            Log.d(TAG, "# ca certs extracted = " + mCaCerts.size());
             return true;
         }
 
-        private byte[] convertToPem(Object... oo) {
+        private byte[] convertToPem(Object... objects) {
             try {
                 ByteArrayOutputStream bao = new ByteArrayOutputStream();
                 OutputStreamWriter osw = new OutputStreamWriter(bao);
                 PEMWriter pw = new PEMWriter(osw);
-                for (Object o : oo) pw.writeObject(o);
+                for (Object o : objects) pw.writeObject(o);
                 pw.close();
                 return bao.toByteArray();
             } catch (IOException e) {
@@ -840,15 +852,18 @@ public class CertInstaller extends PreferenceActivity
         private static final long serialVersionUID = 1L;
 
         protected boolean removeEldestEntry(Map.Entry eldest) {
+            // Note: one key takes about 1300 bytes in the keystore, so be
+            // cautious about allowing more outstanding keys in the map that
+            // may go beyond keystore's max space for one entry.
             return (size() > 3);
         }
     }
 
-    private class SdcardMonitor {
+    private class SdCardMonitor {
         FileObserver mRootMonitor;
         FileObserver mDownloadMonitor;
 
-        SdcardMonitor() {
+        SdCardMonitor() {
             File root = Environment.getExternalStorageDirectory();
             mRootMonitor = new FileObserver(root.getPath()) {
                 @Override
@@ -870,7 +885,13 @@ public class CertInstaller extends PreferenceActivity
             switch (evt) {
                 case FileObserver.CREATE:
                 case FileObserver.DELETE:
-                    if (path.endsWith(".p12")) createFileList();
+                    if (path.endsWith(".p12")) {
+                        runOnUiThread(new Runnable() {
+                            public void run() {
+                                createFileList();
+                            }
+                        });
+                    }
                     break;
             }
         };
