@@ -15,32 +15,32 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="9095072584761066851">"Instalador de certificados"</string>
-    <string name="pick_file_title" msgid="540508675168568249">"Selecciona un certificado."</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Extraer del almacén de claves PKCS12"</string>
+    <string name="app_name" msgid="9095072584761066851">"Instalador de certificado"</string>
+    <string name="pick_file_title" msgid="540508675168568249">"Elige un certificado"</string>
+    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Extraer desde el keystore PKCS12"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Extrayendo..."</string>
-    <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extraer de %s"</string>
+    <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extraer desde %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Nombre del certificado"</string>
     <string name="credential_name" msgid="1974979771369744378">"Nombre del certificado:"</string>
-    <string name="credential_password" msgid="5251535810456146069">"Introduce la contraseña para extraer los certificados."</string>
+    <string name="credential_password" msgid="5251535810456146069">"Ingresa la contraseña para extraer los certificados."</string>
     <string name="credential_info" msgid="2436768402308470397">"El paquete contiene:"</string>
-    <string name="p12_description" msgid="4128352087331630024">"Certificados del almacén de claves PKCS12"</string>
+    <string name="p12_description" msgid="4128352087331630024">"Certificados en el keystore PKCS12."</string>
     <string name="one_userkey" msgid="3500697912370644881">"una clave de usuario"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"un certificado de usuario"</string>
-    <string name="one_cacrt" msgid="2667950425420663146">"un certificado CA"</string>
-    <string name="n_cacrts" msgid="2141498640685639208">"%d certificados de CA"</string>
-    <string name="password_error" msgid="1441470604400783036">"Introduce la contraseña correcta."</string>
-    <string name="password_empty_error" msgid="5805075735548023047">"Introduce la contraseña."</string>
-    <string name="name_empty_error" msgid="7655653930227877414">"Introduce un nombre."</string>
-    <string name="name_char_error" msgid="4674369917792581202">"Introduce un nombre que contenga solo letras y números."</string>
-    <string name="storage_error" msgid="3375395655677579149">"No se puede guardar el certificado. Haz clic en \"Aceptar\" para intentarlo de nuevo."</string>
-    <string name="unable_to_save_cert" msgid="864273038676458624">"No se ha podido guardar el certificado. El almacenamiento de credenciales no está permitido o no se ha inicializado correctamente."</string>
-    <string name="cert_not_saved" msgid="4037698479662830270">"No se ha instalado el certificado."</string>
-    <string name="no_cert_to_saved" msgid="5708884372817309068">"No hay ningún certificado que instalar."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"No se ha podido realizar el intento de análisis: %s"</string>
-    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> se ha instalado."</string>
-    <string name="cert_too_large_error" msgid="8806716564341320607">"Se ha producido un error en la instalación. El tamaño del certificado es demasiado grande."</string>
-    <string name="cert_missing_error" msgid="4220080091005628628">"Se ha producido un error en la instalación. No se puede ubicar el archivo del certificado."</string>
-    <string name="cert_read_error" msgid="9120813657318906215">"Se ha producido un error en la instalación. No se puede leer el archivo del certificado."</string>
+    <string name="one_cacrt" msgid="2667950425420663146">"un certificado de CA"</string>
+    <string name="n_cacrts" msgid="2141498640685639208">"%d Certificados de CA"</string>
+    <string name="password_error" msgid="1441470604400783036">"Ingresa la contraseña correcta."</string>
+    <string name="password_empty_error" msgid="5805075735548023047">"Ingresa la contraseña."</string>
+    <string name="name_empty_error" msgid="7655653930227877414">"Ingresa un nombre."</string>
+    <string name="name_char_error" msgid="4674369917792581202">"Ingresa un nombre que contenga sólo letras y números."</string>
+    <string name="storage_error" msgid="3375395655677579149">"No es posible guardar el certificado. Haz clic en Aceptar para volver a intentarlo."</string>
+    <string name="unable_to_save_cert" msgid="864273038676458624">"No es posible guardar el certificado. El almacenamiento de la credencial no está activado o no se ha inicializado correctamente."</string>
+    <string name="cert_not_saved" msgid="4037698479662830270">"El certificado no se ha instalado."</string>
+    <string name="no_cert_to_saved" msgid="5708884372817309068">"No ha certificado para instalar."</string>
+    <string name="intent_parse_error" msgid="145359819508990047">"No es posible analizar el intento:%s"</string>
+    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> está instalado."</string>
+    <string name="cert_too_large_error" msgid="8806716564341320607">"La instalación falló. El tamaño del certificado es muy grande."</string>
+    <string name="cert_missing_error" msgid="4220080091005628628">"La inicialización falló. No se ha podido ubicar el archivo del certificado."</string>
+    <string name="cert_read_error" msgid="9120813657318906215">"La inicialización falló. No se ha podido leer el archivo del certificado."</string>
     <string name="no_pkcs12_found" msgid="6491877089871006521">"No se ha encontrado el archivo .p12 en la tarjeta SD."</string>
 </resources>
