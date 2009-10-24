@@ -58,8 +58,16 @@ public class CertFileList extends CertFile
     }
 
     @Override
-    protected void onInstallationDone(boolean success) {
-        if (!success) setAllFilesEnabled(true);
+    protected void onInstallationDone(boolean fileDeleted) {
+        if (!fileDeleted) {
+            if (isSdCardPresent()) {
+                setAllFilesEnabled(true);
+            } else {
+                Toast.makeText(this, R.string.sdcard_not_present,
+                        Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
     }
 
     @Override
@@ -90,14 +98,20 @@ public class CertFileList extends CertFile
         if (isFinishing()) {
             Log.d(TAG, "finishing, exit createFileList()");
             return;
+        } else if (!isSdCardPresent()) {
+            Toast.makeText(this, R.string.sdcard_not_present,
+                    Toast.LENGTH_SHORT).show();
+            finish();
+            return;
         }
+
         try {
             PreferenceScreen root = getPreferenceScreen();
             root.removeAll();
 
             List<File> allFiles = getAllCertFiles();
             if (allFiles.isEmpty()) {
-                Toast.makeText(this, R.string.no_pkcs12_found,
+                Toast.makeText(this, R.string.no_cert_file_found,
                         Toast.LENGTH_SHORT).show();
             } else {
                 int prefixEnd = Environment.getExternalStorageDirectory()

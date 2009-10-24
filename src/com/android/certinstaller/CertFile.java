@@ -71,10 +71,9 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_INSTALL_CODE) {
-            boolean success = (resultCode == RESULT_OK);
-            if (success) Util.deleteFile(mCertFile);
+            onInstallationDone((resultCode == RESULT_OK)
+                    && Util.deleteFile(mCertFile));
             mCertFile = null;
-            onInstallationDone(success);
         } else {
             Log.w(TAG, "unknown request code: " + requestCode);
         }
@@ -149,6 +148,11 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     protected boolean isFileAcceptable(String path) {
         return (path.endsWith(PKCS12_EXT) || path.endsWith(CERT_EXT));
+    }
+
+    protected boolean isSdCardPresent() {
+        return Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED);
     }
 
     private void install(String fileName, byte[] value) {
