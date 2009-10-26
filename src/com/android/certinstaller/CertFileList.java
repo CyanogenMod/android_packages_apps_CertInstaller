@@ -151,7 +151,7 @@ public class CertFileList extends CertFile
             switch (evt) {
                 case FileObserver.CREATE:
                 case FileObserver.DELETE:
-                    if (path.endsWith(".p12")) {
+                    if (isFileAcceptable(path)) {
                         runOnUiThread(new Runnable() {
                             public void run() {
                                 createFileList();
