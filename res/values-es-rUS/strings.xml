@@ -42,5 +42,4 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Se ha producido un error en la instalación. El tamaño del certificado es demasiado grande."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Se ha producido un error en la instalación. No se puede ubicar el archivo del certificado."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Se ha producido un error en la instalación. No se puede leer el archivo del certificado."</string>
-    <string name="no_pkcs12_found" msgid="6491877089871006521">"No se ha encontrado el archivo .p12 en la tarjeta SD."</string>
 </resources>

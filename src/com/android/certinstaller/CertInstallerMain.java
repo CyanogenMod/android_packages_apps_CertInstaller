@@ -52,15 +52,20 @@ public class CertInstallerMain extends CertFile implements Runnable {
             Bundle bundle = intent.getExtras();
 
             if ((bundle == null) || bundle.isEmpty()) {
-                List<File> allFiles = getAllCertFiles();
-                if (allFiles.isEmpty()) {
-                    Toast.makeText(this, R.string.no_pkcs12_found,
+                if (!isSdCardPresent()) {
+                    Toast.makeText(this, R.string.sdcard_not_present,
                             Toast.LENGTH_SHORT).show();
-                } else if (allFiles.size() == 1) {
-                    installFromFile(allFiles.get(0));
-                    return;
                 } else {
-                    startActivity(new Intent(this, CertFileList.class));
+                    List<File> allFiles = getAllCertFiles();
+                    if (allFiles.isEmpty()) {
+                        Toast.makeText(this, R.string.no_cert_file_found,
+                                Toast.LENGTH_SHORT).show();
+                    } else if (allFiles.size() == 1) {
+                        installFromFile(allFiles.get(0));
+                        return;
+                    } else {
+                        startActivity(new Intent(this, CertFileList.class));
+                    }
                 }
             } else {
                 Intent newIntent = new Intent(this, CertInstaller.class);

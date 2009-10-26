@@ -90,9 +90,12 @@ class Util {
         }
     }
 
-    static void deleteFile(File file) {
+    static boolean deleteFile(File file) {
         if ((file != null) && !file.delete()) {
             Log.w(TAG, "cannot delete cert: " + file);
+            return false;
+        } else {
+            return true;
         }
     }
 
