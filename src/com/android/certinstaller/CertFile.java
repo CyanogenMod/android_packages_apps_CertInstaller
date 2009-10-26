@@ -44,6 +44,9 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     private static final String TAG = "CertFile";
 
+    private static final String CERT_EXT = ".crt";
+    private static final String PKCS12_EXT = ".p12";
+
     private static final String CERT_FILE_KEY = "cf";
     private static final int MAX_FILE_SIZE = 1000000;
     private static final int REQUEST_INSTALL_CODE = 1;
@@ -138,16 +141,24 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     public boolean accept(File file) {
         if (!file.isDirectory()) {
-            return file.getPath().endsWith(".p12");
+            return isFileAcceptable(file.getPath());
         } else {
             return false;
         }
     }
 
+    protected boolean isFileAcceptable(String path) {
+        return (path.endsWith(PKCS12_EXT) || path.endsWith(CERT_EXT));
+    }
+
     private void install(String fileName, byte[] value) {
         Intent intent = new Intent(this, CertInstaller.class);
         intent.putExtra(CredentialHelper.CERT_NAME_KEY, fileName);
-        intent.putExtra(Credentials.PKCS12, value);
+        if (fileName.endsWith(PKCS12_EXT)) {
+            intent.putExtra(Credentials.PKCS12, value);
+        } else {
+            intent.putExtra(Credentials.CERTIFICATE, value);
+        }
         startActivityForResult(intent, REQUEST_INSTALL_CODE);
     }
 
