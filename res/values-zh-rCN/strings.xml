@@ -42,5 +42,5 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"安装失败。证书大小过大。"</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"安装失败。无法找到证书文件。"</string>
     <string name="cert_read_error" msgid="9120813657318906215">"安装失败。无法读取证书文件。"</string>
-    <string name="no_pkcs12_found" msgid="6491877089871006521">"未在 SD 卡中找到 .p12 文件。"</string>
+    <string name="no_pkcs12_found" msgid="6491877089871006521">"在 SD 卡上找不到 .p12 文件。"</string>
 </resources>
