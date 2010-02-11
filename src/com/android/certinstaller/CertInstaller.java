@@ -101,8 +101,11 @@ public class CertInstaller extends Activity
     protected void onResume() {
         super.onResume();
 
-        mState = STATE_RUNNING;
-        if (mNextAction != null) mNextAction.run(this);
+        if (mState == STATE_INIT) {
+            mState = STATE_RUNNING;
+        } else {
+            if (mNextAction != null) mNextAction.run(this);
+        }
     }
 
     private boolean needsKeyStoreAccess() {
@@ -316,8 +319,6 @@ public class CertInstaller extends Activity
         View view = View.inflate(this, R.layout.name_credential_dialog, null);
         mView.setView(view);
 
-        mView.setText(R.id.credential_name_title, R.string.credential_name);
-        mView.setText(R.id.credential_info_title, R.string.credential_info);
         mView.setText(R.id.credential_info,
                 mCredentials.getDescription(this).toString());
 

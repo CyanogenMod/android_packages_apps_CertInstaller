@@ -102,9 +102,16 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     protected List<File> getAllCertFiles() {
         List<File> allFiles = new ArrayList<File>();
         File root = Environment.getExternalStorageDirectory();
+
         File download = new File(root, DOWNLOAD_DIR);
-        Collections.addAll(allFiles, download.listFiles(this));
-        Collections.addAll(allFiles, root.listFiles(this));
+        if (download != null) {
+            File[] files = download.listFiles(this);
+            if (files != null) Collections.addAll(allFiles, files);
+        }
+
+        File[] files = root.listFiles(this);
+        if (files != null) Collections.addAll(allFiles, files);
+
         return allFiles;
     }
 
