@@ -42,8 +42,6 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Installationen mislykkedes. Certifikatstørrelsen er for stor."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Installationen mislykkedes. Certifikatfilen kan ikke lokaliseres."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Installationen mislykkedes. Certifikatfilen kan ikke læses."</string>
-    <!-- no translation found for no_cert_file_found (1942077544887243999) -->
-    <skip />
-    <!-- no translation found for sdcard_not_present (1567335300760018448) -->
-    <skip />
+    <string name="no_cert_file_found" msgid="1942077544887243999">"Der blev ikke fundet nogen certifikatfil på SD-kortet."</string>
+    <string name="sdcard_not_present" msgid="1567335300760018448">"SD-kort er ikke til stede."</string>
 </resources>

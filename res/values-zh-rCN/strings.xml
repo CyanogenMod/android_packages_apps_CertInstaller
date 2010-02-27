@@ -42,8 +42,6 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"安装失败。证书大小过大。"</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"安装失败。无法找到证书文件。"</string>
     <string name="cert_read_error" msgid="9120813657318906215">"安装失败。无法读取证书文件。"</string>
-    <!-- no translation found for no_cert_file_found (1942077544887243999) -->
-    <skip />
-    <!-- no translation found for sdcard_not_present (1567335300760018448) -->
-    <skip />
+    <string name="no_cert_file_found" msgid="1942077544887243999">"在 SD 卡上找不到证书文件。"</string>
+    <string name="sdcard_not_present" msgid="1567335300760018448">"SD 卡不存在。"</string>
 </resources>

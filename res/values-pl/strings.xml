@@ -42,8 +42,6 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Instalacja nie powiodła się. Rozmiar certyfikatu jest zbyt duży."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Instalacja nie powiodła się. Nie można znaleźć pliku certyfikatu."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Instalacja nie powiodła się. Nie można odczytać pliku certyfikatu."</string>
-    <!-- no translation found for no_cert_file_found (1942077544887243999) -->
-    <skip />
-    <!-- no translation found for sdcard_not_present (1567335300760018448) -->
-    <skip />
+    <string name="no_cert_file_found" msgid="1942077544887243999">"Na karcie SD nie znaleziono pliku certyfikatu."</string>
+    <string name="sdcard_not_present" msgid="1567335300760018448">"Brak karty SD."</string>
 </resources>
