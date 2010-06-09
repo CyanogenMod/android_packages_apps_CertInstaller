@@ -49,7 +49,7 @@
     <string name="unable_to_save_cert">Unable to save the certificate. The credential storage is not enabled or properly initialized.</string>
     <string name="cert_not_saved">The certificate is not installed.</string>
     <string name="no_cert_to_saved">No certificate to install.</string>
-    <string name="intent_parse_error">Unable to parse intent: %s</string>
+    <string name="invalid_cert">The certificate is invalid.</string>
 
     <!-- toast message -->
     <string name="cert_is_added"><xliff:g id="credential">%s</xliff:g> is installed.</string>

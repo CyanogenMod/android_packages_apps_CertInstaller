@@ -69,6 +69,9 @@ class CredentialHelper {
     private X509Certificate mUserCert;
     private List<X509Certificate> mCaCerts = new ArrayList<X509Certificate>();
 
+    CredentialHelper() {
+    }
+
     CredentialHelper(Intent intent) {
         Bundle bundle = intent.getExtras();
         if (bundle == null) return;

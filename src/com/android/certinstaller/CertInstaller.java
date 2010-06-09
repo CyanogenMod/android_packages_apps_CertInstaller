@@ -67,11 +67,21 @@ public class CertInstaller extends Activity
     private CredentialHelper mCredentials;
     private MyAction mNextAction;
 
+    private CredentialHelper createCredentialHelper(Intent intent) {
+        try {
+            return new CredentialHelper(getIntent());
+        } catch (Throwable t) {
+            Log.w(TAG, "createCredentialHelper", t);
+            toastErrorAndFinish(R.string.invalid_cert);
+            return new CredentialHelper();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedStates) {
         super.onCreate(savedStates);
 
-        mCredentials = new CredentialHelper(getIntent());
+        mCredentials = createCredentialHelper(getIntent());
 
         mState = (savedStates == null) ? STATE_INIT : STATE_RUNNING;
 
