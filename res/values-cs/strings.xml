@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Certifikát nelze uložit. Úložiště pověření není aktivováno nebo není správně inicializováno."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Certifikát není nainstalován."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nebyl nalezen žádný certifikát k instalaci."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"Nelze analyzovat cíl: %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"Certifikát je neplatný."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"Pověření <xliff:g id="CREDENTIAL">%s</xliff:g> bylo nainstalováno."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Instalace se nezdařila. Certifikát je příliš velký."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Instalace se nezdařila. Soubor certifikátu nebyl nalezen."</string>

@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Kunne ikke lagre sertifikatet. Legitimasjonslageret er ikke aktivert eller riktig satt opp."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Sertifikatet ble ikke installert."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Ingen sertifikater å installere."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"Kunne ikke analysere hensikt: %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"Sertifikatet er ugyldig."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> er installert."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Installasjonen mislyktes. Sertifikatstørrelsen er for stor."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Installasjonen mislyktes. Kunne ikke finne sertifikatfilen."</string>

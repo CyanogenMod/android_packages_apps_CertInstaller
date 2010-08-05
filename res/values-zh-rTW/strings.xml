@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"無法儲存憑證，您並未啟用或未正確初始化認證儲存空間。"</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"未安裝此憑證。"</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"沒有可安裝的憑證。"</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"無法剖析目的：%s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"憑證無效。"</string>
     <string name="cert_is_added" msgid="6996557598167000500">"已安裝<xliff:g id="CREDENTIAL">%s</xliff:g>。"</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"安裝失敗：憑證檔案太大。"</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"安裝失敗，找不到憑證檔案。"</string>

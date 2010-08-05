@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"인증서를 저장할 수 없습니다. 자격증명 저장소를 사용할 수 없거나 적절하게 초기화하지 않았습니다."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"인증서가 설치되지 않았습니다."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"설치할 인증서가 없습니다."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"인텐트를 구문분석할 수 없습니다. %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"인증서가 잘못되었습니다."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g>이(가) 설치되었습니다."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"설치에 실패했습니다. 인증서 크기가 너무 큽니다."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"설치에 실패했습니다. 인증서 파일을 찾을 수 없습니다."</string>

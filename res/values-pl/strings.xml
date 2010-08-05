@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Nie można zapisać certyfikatu. Magazyn danych uwierzytelniania nie został włączony lub poprawnie zainicjowany."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Certyfikat nie został zainstalowany."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Brak certyfikatu do zainstalowania."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"Nie można przeanalizować zamiaru: %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"Certyfikat jest nieprawidłowy."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> jest zainstalowany."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Instalacja nie powiodła się. Rozmiar certyfikatu jest zbyt duży."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Instalacja nie powiodła się. Nie można znaleźć pliku certyfikatu."</string>

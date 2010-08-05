@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Не удается сохранить сертификат. Хранилище регистрационных данных не включено или некорректно инициализировано."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Сертификат не установлен."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Отсутствует сертификат для установки."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"Невозможно выполнить синтаксический анализ: %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"Сертификат недействителен."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> установлен."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Установка не удалась. Размер сертификата слишком велик."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Установка завершилась со сбоем. Не удается найти файл сертификата."</string>

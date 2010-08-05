@@ -38,7 +38,7 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Impossibile salvare il certificato. L\'archivio di credenziali non è abilitato o inizializzato in modo appropriato."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Il certificato non è installato."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nessun certificato da installare."</string>
-    <string name="intent_parse_error" msgid="145359819508990047">"Impossibile analizzare l\'intent: %s"</string>
+    <string name="invalid_cert" msgid="7704228670980743590">"Il certificato non è valido."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> è installato."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Installazione non riuscita. La dimensione del certificato è eccessiva."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Installazione non riuscita. Impossibile individuare il file del certificato."</string>
