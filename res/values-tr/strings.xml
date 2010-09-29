@@ -43,6 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Yükleme başarısız oldu. Sertifika boyutu çok büyük."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Yükleme başarısız oldu. Sertifika dosyası bulunamıyor."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Yükleme başarısız oldu. Sertifika dosyası okunamıyor."</string>
-    <string name="no_cert_file_found" msgid="1942077544887243999">"SD kartta hiçbir sertifika dosyası bulunamadı."</string>
-    <string name="sdcard_not_present" msgid="1567335300760018448">"SD kart yok."</string>
+    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="7170871727456313439">"SD kartta hiçbir sertifika dosyası bulunamadı."</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"SD kartta hiçbir sertifika dosyası bulunamadı."</string>
+    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9190417396392032242">"SD kart yok."</string>
+    <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"SD kart yok."</string>
 </resources>
