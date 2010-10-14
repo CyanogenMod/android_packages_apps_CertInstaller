@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"La instalación falló. El tamaño del certificado es muy grande."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"La inicialización falló. No se ha podido ubicar el archivo del certificado."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"La inicialización falló. No se ha podido leer el archivo del certificado."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="7170871727456313439">"No se ha encontrado un archivo de certificado en la tarjeta SD."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="7170871727456313439">"No se ha encontrado un archivo de certificado en el almacenamiento compartido."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"No se ha encontrado un archivo de certificado en la tarjeta SD."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9190417396392032242">"La tarjeta SD no está presente."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9190417396392032242">"Alm. comp. no disponible"</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"La tarjeta SD no está presente."</string>
 </resources>
