@@ -65,9 +65,9 @@
     <string name="cert_read_error">Installation failed. Cannot read the certificate file.</string>
 
     <!-- Shown when the certificate file can't be found.  [CHAR LIMIT=NONE] -->
-    <string name="no_cert_file_found" product="nosdcard">No certificate file found in the shared storage.</string>
+    <string name="no_cert_file_found" product="nosdcard">No certificate file found in USB storage.</string>
     <string name="no_cert_file_found" product="default">No certificate file found in the SD card.</string>
-    <!-- Shown when the shared storage can't be found to look for a certificate.  [CHAR LIMIT=30] -->
-    <string name="sdcard_not_present" product="nosdcard">Shared storage not available.</string>
+    <!-- Shown when USB storage can't be found to look for a certificate.  [CHAR LIMIT=30] -->
+    <string name="sdcard_not_present" product="nosdcard">USB storage not available.</string>
     <string name="sdcard_not_present" product="default">SD card is not present.</string>
 </resources>
