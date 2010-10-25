@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Installazione non riuscita. La dimensione del certificato è eccessiva."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Installazione non riuscita. Impossibile individuare il file del certificato."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Installazione non riuscita. Impossibile leggere il file del certificato."</string>
-    <string name="no_cert_file_found" product="nosdcard" msgid="7170871727456313439">"Nessun file di certificato trovato nell\'archivio condiviso."</string>
+    <!-- outdated translation 7170871727456313439 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Nessun file di certificato trovato nell\'archivio condiviso."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Nessun file di certificato trovato sulla scheda SD."</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9190417396392032242">"Archivio condiviso non disp."</string>
+    <!-- outdated translation 9190417396392032242 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Archivio condiviso non disp."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Scheda SD non presente."</string>
 </resources>

@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"安裝失敗：憑證檔案太大。"</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"安裝失敗，找不到憑證檔案。"</string>
     <string name="cert_read_error" msgid="9120813657318906215">"安裝失敗：無法讀取憑證檔案。"</string>
-    <string name="no_cert_file_found" product="nosdcard" msgid="7170871727456313439">"在共用儲存裝置中找不到憑證檔案。"</string>
+    <!-- outdated translation 7170871727456313439 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"在共用儲存裝置中找不到憑證檔案。"</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在 SD 卡上找不到憑證檔案。"</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9190417396392032242">"沒有可用的共用儲存裝置。"</string>
+    <!-- outdated translation 9190417396392032242 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"沒有可用的共用儲存裝置。"</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"找不到 SD 卡。"</string>
 </resources>
