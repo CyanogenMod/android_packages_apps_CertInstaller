@@ -43,6 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Échec de l\'installation. Le certificat est trop volumineux."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Échec de l\'installation. Impossible de localiser le fichier du certificat."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Échec de l\'installation. Impossible de lire le fichier du certificat."</string>
-    <string name="no_cert_file_found" msgid="1942077544887243999">"Fichier de certificat introuvable sur la carte SD"</string>
-    <string name="sdcard_not_present" msgid="1567335300760018448">"Carte SD manquante"</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Fichier de certificat introuvable sur le stockage USB"</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Fichier de certificat introuvable sur la carte SD"</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Stockage USB indisponible"</string>
+    <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Carte SD manquante"</string>
 </resources>

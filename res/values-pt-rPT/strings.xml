@@ -43,6 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"A instalação falhou. O tamanho do certificado é demasiado grande."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"A instalação falhou. Não é possível localizar o ficheiro do certificado."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"A instalação falhou. Não é possível ler o ficheiro do certificado."</string>
-    <string name="no_cert_file_found" msgid="1942077544887243999">"Não foi encontrado nenhum ficheiro de certificado no cartão SD."</string>
-    <string name="sdcard_not_present" msgid="1567335300760018448">"O cartão SD não está presente."</string>
+    <!-- outdated translation 7170871727456313439 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Não foi encontrado nenhum ficheiro de certificado no armazenamento partilhado."</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Não foi encontrado nenhum ficheiro de certificado no cartão SD."</string>
+    <!-- outdated translation 9190417396392032242 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Arm. partilhado indisponível."</string>
+    <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"O cartão SD não está presente."</string>
 </resources>

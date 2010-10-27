@@ -43,6 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Установка не удалась. Размер сертификата слишком велик."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Установка завершилась со сбоем. Не удается найти файл сертификата."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Установка завершилась со сбоем. Не удается прочитать файл сертификата."</string>
-    <string name="no_cert_file_found" msgid="1942077544887243999">"На SD-карте отсутствует файл сертификата."</string>
-    <string name="sdcard_not_present" msgid="1567335300760018448">"SD-карта отсутствует."</string>
+    <!-- outdated translation 7170871727456313439 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"На общем накопителе отсутствует файл сертификата."</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"На SD-карте отсутствует файл сертификата."</string>
+    <!-- outdated translation 9190417396392032242 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Общий накопитель недоступен."</string>
+    <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"SD-карта отсутствует."</string>
 </resources>
