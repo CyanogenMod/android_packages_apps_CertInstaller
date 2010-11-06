@@ -37,8 +37,6 @@ public class CertFileList extends CertFile
     private static final String TAG = "CertFileList";
 
     private static final String DOWNLOAD_DIR = "download";
-    private static final int MAX_FILE_SIZE = 1000000;
-    private static final int REQUEST_INSTALL_CODE = 1;
 
     private SdCardMonitor mSdCardMonitor;
 
