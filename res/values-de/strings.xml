@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Die Installation ist fehlgeschlagen. Das Zertifikat ist zu groß."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Die Installation ist fehlgeschlagen. Die Zertifikats-Datei kann nicht gefunden werden."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Die Installation ist fehlgeschlagen. Die Zertifikats-Datei kann nicht gelesen werden."</string>
-    <!-- outdated translation 7170871727456313439 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Keine Zertifikatdatei im freigegebenen Speicher gefunden"</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Keine Zertifikatdatei auf USB-Speicher gefunden."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Auf der SD-Karte wurde keine Zertifikats-Datei gefunden."</string>
-    <!-- outdated translation 9190417396392032242 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Freigegebener Speicher nicht verfügbar"</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Kein USB-Speicher verfügbar."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"SD-Karte ist nicht vorhanden."</string>
 </resources>
