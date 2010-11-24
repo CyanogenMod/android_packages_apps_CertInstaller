@@ -22,7 +22,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.security.MessageDigest;
@@ -39,9 +38,8 @@ class Util {
             os.close();
         } catch (Exception e) {
             Log.w(TAG, "toBytes(): " + e + ": " + object);
-        } finally {
-            return baos.toByteArray();
         }
+        return baos.toByteArray();
     }
 
     static <T> T fromBytes(byte[] bytes) {
