@@ -38,14 +38,13 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Сертификатът не можа да бъде запазен. Хранилището за идентификационни данни не е активирано или не е инициализирано правилно."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Сертификатът не е инсталиран."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Няма сертификат за инсталиране."</string>
-    <!-- no translation found for invalid_cert (7704228670980743590) -->
-    <skip />
+    <string name="invalid_cert" msgid="7704228670980743590">"Сертификатът е невалиден."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> е инсталиран."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Инсталирането не бе успешно. Размерът на сертификата е твърде голям."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Инсталирането не бе успешно. Файлът със сертификата не бе намерен."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Инсталирането не бе успешно. Файлът със сертификата не можа да се прочете."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"На SD картата не бе намерен файл със сертификат."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"В USB хранилището не бе намерен файл със сертификат."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"На SD картата не бе намерен файл със сертификат."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"SD картата липсва."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB хранилището не е налице."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"SD картата липсва."</string>
 </resources>

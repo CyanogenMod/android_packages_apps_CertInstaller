@@ -38,14 +38,13 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"يتعذر حفظ الشهادة. سعة تخزين الاعتماد غير ممكّنة أو مهيأة بشكل صحيح."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"الشهادة غير مثبتة."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"ليس هناك شهادات للتثبيت."</string>
-    <!-- no translation found for invalid_cert (7704228670980743590) -->
-    <skip />
+    <string name="invalid_cert" msgid="7704228670980743590">"الشهادة غير صالحة."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> مثبت."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"أخفق التثبيت. حجم الشهادة كبير للغاية."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"أخفق التثبيت. لا يمكن تحديد موقع ملف الشهادة."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"أخفق التثبيت. لا يمكن قراءة ملف الشهادة."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"لم يتم العثور على ملف شهادة في بطاقة SD."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"لم يتم العثور على ملف شهادة في وحدة تخزين USB."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"لم يتم العثور على ملف شهادة في بطاقة SD."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"بطاقة SD غير موجودة."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"وحدة تخزين USB غير متاحة."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"بطاقة SD غير موجودة."</string>
 </resources>

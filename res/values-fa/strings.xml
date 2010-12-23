@@ -38,14 +38,13 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"گواهی ذخیره نشد. محل ذخیره اطلاعات کاربری فعال نیست یا به درستی راه اندازی نشده است."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"گواهی نصب نشده است."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"هیچ گواهی برای نصب موجود نیست."</string>
-    <!-- no translation found for invalid_cert (7704228670980743590) -->
-    <skip />
+    <string name="invalid_cert" msgid="7704228670980743590">"مجوز نامعتبر است."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> نصب شده است."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"نصب انجام نشد. اندازه گواهی بسیار بزرگ است."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"نصب انجام نشد. فایل گواهی را نمی توان پیدا کرد."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"نصب انجام نشد. فایل گواهی را نمی توان خواند."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"هیچ فایل گواهی در کارت SD یافت نشد."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"فایل مجوزی در حافظه USB یافت نشد."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"هیچ فایل گواهی در کارت SD یافت نشد."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"کارت SD موجود نیست."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"حافظه USB موجود نیست."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"کارت SD موجود نیست."</string>
 </resources>

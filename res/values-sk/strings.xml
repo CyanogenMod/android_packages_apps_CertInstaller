@@ -38,14 +38,13 @@
     <string name="unable_to_save_cert" msgid="864273038676458624">"Certifikát sa nepodarilo uložiť. Ukladací priestor poverení nie je povolený alebo nie je správne inicializovaný."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Certifikát nie je nainštalovaný."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nebol nájdený žiadny certifikát na inštaláciu."</string>
-    <!-- no translation found for invalid_cert (7704228670980743590) -->
-    <skip />
+    <string name="invalid_cert" msgid="7704228670980743590">"Certifikát je neplatný."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"Bolo nainštalované poverenie <xliff:g id="CREDENTIAL">%s</xliff:g>."</string>
     <string name="cert_too_large_error" msgid="8806716564341320607">"Inštalácia zlyhala. Certifikát je príliš veľký."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Inštalácia zlyhala. Súbor certifikátu sa nepodarilo nájsť."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Inštalácia zlyhala. Súbor certifikátu sa nepodarilo prečítať."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Na karte SD nebol nájdený žiadny certifikát."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"V ukladacom priestore USB nebol nájdený žiadny súbor certifikátu."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Na karte SD nebol nájdený žiadny certifikát."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Karta SD nie je k dispozícii."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Ukl. priestor USB je nedostup."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Karta SD nie je k dispozícii."</string>
 </resources>
