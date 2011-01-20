@@ -228,11 +228,11 @@ class CredentialHelper {
     }
 
     Intent createSystemInstallIntent() {
-        Intent intent = new Intent(Credentials.SYSTEM_INSTALL_ACTION);
+        Intent intent = new Intent("com.android.credentials.INSTALL");
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
         intent.setClassName("com.android.settings",
-                "com.android.settings.CredentialInstaller");
+                "com.android.settings.CredentialStorage");
         if (mUserKey != null) {
             intent.putExtra(Credentials.USER_PRIVATE_KEY + mName,
                     convertToPem(mUserKey));
