@@ -21,11 +21,17 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.security.Credentials;
 import android.security.KeyStore;
+import android.security.IKeyChainService;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +40,8 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.security.cert.X509Certificate;
 import java.util.LinkedHashMap;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Map;
 
 /**
@@ -173,6 +181,12 @@ public class CertInstaller extends Activity
                 Log.d(TAG, "credential is added: " + mCredentials.getName());
                 Toast.makeText(this, getString(R.string.cert_is_added,
                         mCredentials.getName()), Toast.LENGTH_LONG).show();
+
+                if (mCredentials.hasCaCerts()) {
+                    // more work to do, dont't finish just yet
+                    new InstallCaCertsToKeyChainTask().execute();
+                    return;
+                }
                 setResult(RESULT_OK);
             } else {
                 Log.d(TAG, "credential not saved, err: " + resultCode);
@@ -182,6 +196,47 @@ public class CertInstaller extends Activity
             Log.w(TAG, "unknown request code: " + requestCode);
         }
         finish();
+    }
+
+    private class InstallCaCertsToKeyChainTask extends AsyncTask<Void, Void, Boolean> {
+
+        @Override protected Boolean doInBackground(Void... unused) {
+            final BlockingQueue<IKeyChainService> q = new LinkedBlockingQueue<IKeyChainService>(1);
+            ServiceConnection keyChainServiceConnection = new ServiceConnection() {
+                @Override public void onServiceConnected(ComponentName name, IBinder service) {
+                    try {
+                        q.put(IKeyChainService.Stub.asInterface(service));
+                    } catch (InterruptedException e) {
+                        throw new AssertionError(e);
+                    }
+                }
+                @Override public void onServiceDisconnected(ComponentName name) {}
+            };
+            boolean isBound = bindService(new Intent(IKeyChainService.class.getName()),
+                                          keyChainServiceConnection,
+                                          Context.BIND_AUTO_CREATE);
+            if (!isBound) {
+                Log.w(TAG, "could not bind to KeyChainService");
+                return false;
+            }
+            IKeyChainService keyChainService;
+            try {
+                keyChainService = q.take();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+            boolean success = mCredentials.installCaCertsToKeyChain(keyChainService);
+            unbindService(keyChainServiceConnection);
+            return success;
+        }
+
+        @Override protected void onPostExecute(Boolean success) {
+            if (success) {
+                setResult(RESULT_OK);
+            }
+            finish();
+        }
     }
 
     void installOthers() {
@@ -251,23 +306,20 @@ public class CertInstaller extends Activity
         // show progress bar and extract certs in a background thread
         showDialog(PROGRESS_BAR_DIALOG);
 
-        new Thread(new Runnable() {
-            public void run() {
-                final boolean success = mCredentials.extractPkcs12(password);
-
-                runOnUiThread(new Runnable() {
-                    public void run() {
-                        MyAction action = new OnExtractionDoneAction(success);
-                        if (mState == STATE_PAUSED) {
-                            // activity is paused; run it in next onResume()
-                            mNextAction = action;
-                        } else {
-                            action.run(CertInstaller.this);
-                        }
-                    }
-                });
+        new AsyncTask<Void,Void,Boolean>() {
+            @Override protected Boolean doInBackground(Void... unused) {
+                return mCredentials.extractPkcs12(password);
             }
-        }).start();
+            @Override protected void onPostExecute(Boolean success) {
+                MyAction action = new OnExtractionDoneAction(success);
+                if (mState == STATE_PAUSED) {
+                    // activity is paused; run it in next onResume()
+                    mNextAction = action;
+                } else {
+                    action.run(CertInstaller.this);
+                }
+            }
+        }.execute();
     }
 
     void onExtractionDone(boolean success) {

@@ -19,7 +19,9 @@ package com.android.certinstaller;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.security.Credentials;
+import android.security.IKeyChainService;
 import android.text.Html;
 import android.util.Log;
 
@@ -33,15 +35,19 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.security.KeyStore;
+import java.security.KeyFactory;
 import java.security.KeyStore.PasswordProtection;
 import java.security.KeyStore.PrivateKeyEntry;
-import java.security.KeyFactory;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
+import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -72,11 +78,15 @@ class CredentialHelper {
 
     CredentialHelper(Intent intent) {
         Bundle bundle = intent.getExtras();
-        if (bundle == null) return;
+        if (bundle == null) {
+            return;
+        }
 
         String name = bundle.getString(CERT_NAME_KEY);
         bundle.remove(CERT_NAME_KEY);
-        if (name != null) mName = name;
+        if (name != null) {
+            mName = name;
+        }
 
         Log.d(TAG, "# extras: " + bundle.size());
         for (String key : bundle.keySet()) {
@@ -95,15 +105,16 @@ class CredentialHelper {
                 outStates.putByteArray(Credentials.USER_PRIVATE_KEY,
                         mUserKey.getEncoded());
             }
-            ArrayList<byte[]> certs =
-                    new ArrayList<byte[]>(mCaCerts.size() + 1);
-            if (mUserCert != null) certs.add(mUserCert.getEncoded());
+            ArrayList<byte[]> certs = new ArrayList<byte[]>(mCaCerts.size() + 1);
+            if (mUserCert != null) {
+                certs.add(mUserCert.getEncoded());
+            }
             for (X509Certificate cert : mCaCerts) {
                 certs.add(cert.getEncoded());
             }
             outStates.putByteArray(CERTS_KEY, Util.toBytes(certs));
-        } catch (Exception e) {
-            // should not occur
+        } catch (CertificateEncodingException e) {
+            throw new AssertionError(e);
         }
     }
 
@@ -111,11 +122,14 @@ class CredentialHelper {
         mBundle = (HashMap) savedStates.getSerializable(DATA_KEY);
         mName = savedStates.getString(CERT_NAME_KEY);
         byte[] bytes = savedStates.getByteArray(Credentials.USER_PRIVATE_KEY);
-        if (bytes != null) setPrivateKey(bytes);
+        if (bytes != null) {
+            setPrivateKey(bytes);
+        }
 
-        ArrayList<byte[]> certs =
-                Util.fromBytes(savedStates.getByteArray(CERTS_KEY));
-        for (byte[] cert : certs) parseCert(cert);
+        ArrayList<byte[]> certs = Util.fromBytes(savedStates.getByteArray(CERTS_KEY));
+        for (byte[] cert : certs) {
+            parseCert(cert);
+        }
     }
 
     X509Certificate getUserCertificate() {
@@ -123,11 +137,12 @@ class CredentialHelper {
     }
 
     private void parseCert(byte[] bytes) {
-        if (bytes == null) return;
+        if (bytes == null) {
+            return;
+        }
 
         try {
-            CertificateFactory certFactory =
-                    CertificateFactory.getInstance("X.509");
+            CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
             X509Certificate cert = (X509Certificate)
                     certFactory.generateCertificate(
                             new ByteArrayInputStream(bytes));
@@ -151,7 +166,7 @@ class CredentialHelper {
             basicConstraints = ((DEROctetString) obj).getOctets();
             obj = new ASN1InputStream(basicConstraints).readObject();
             return new BasicConstraints((ASN1Sequence) obj).isCA();
-        } catch (Exception e) {
+        } catch (IOException e) {
             return false;
         }
     }
@@ -169,20 +184,22 @@ class CredentialHelper {
         return (mUserCert != null);
     }
 
+    boolean hasCaCerts() {
+        return !mCaCerts.isEmpty();
+    }
+
     boolean hasAnyForSystemInstall() {
-        return ((mUserKey != null) || (mUserCert != null)
-                || !mCaCerts.isEmpty());
+        return (mUserKey != null) || hasUserCertificate() || hasCaCerts();
     }
 
     void setPrivateKey(byte[] bytes) {
         try {
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            mUserKey = keyFactory.generatePrivate(
-                    new PKCS8EncodedKeySpec(bytes));
-        } catch (Exception e) {
-            // should not occur
-            Log.w(TAG, "setPrivateKey(): " + e);
-            throw new RuntimeException(e);
+            mUserKey = keyFactory.generatePrivate(new PKCS8EncodedKeySpec(bytes));
+        } catch (NoSuchAlgorithmException e) {
+            throw new AssertionError(e);
+        } catch (InvalidKeySpecException e) {
+            throw new AssertionError(e);
         }
     }
 
@@ -231,23 +248,38 @@ class CredentialHelper {
         Intent intent = new Intent("com.android.credentials.INSTALL");
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
-        intent.setClassName("com.android.settings",
-                "com.android.settings.CredentialStorage");
+        intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
         if (mUserKey != null) {
-            intent.putExtra(Credentials.USER_PRIVATE_KEY + mName,
-                    convertToPem(mUserKey));
+            intent.putExtra(Credentials.USER_PRIVATE_KEY + mName, convertToPem(mUserKey));
         }
         if (mUserCert != null) {
-            intent.putExtra(Credentials.USER_CERTIFICATE + mName,
-                    convertToPem(mUserCert));
+            intent.putExtra(Credentials.USER_CERTIFICATE + mName, convertToPem(mUserCert));
         }
         if (!mCaCerts.isEmpty()) {
-            Object[] caCerts = (Object[])
-                    mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
-            intent.putExtra(Credentials.CA_CERTIFICATE + mName,
-                    convertToPem(caCerts));
+            Object[] caCerts = (Object[]) mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
+            intent.putExtra(Credentials.CA_CERTIFICATE + mName, convertToPem(caCerts));
         }
         return intent;
+    }
+
+    boolean installCaCertsToKeyChain(IKeyChainService keyChainService) {
+        for (X509Certificate caCert : mCaCerts) {
+            byte[] bytes = null;
+            try {
+                bytes = caCert.getEncoded();
+            } catch (CertificateEncodingException e) {
+                throw new AssertionError(e);
+            }
+            if (bytes != null) {
+                try {
+                    keyChainService.installCaCertificate(bytes);
+                } catch (RemoteException e) {
+                    Log.w(TAG, "installCaCertsToKeyChain(): " + e);
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     boolean extractPkcs12(String password) {
@@ -262,21 +294,20 @@ class CredentialHelper {
     private boolean extractPkcs12Internal(String password)
             throws Exception {
         // TODO: add test about this
-        java.security.KeyStore keystore =
-                java.security.KeyStore.getInstance("PKCS12");
-        PasswordProtection passwordProtection =
-                new PasswordProtection(password.toCharArray());
+        java.security.KeyStore keystore = java.security.KeyStore.getInstance("PKCS12");
+        PasswordProtection passwordProtection = new PasswordProtection(password.toCharArray());
         keystore.load(new ByteArrayInputStream(getData(Credentials.PKCS12)),
-                passwordProtection.getPassword());
+                      passwordProtection.getPassword());
 
         Enumeration<String> aliases = keystore.aliases();
-        if (!aliases.hasMoreElements()) return false;
+        if (!aliases.hasMoreElements()) {
+            return false;
+        }
 
         while (aliases.hasMoreElements()) {
             String alias = aliases.nextElement();
             KeyStore.Entry entry = keystore.getEntry(alias, passwordProtection);
-            Log.d(TAG, "extracted alias = " + alias
-                    + ", entry=" + entry.getClass());
+            Log.d(TAG, "extracted alias = " + alias + ", entry=" + entry.getClass());
 
             if (entry instanceof PrivateKeyEntry) {
                 mName = alias;
@@ -292,11 +323,12 @@ class CredentialHelper {
 
         Certificate[] certs = entry.getCertificateChain();
         Log.d(TAG, "# certs extracted = " + certs.length);
-        List<X509Certificate> caCerts = mCaCerts =
-                new ArrayList<X509Certificate>(certs.length);
+        List<X509Certificate> caCerts = mCaCerts = new ArrayList<X509Certificate>(certs.length);
         for (Certificate c : certs) {
             X509Certificate cert = (X509Certificate) c;
-            if (isCa(cert)) caCerts.add(cert);
+            if (isCa(cert)) {
+                caCerts.add(cert);
+            }
         }
         Log.d(TAG, "# ca certs extracted = " + mCaCerts.size());
 
@@ -308,13 +340,13 @@ class CredentialHelper {
             ByteArrayOutputStream bao = new ByteArrayOutputStream();
             OutputStreamWriter osw = new OutputStreamWriter(bao);
             PEMWriter pw = new PEMWriter(osw);
-            for (Object o : objects) pw.writeObject(o);
+            for (Object o : objects) {
+                pw.writeObject(o);
+            }
             pw.close();
             return bao.toByteArray();
         } catch (IOException e) {
-            // should not occur
-            Log.w(TAG, "convertToPem(): " + e);
-            throw new RuntimeException(e);
+            throw new AssertionError(e);
         }
     }
 }
