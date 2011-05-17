@@ -57,6 +57,7 @@ public class CertFileList extends CertFile
 
     @Override
     protected void onInstallationDone(boolean fileDeleted) {
+        super.onInstallationDone(fileDeleted);
         if (!fileDeleted) {
             if (isSdCardPresent()) {
                 setAllFilesEnabled(true);

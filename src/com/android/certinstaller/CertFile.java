@@ -47,7 +47,7 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     private static final String CERT_FILE_KEY = "cf";
     private static final int MAX_FILE_SIZE = 1000000;
-    private static final int REQUEST_INSTALL_CODE = 1;
+    protected static final int REQUEST_INSTALL_CODE = 1;
 
     private File mCertFile;
 
@@ -63,14 +63,17 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     protected void onRestoreInstanceState(Bundle savedStates) {
         super.onRestoreInstanceState(savedStates);
         String path = savedStates.getString(CERT_FILE_KEY);
-        if (path != null) mCertFile = new File(path);
+        if (path != null) {
+            mCertFile = new File(path);
+        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_INSTALL_CODE) {
-            onInstallationDone((resultCode == RESULT_OK)
-                    && Util.deleteFile(mCertFile));
+            boolean success = (resultCode == RESULT_OK
+                               && mCertFile == null || Util.deleteFile(mCertFile));
+            onInstallationDone(success);
             mCertFile = null;
         } else {
             Log.w(TAG, "unknown request code: " + requestCode);
@@ -83,6 +86,9 @@ public class CertFile extends PreferenceActivity implements FileFilter {
      * @param success true if installation is done successfully
      */
     protected void onInstallationDone(boolean success) {
+        if (success) {
+            setResult(RESULT_OK);
+        }
     }
 
     /**

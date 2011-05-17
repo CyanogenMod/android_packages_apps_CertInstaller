@@ -32,9 +32,12 @@ public class CertInstallerMain extends CertFile implements Runnable {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) return;
+        if (savedInstanceState != null) {
+            return;
+        }
 
         new Thread(new Runnable() {
+            @Override
             public void run() {
                 // don't want to call startActivityForResult() (invoked in
                 // installFromFile()) here as it makes the new activity (thus
@@ -44,6 +47,7 @@ public class CertInstallerMain extends CertFile implements Runnable {
         }).start();
     }
 
+    @Override
     public void run() {
         Intent intent = getIntent();
         String action = (intent == null) ? null : intent.getAction();
@@ -64,13 +68,16 @@ public class CertInstallerMain extends CertFile implements Runnable {
                         installFromFile(allFiles.get(0));
                         return;
                     } else {
-                        startActivity(new Intent(this, CertFileList.class));
+                        startActivityForResult(new Intent(this, CertFileList.class),
+                                               REQUEST_INSTALL_CODE);
+                        return;
                     }
                 }
             } else {
                 Intent newIntent = new Intent(this, CertInstaller.class);
                 newIntent.putExtras(intent);
-                startActivity(newIntent);
+                startActivityForResult(newIntent, REQUEST_INSTALL_CODE);
+                return;
             }
         }
         finish();
@@ -78,6 +85,7 @@ public class CertInstallerMain extends CertFile implements Runnable {
 
     @Override
     protected void onInstallationDone(boolean success) {
+        super.onInstallationDone(success);
         finish();
     }
 

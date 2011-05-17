@@ -174,8 +174,7 @@ public class CertInstaller extends Activity
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode,
-            Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_SYSTEM_INSTALL_CODE) {
             if (resultCode == RESULT_OK) {
                 Log.d(TAG, "credential is added: " + mCredentials.getName());
@@ -183,7 +182,7 @@ public class CertInstaller extends Activity
                         mCredentials.getName()), Toast.LENGTH_LONG).show();
 
                 if (mCredentials.hasCaCerts()) {
-                    // more work to do, dont't finish just yet
+                    // more work to do, don't finish just yet
                     new InstallCaCertsToKeyChainTask().execute();
                     return;
                 }
@@ -222,13 +221,13 @@ public class CertInstaller extends Activity
             IKeyChainService keyChainService;
             try {
                 keyChainService = q.take();
+                return mCredentials.installCaCertsToKeyChain(keyChainService);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 return false;
+            } finally {
+                unbindService(keyChainServiceConnection);
             }
-            boolean success = mCredentials.installCaCertsToKeyChain(keyChainService);
-            unbindService(keyChainServiceConnection);
-            return success;
         }
 
         @Override protected void onPostExecute(Boolean success) {
