@@ -31,6 +31,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.security.Credentials;
 import android.security.KeyStore;
+import android.security.KeyChain;
+import android.security.KeyChain.KeyChainConnection;
 import android.security.IKeyChainService;
 import android.text.TextUtils;
 import android.util.Log;
@@ -200,33 +202,16 @@ public class CertInstaller extends Activity
     private class InstallCaCertsToKeyChainTask extends AsyncTask<Void, Void, Boolean> {
 
         @Override protected Boolean doInBackground(Void... unused) {
-            final BlockingQueue<IKeyChainService> q = new LinkedBlockingQueue<IKeyChainService>(1);
-            ServiceConnection keyChainServiceConnection = new ServiceConnection() {
-                @Override public void onServiceConnected(ComponentName name, IBinder service) {
-                    try {
-                        q.put(IKeyChainService.Stub.asInterface(service));
-                    } catch (InterruptedException e) {
-                        throw new AssertionError(e);
-                    }
-                }
-                @Override public void onServiceDisconnected(ComponentName name) {}
-            };
-            boolean isBound = bindService(new Intent(IKeyChainService.class.getName()),
-                                          keyChainServiceConnection,
-                                          Context.BIND_AUTO_CREATE);
-            if (!isBound) {
-                Log.w(TAG, "could not bind to KeyChainService");
-                return false;
-            }
-            IKeyChainService keyChainService;
             try {
-                keyChainService = q.take();
-                return mCredentials.installCaCertsToKeyChain(keyChainService);
+                KeyChainConnection keyChainConnection = KeyChain.bind(CertInstaller.this);
+                try {
+                    return mCredentials.installCaCertsToKeyChain(keyChainConnection.getService());
+                } finally {
+                    keyChainConnection.close();
+                }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 return false;
-            } finally {
-                unbindService(keyChainServiceConnection);
             }
         }
 
