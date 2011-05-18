@@ -42,8 +42,12 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     private static final String TAG = "CertFile";
 
-    private static final String CERT_EXT = ".crt";
-    private static final String PKCS12_EXT = ".p12";
+    // historically used by Android
+    private static final String EXTENSION_CRT = ".crt";
+    private static final String EXTENSION_P12 = ".p12";
+    // commonly used on Windows
+    private static final String EXTENSION_CER = ".cer";
+    private static final String EXTENSION_PFX = ".pfx";
 
     private static final String CERT_FILE_KEY = "cf";
     private static final int MAX_FILE_SIZE = 1000000;
@@ -158,7 +162,10 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     }
 
     protected boolean isFileAcceptable(String path) {
-        return (path.endsWith(PKCS12_EXT) || path.endsWith(CERT_EXT));
+        return (path.endsWith(EXTENSION_CRT) ||
+                path.endsWith(EXTENSION_P12) ||
+                path.endsWith(EXTENSION_CER) ||
+                path.endsWith(EXTENSION_PFX));
     }
 
     protected boolean isSdCardPresent() {
@@ -169,10 +176,12 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     private void install(String fileName, byte[] value) {
         Intent intent = new Intent(this, CertInstaller.class);
         intent.putExtra(CredentialHelper.CERT_NAME_KEY, fileName);
-        if (fileName.endsWith(PKCS12_EXT)) {
+        if (fileName.endsWith(EXTENSION_PFX) || fileName.endsWith(EXTENSION_P12)) {
             intent.putExtra(Credentials.PKCS12, value);
-        } else {
+        } else if (fileName.endsWith(EXTENSION_CER) || fileName.endsWith(EXTENSION_CRT)) {
             intent.putExtra(Credentials.CERTIFICATE, value);
+        } else {
+            throw new AssertionError(fileName);
         }
         startActivityForResult(intent, REQUEST_INSTALL_CODE);
     }
