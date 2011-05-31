@@ -67,7 +67,7 @@ public class CertInstaller extends Activity
     private static final String NEXT_ACTION_KEY = "na";
 
     // key to KeyStore
-    private static final byte[] PKEY_MAP_KEY = "PKEY_MAP".getBytes();
+    private static final String PKEY_MAP_KEY = "PKEY_MAP";
 
     private KeyStore mKeyStore = KeyStore.getInstance();
     private ViewHelper mView = new ViewHelper();
@@ -130,7 +130,7 @@ public class CertInstaller extends Activity
 
     private boolean needsKeyStoreAccess() {
         return ((mCredentials.hasKeyPair() || mCredentials.hasUserCertificate())
-                && (mKeyStore.test() != KeyStore.NO_ERROR));
+                && (mKeyStore.state() != KeyStore.State.UNLOCKED));
     }
 
     @Override

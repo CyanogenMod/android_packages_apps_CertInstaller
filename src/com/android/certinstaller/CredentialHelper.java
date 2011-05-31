@@ -162,6 +162,9 @@ class CredentialHelper {
         try {
             // TODO: add a test about this
             byte[] basicConstraints = cert.getExtensionValue("2.5.29.19");
+            if (basicConstraints == null) {
+                return false;
+            }
             Object obj = new ASN1InputStream(basicConstraints).readObject();
             basicConstraints = ((DEROctetString) obj).getOctets();
             obj = new ASN1InputStream(basicConstraints).readObject();
