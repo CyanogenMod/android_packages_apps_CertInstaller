@@ -161,14 +161,16 @@ class CredentialHelper {
     private boolean isCa(X509Certificate cert) {
         try {
             // TODO: add a test about this
-            byte[] basicConstraints = cert.getExtensionValue("2.5.29.19");
-            if (basicConstraints == null) {
+            byte[] asn1EncodedBytes = cert.getExtensionValue("2.5.29.19");
+            if (asn1EncodedBytes == null) {
                 return false;
             }
-            Object obj = new ASN1InputStream(basicConstraints).readObject();
-            basicConstraints = ((DEROctetString) obj).getOctets();
-            obj = new ASN1InputStream(basicConstraints).readObject();
-            return new BasicConstraints((ASN1Sequence) obj).isCA();
+            DEROctetString derOctetString = (DEROctetString)
+                    new ASN1InputStream(asn1EncodedBytes).readObject();
+            byte[] octets = derOctetString.getOctets();
+            ASN1Sequence sequence = (ASN1Sequence)
+                    new ASN1InputStream(octets).readObject();
+            return new BasicConstraints(sequence).isCA();
         } catch (IOException e) {
             return false;
         }
