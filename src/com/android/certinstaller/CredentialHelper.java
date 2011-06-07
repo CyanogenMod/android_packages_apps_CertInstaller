@@ -24,22 +24,16 @@ import android.security.Credentials;
 import android.security.IKeyChainService;
 import android.text.Html;
 import android.util.Log;
-
 import com.android.org.bouncycastle.asn1.ASN1InputStream;
 import com.android.org.bouncycastle.asn1.ASN1Sequence;
 import com.android.org.bouncycastle.asn1.DEROctetString;
 import com.android.org.bouncycastle.asn1.x509.BasicConstraints;
-import com.android.org.bouncycastle.openssl.PEMWriter;
-
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.security.KeyFactory;
 import java.security.KeyStore.PasswordProtection;
 import java.security.KeyStore.PrivateKeyEntry;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
@@ -254,17 +248,25 @@ class CredentialHelper {
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
         intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
-        if (mUserKey != null) {
-            intent.putExtra(Credentials.USER_PRIVATE_KEY + mName, convertToPem(mUserKey));
+        try {
+            if (mUserKey != null) {
+                intent.putExtra(Credentials.USER_PRIVATE_KEY + mName,
+                                Credentials.convertToPem(mUserKey));
+            }
+            if (mUserCert != null) {
+                intent.putExtra(Credentials.USER_CERTIFICATE + mName,
+                                Credentials.convertToPem(mUserCert));
+            }
+            if (!mCaCerts.isEmpty()) {
+                Object[] caCerts = (Object[])
+                        mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
+                intent.putExtra(Credentials.CA_CERTIFICATE + mName,
+                                Credentials.convertToPem(caCerts));
+            }
+            return intent;
+        } catch (IOException e) {
+            throw new AssertionError(e);
         }
-        if (mUserCert != null) {
-            intent.putExtra(Credentials.USER_CERTIFICATE + mName, convertToPem(mUserCert));
-        }
-        if (!mCaCerts.isEmpty()) {
-            Object[] caCerts = (Object[]) mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
-            intent.putExtra(Credentials.CA_CERTIFICATE + mName, convertToPem(caCerts));
-        }
-        return intent;
     }
 
     boolean installCaCertsToKeyChain(IKeyChainService keyChainService) {
@@ -338,20 +340,5 @@ class CredentialHelper {
         Log.d(TAG, "# ca certs extracted = " + mCaCerts.size());
 
         return true;
-    }
-
-    private byte[] convertToPem(Object... objects) {
-        try {
-            ByteArrayOutputStream bao = new ByteArrayOutputStream();
-            OutputStreamWriter osw = new OutputStreamWriter(bao);
-            PEMWriter pw = new PEMWriter(osw);
-            for (Object o : objects) {
-                pw.writeObject(o);
-            }
-            pw.close();
-            return bao.toByteArray();
-        } catch (IOException e) {
-            throw new AssertionError(e);
-        }
     }
 }
