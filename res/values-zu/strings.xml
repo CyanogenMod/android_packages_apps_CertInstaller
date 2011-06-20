@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Ukufaka kwehlulekile. Usayizi wesitifiketi mukhulu kakhulu."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Ukufaka kwehlulekile. Ayikwazi ukuthola ifayela yesitifiketi."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Ukufaka kwehlulekile. Ayikwazi ukufunda ifayela yesitifiketi."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Ayikho ifayela yesitifiketi etholakele ekhadini le-SD"</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Ayikho ifayela yesitifiketi etholakele ekugcineni nge-USB."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Ayikho ifayela yesitifiketi etholakele ekhadini le-SD"</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Ikhadi le-SD alikho."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Ukugcina nge-USB akutholakali."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Ikhadi le-SD alikho."</string>
 </resources>

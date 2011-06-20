@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Imeshindwa kusakinisha. Ukubwa wa cheti ni mkubwa sana."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Imeshindwa kusakinisha. Haiwezi kusoma faili ya cheti."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Imeshindwa kusakinisha. Haiwezi kusoma faili ya cheti."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Hakuni faili ya cheti iliyopatikana kwenye kadi ya SD."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Hakuna faili ya cheti iliyopatikana katika hifadhi ya USB."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Hakuni faili ya cheti iliyopatikana kwenye kadi ya SD."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Kadi ya SD haipatikani."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Hifadhi ya USB haipatikani."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Kadi ya SD haipatikani."</string>
 </resources>
