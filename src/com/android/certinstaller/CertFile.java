@@ -42,13 +42,6 @@ public class CertFile extends PreferenceActivity implements FileFilter {
 
     private static final String TAG = "CertFile";
 
-    // historically used by Android
-    private static final String EXTENSION_CRT = ".crt";
-    private static final String EXTENSION_P12 = ".p12";
-    // commonly used on Windows
-    private static final String EXTENSION_CER = ".cer";
-    private static final String EXTENSION_PFX = ".pfx";
-
     private static final String CERT_FILE_KEY = "cf";
     private static final int MAX_FILE_SIZE = 1000000;
     protected static final int REQUEST_INSTALL_CODE = 1;
@@ -162,10 +155,10 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     }
 
     protected boolean isFileAcceptable(String path) {
-        return (path.endsWith(EXTENSION_CRT) ||
-                path.endsWith(EXTENSION_P12) ||
-                path.endsWith(EXTENSION_CER) ||
-                path.endsWith(EXTENSION_PFX));
+        return (path.endsWith(Credentials.EXTENSION_CRT) ||
+                path.endsWith(Credentials.EXTENSION_P12) ||
+                path.endsWith(Credentials.EXTENSION_CER) ||
+                path.endsWith(Credentials.EXTENSION_PFX));
     }
 
     protected boolean isSdCardPresent() {
@@ -176,9 +169,11 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     private void install(String fileName, byte[] value) {
         Intent intent = new Intent(this, CertInstaller.class);
         intent.putExtra(CredentialHelper.CERT_NAME_KEY, fileName);
-        if (fileName.endsWith(EXTENSION_PFX) || fileName.endsWith(EXTENSION_P12)) {
+        if (fileName.endsWith(Credentials.EXTENSION_PFX)
+                || fileName.endsWith(Credentials.EXTENSION_P12)) {
             intent.putExtra(Credentials.PKCS12, value);
-        } else if (fileName.endsWith(EXTENSION_CER) || fileName.endsWith(EXTENSION_CRT)) {
+        } else if (fileName.endsWith(Credentials.EXTENSION_CER)
+                   || fileName.endsWith(Credentials.EXTENSION_CRT)) {
             intent.putExtra(Credentials.CERTIFICATE, value);
         } else {
             throw new AssertionError(fileName);
