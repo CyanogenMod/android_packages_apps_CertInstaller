@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.security.Credentials;
+import android.security.KeyChain;
 import android.security.IKeyChainService;
 import android.text.Html;
 import android.util.Log;
@@ -88,7 +89,7 @@ class CredentialHelper {
             Log.d(TAG, "   " + key + ": " + ((bytes == null) ? -1 : bytes.length));
             mBundle.put(key, bytes);
         }
-        parseCert(getData(Credentials.CERTIFICATE));
+        parseCert(getData(KeyChain.EXTRA_CERTIFICATE));
     }
 
     synchronized void onSaveStates(Bundle outStates) {
@@ -171,12 +172,12 @@ class CredentialHelper {
     }
 
     boolean hasPkcs12KeyStore() {
-        return mBundle.containsKey(Credentials.PKCS12);
+        return mBundle.containsKey(KeyChain.EXTRA_PKCS12);
     }
 
     boolean hasKeyPair() {
-        return mBundle.containsKey(Credentials.PUBLIC_KEY)
-                && mBundle.containsKey(Credentials.PRIVATE_KEY);
+        return mBundle.containsKey(Credentials.EXTRA_PUBLIC_KEY)
+                && mBundle.containsKey(Credentials.EXTRA_PRIVATE_KEY);
     }
 
     boolean hasUserCertificate() {
@@ -211,7 +212,7 @@ class CredentialHelper {
     }
 
     void putPkcs12Data(byte[] data) {
-        mBundle.put(Credentials.PKCS12, data);
+        mBundle.put(KeyChain.EXTRA_PKCS12, data);
     }
 
     CharSequence getDescription(Context context) {
@@ -303,7 +304,7 @@ class CredentialHelper {
         // TODO: add test about this
         java.security.KeyStore keystore = java.security.KeyStore.getInstance("PKCS12");
         PasswordProtection passwordProtection = new PasswordProtection(password.toCharArray());
-        keystore.load(new ByteArrayInputStream(getData(Credentials.PKCS12)),
+        keystore.load(new ByteArrayInputStream(getData(KeyChain.EXTRA_PKCS12)),
                       passwordProtection.getPassword());
 
         Enumeration<String> aliases = keystore.aliases();
@@ -330,11 +331,11 @@ class CredentialHelper {
 
         Certificate[] certs = entry.getCertificateChain();
         Log.d(TAG, "# certs extracted = " + certs.length);
-        List<X509Certificate> caCerts = mCaCerts = new ArrayList<X509Certificate>(certs.length);
-        for (Certificate c : certs) {
+        List<X509Certificate> mCaCerts = new ArrayList<X509Certificate>(certs.length);
+        for (Certificate c : mCaCerts) {
             X509Certificate cert = (X509Certificate) c;
             if (isCa(cert)) {
-                caCerts.add(cert);
+                mCaCerts.add(cert);
             }
         }
         Log.d(TAG, "# ca certs extracted = " + mCaCerts.size());

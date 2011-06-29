@@ -261,8 +261,8 @@ public class CertInstaller extends Activity
     }
 
     private void saveKeyPair() {
-        byte[] privatekey = mCredentials.getData(Credentials.PRIVATE_KEY);
-        String key = Util.toMd5(mCredentials.getData(Credentials.PUBLIC_KEY));
+        byte[] privatekey = mCredentials.getData(Credentials.EXTRA_PRIVATE_KEY);
+        String key = Util.toMd5(mCredentials.getData(Credentials.EXTRA_PUBLIC_KEY));
         Map<String, byte[]> map = getPkeyMap();
         map.put(key, privatekey);
         savePkeyMap(map);
@@ -450,7 +450,9 @@ public class CertInstaller extends Activity
         }
 
         public void run(CertInstaller host) {
-            if (hasRun) return;
+            if (hasRun) {
+                return;
+            }
             hasRun = true;
             host.extractPkcs12InBackground(mPassword);
         }

@@ -71,7 +71,9 @@ public class CertFileList extends CertFile
 
     @Override
     protected void onError(int errorId) {
-        if (errorId == CERT_FILE_MISSING_ERROR) createFileList();
+        if (errorId == CERT_FILE_MISSING_ERROR) {
+            createFileList();
+        }
     }
 
     private void setAllFilesEnabled(boolean enabled) {
@@ -97,7 +99,8 @@ public class CertFileList extends CertFile
         if (isFinishing()) {
             Log.d(TAG, "finishing, exit createFileList()");
             return;
-        } else if (!isSdCardPresent()) {
+        } 
+        if (!isSdCardPresent()) {
             Toast.makeText(this, R.string.sdcard_not_present,
                     Toast.LENGTH_SHORT).show();
             finish();
@@ -130,12 +133,16 @@ public class CertFileList extends CertFile
     }
 
     private void startSdCardMonitor() {
-        if (mSdCardMonitor == null) mSdCardMonitor = new SdCardMonitor();
+        if (mSdCardMonitor == null) {
+            mSdCardMonitor = new SdCardMonitor();
+        }
         mSdCardMonitor.startWatching();
     }
 
     private void stopSdCardMonitor() {
-        if (mSdCardMonitor != null) mSdCardMonitor.stopWatching();
+        if (mSdCardMonitor != null) {
+            mSdCardMonitor.stopWatching();
+        }
     }
 
     private class SdCardMonitor {

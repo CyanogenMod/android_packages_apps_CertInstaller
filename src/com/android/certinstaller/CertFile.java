@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceActivity;
 import android.security.Credentials;
+import android.security.KeyChain;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -171,10 +172,10 @@ public class CertFile extends PreferenceActivity implements FileFilter {
         intent.putExtra(CredentialHelper.CERT_NAME_KEY, fileName);
         if (fileName.endsWith(Credentials.EXTENSION_PFX)
                 || fileName.endsWith(Credentials.EXTENSION_P12)) {
-            intent.putExtra(Credentials.PKCS12, value);
+            intent.putExtra(KeyChain.EXTRA_PKCS12, value);
         } else if (fileName.endsWith(Credentials.EXTENSION_CER)
                    || fileName.endsWith(Credentials.EXTENSION_CRT)) {
-            intent.putExtra(Credentials.CERTIFICATE, value);
+            intent.putExtra(KeyChain.EXTRA_CERTIFICATE, value);
         } else {
             throw new AssertionError(fileName);
         }
