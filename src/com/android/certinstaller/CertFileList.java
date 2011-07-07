@@ -115,6 +115,8 @@ public class CertFileList extends CertFile
             if (allFiles.isEmpty()) {
                 Toast.makeText(this, R.string.no_cert_file_found,
                         Toast.LENGTH_SHORT).show();
+                finish();
+                return;
             } else {
                 int prefixEnd = Environment.getExternalStorageDirectory()
                         .getCanonicalPath().length() + 1;

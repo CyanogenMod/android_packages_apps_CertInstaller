@@ -70,7 +70,7 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_INSTALL_CODE) {
             boolean success = (resultCode == RESULT_OK
-                               && mCertFile == null || Util.deleteFile(mCertFile));
+                               && (mCertFile == null || Util.deleteFile(mCertFile)));
             onInstallationDone(success);
             mCertFile = null;
         } else {
@@ -108,11 +108,15 @@ public class CertFile extends PreferenceActivity implements FileFilter {
         File download = new File(root, DOWNLOAD_DIR);
         if (download != null) {
             File[] files = download.listFiles(this);
-            if (files != null) Collections.addAll(allFiles, files);
+            if (files != null) {
+                Collections.addAll(allFiles, files);
+            }
         }
 
         File[] files = root.listFiles(this);
-        if (files != null) Collections.addAll(allFiles, files);
+        if (files != null) {
+            Collections.addAll(allFiles, files);
+        }
 
         return allFiles;
     }
@@ -147,7 +151,7 @@ public class CertFile extends PreferenceActivity implements FileFilter {
         }
     }
 
-    public boolean accept(File file) {
+    @Override public boolean accept(File file) {
         if (!file.isDirectory()) {
             return isFileAcceptable(file.getPath());
         } else {

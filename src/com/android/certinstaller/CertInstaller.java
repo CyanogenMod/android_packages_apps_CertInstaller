@@ -79,7 +79,7 @@ public class CertInstaller extends Activity
 
     private CredentialHelper createCredentialHelper(Intent intent) {
         try {
-            return new CredentialHelper(getIntent());
+            return new CredentialHelper(intent);
         } catch (Throwable t) {
             Log.w(TAG, "createCredentialHelper", t);
             toastErrorAndFinish(R.string.invalid_cert);
