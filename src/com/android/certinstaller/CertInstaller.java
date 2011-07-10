@@ -270,6 +270,12 @@ public class CertInstaller extends Activity
     }
 
     private void savePkeyMap(Map<String, byte[]> map) {
+        if (map.isEmpty()) {
+            if (!mKeyStore.delete(PKEY_MAP_KEY)) {
+                Log.w(TAG, "savePkeyMap(): failed to delete pkey map");
+            }
+            return;
+        }
         byte[] bytes = Util.toBytes((Serializable) map);
         if (!mKeyStore.put(PKEY_MAP_KEY, bytes)) {
             Log.w(TAG, "savePkeyMap(): failed to write pkey map");
