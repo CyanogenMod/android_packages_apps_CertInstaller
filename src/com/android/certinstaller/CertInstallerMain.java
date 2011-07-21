@@ -17,12 +17,20 @@
 package com.android.certinstaller;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.security.Credentials;
+import android.security.KeyChain;
+import android.util.Log;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+
+import libcore.io.IoUtils;
 
 /**
  * The main class for installing certificates to the system keystore. It reacts
@@ -79,8 +87,48 @@ public class CertInstallerMain extends CertFile implements Runnable {
                 startActivityForResult(newIntent, REQUEST_INSTALL_CODE);
                 return;
             }
+        } else if (Intent.ACTION_VIEW.equals(action)) {
+            Uri data = intent.getData();
+            String type = intent.getType();
+            if ((data != null) && (type != null)) {
+                byte[] payload = null;
+                InputStream is = null;
+                try {
+                    is = getContentResolver().openInputStream(data);
+                    ByteArrayOutputStream out = new ByteArrayOutputStream();
+                    byte[] buffer = new byte[1024];
+                    int read = 0;
+                    while ((read = is.read(buffer)) > 0) {
+                        out.write(buffer, 0, read);
+                    }
+                    out.flush();
+                    payload = out.toByteArray();
+                } catch (IOException ignored) {
+                    // Not much we can do - it will be logged below as an error.
+                } finally {
+                    IoUtils.closeQuietly(is);
+                }
+                if (payload == null) {
+                    Log.e("CertInstaller", "Unable to read stream for for certificate");
+                } else {
+                    installByType(type, payload);
+                }
+            }
         }
         finish();
+    }
+
+    private void installByType(String type, byte[] value) {
+        Intent intent = new Intent(this, CertInstaller.class);
+        if ("application/x-pkcs12".equals(type)) {
+            intent.putExtra(KeyChain.EXTRA_PKCS12, value);
+        } else if ("application/x-x509-ca-cert".equals(type)
+                || "application/x-x509-user-cert".equals(type)) {
+            intent.putExtra(KeyChain.EXTRA_CERTIFICATE, value);
+        } else {
+            throw new AssertionError("Unknown type: " + type);
+        }
+        startActivityForResult(intent, REQUEST_INSTALL_CODE);
     }
 
     @Override
