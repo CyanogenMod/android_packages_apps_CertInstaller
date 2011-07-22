@@ -331,8 +331,8 @@ class CredentialHelper {
 
         Certificate[] certs = entry.getCertificateChain();
         Log.d(TAG, "# certs extracted = " + certs.length);
-        List<X509Certificate> mCaCerts = new ArrayList<X509Certificate>(certs.length);
-        for (Certificate c : mCaCerts) {
+        mCaCerts = new ArrayList<X509Certificate>(certs.length);
+        for (Certificate c : certs) {
             X509Certificate cert = (X509Certificate) c;
             if (isCa(cert)) {
                 mCaCerts.add(cert);
