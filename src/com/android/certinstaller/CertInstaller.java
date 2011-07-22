@@ -49,8 +49,7 @@ import java.util.Map;
 /**
  * Installs certificates to the system keystore.
  */
-public class CertInstaller extends Activity
-        implements DialogInterface.OnClickListener {
+public class CertInstaller extends Activity {
     private static final String TAG = "CertInstaller";
 
     private static final int STATE_INIT = 1;
@@ -71,7 +70,6 @@ public class CertInstaller extends Activity
 
     private KeyStore mKeyStore = KeyStore.getInstance();
     private ViewHelper mView = new ViewHelper();
-    private int mButtonClicked;
 
     private int mState;
     private CredentialHelper mCredentials;
@@ -124,7 +122,9 @@ public class CertInstaller extends Activity
         if (mState == STATE_INIT) {
             mState = STATE_RUNNING;
         } else {
-            if (mNextAction != null) mNextAction.run(this);
+            if (mNextAction != null) {
+                mNextAction.run(this);
+            }
         }
     }
 
@@ -167,12 +167,6 @@ public class CertInstaller extends Activity
             default:
                 return null;
         }
-    }
-
-    @Override
-    protected void onPrepareDialog (int dialogId, Dialog dialog) {
-        super.onPrepareDialog(dialogId, dialog);
-        mButtonClicked = DialogInterface.BUTTON_NEGATIVE;
     }
 
     @Override
@@ -325,33 +319,9 @@ public class CertInstaller extends Activity
         }
     }
 
-    public void onClick(DialogInterface dialog, int which) {
-        mButtonClicked = which;
-    }
-
     private Dialog createPkcs12PasswordDialog() {
         View view = View.inflate(this, R.layout.password_dialog, null);
         mView.setView(view);
-
-        DialogInterface.OnDismissListener onDismissHandler =
-                new DialogInterface.OnDismissListener() {
-            public void onDismiss(DialogInterface dialog) {
-                if (mButtonClicked == DialogInterface.BUTTON_NEGATIVE) {
-                    toastErrorAndFinish(R.string.cert_not_saved);
-                    return;
-                }
-
-                final String password = mView.getText(R.id.credential_password);
-
-                if (TextUtils.isEmpty(password)) {
-                    mView.showError(R.string.password_empty_error);
-                    showDialog(PKCS12_PASSWORD_DIALOG);
-                } else {
-                    mNextAction = new Pkcs12ExtractAction(password);
-                    mNextAction.run(CertInstaller.this);
-                }
-            }
-        };
 
         String title = mCredentials.getName();
         title = TextUtils.isEmpty(title)
@@ -360,57 +330,73 @@ public class CertInstaller extends Activity
         Dialog d = new AlertDialog.Builder(this)
                 .setView(view)
                 .setTitle(title)
-                .setPositiveButton(android.R.string.ok, this)
-                .setNegativeButton(android.R.string.cancel, this)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        String password = mView.getText(R.id.credential_password);
+                        if (TextUtils.isEmpty(password)) {
+                            mView.showError(R.string.password_empty_error);
+                            showDialog(PKCS12_PASSWORD_DIALOG);
+                        } else {
+                            mNextAction = new Pkcs12ExtractAction(password);
+                            mNextAction.run(CertInstaller.this);
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        toastErrorAndFinish(R.string.cert_not_saved);
+                    }
+                })
                 .create();
-        d.setOnDismissListener(onDismissHandler);
+        d.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override public void onCancel(DialogInterface dialog) {
+                toastErrorAndFinish(R.string.cert_not_saved);
+            }
+        });
         return d;
     }
 
     private Dialog createNameCredentialDialog() {
         View view = View.inflate(this, R.layout.name_credential_dialog, null);
         mView.setView(view);
-
-        mView.setText(R.id.credential_info,
-                mCredentials.getDescription(this).toString());
-
-        DialogInterface.OnDismissListener onDismissHandler =
-                new DialogInterface.OnDismissListener() {
-            public void onDismiss(DialogInterface dialog) {
-                if (mButtonClicked == DialogInterface.BUTTON_NEGATIVE) {
-                    toastErrorAndFinish(R.string.cert_not_saved);
-                    return;
-                }
-
-                String name = mView.getText(R.id.credential_name);
-                if (TextUtils.isEmpty(name)) {
-                    mView.showError(R.string.name_empty_error);
-                    showDialog(NAME_CREDENTIAL_DIALOG);
-                } else {
-                    removeDialog(NAME_CREDENTIAL_DIALOG);
-                    mCredentials.setName(name);
-
-                    // install everything to system keystore
-                    try {
-                        startActivityForResult(
-                                mCredentials.createSystemInstallIntent(),
-                                REQUEST_SYSTEM_INSTALL_CODE);
-                    } catch (ActivityNotFoundException e) {
-                        Log.w(TAG, "systemInstall(): " + e);
-                        toastErrorAndFinish(R.string.cert_not_saved);
-                    }
-                }
-            }
-        };
-
+        mView.setText(R.id.credential_info, mCredentials.getDescription(this).toString());
         mView.setText(R.id.credential_name, getDefaultName());
         Dialog d = new AlertDialog.Builder(this)
                 .setView(view)
                 .setTitle(R.string.name_credential_dialog_title)
-                .setPositiveButton(android.R.string.ok, this)
-                .setNegativeButton(android.R.string.cancel, this)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        String name = mView.getText(R.id.credential_name);
+                        if (TextUtils.isEmpty(name)) {
+                            mView.showError(R.string.name_empty_error);
+                            showDialog(NAME_CREDENTIAL_DIALOG);
+                        } else {
+                            removeDialog(NAME_CREDENTIAL_DIALOG);
+                            mCredentials.setName(name);
+
+                            // install everything to system keystore
+                            try {
+                                startActivityForResult(
+                                        mCredentials.createSystemInstallIntent(),
+                                        REQUEST_SYSTEM_INSTALL_CODE);
+                            } catch (ActivityNotFoundException e) {
+                                Log.w(TAG, "systemInstall(): " + e);
+                                toastErrorAndFinish(R.string.cert_not_saved);
+                            }
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        toastErrorAndFinish(R.string.cert_not_saved);
+                    }
+                })
                 .create();
-        d.setOnDismissListener(onDismissHandler);
+        d.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override public void onCancel(DialogInterface dialog) {
+                toastErrorAndFinish(R.string.cert_not_saved);
+            }
+        });
         return d;
     }
 
