@@ -35,7 +35,7 @@
     <string name="name_empty_error" msgid="7655653930227877414">"Sicela ufake igama."</string>
     <string name="name_char_error" msgid="4674369917792581202">"Sicela ufake igama eliqukethe amagama nezinombolo kuphela"</string>
     <string name="storage_error" msgid="3375395655677579149">"Ayikwazi ukugcina isitifiketi. Qhafaza OK ukuzama futhi."</string>
-    <string name="unable_to_save_cert" msgid="864273038676458624">"Ayikwazi ukugcina lesi sitifikethi. Ukugcina ukuqinisekisa akuvunyelwe noma akuqalisiwanga kahle."</string>
+    <string name="unable_to_save_cert" msgid="864273038676458624">"Ayikwazi ukugcina isitifikethi. Isitoreji sokuqinisekisa asivunyelwe noma asiqalisiwanga kahle."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Isitifiketi asifakiwe"</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Asikho isitifiketi sokufakwa"</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Isitifiketi ailungile."</string>
@@ -43,8 +43,8 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"Ukufaka kwehlulekile. Usayizi wesitifiketi mukhulu kakhulu."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"Ukufaka kwehlulekile. Ayikwazi ukuthola ifayela yesitifiketi."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"Ukufaka kwehlulekile. Ayikwazi ukufunda ifayela yesitifiketi."</string>
-    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Ayikho ifayela yesitifiketi etholakele ekugcineni nge-USB."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Ayikho ifayela yesitifiketi etholakele kwisitoreji se-USB."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Ayikho ifayela yesitifiketi etholakele ekhadini le-SD"</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Ukugcina nge-USB akutholakali."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Isitoreji se-USB asitholakali."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"Ikhadi le-SD alikho."</string>
 </resources>
