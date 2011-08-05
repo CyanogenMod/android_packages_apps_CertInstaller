@@ -19,7 +19,7 @@
     <string name="app_name" msgid="9095072584761066851">"Zertifikats-Installer"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Zertifikat auswählen"</string>
     <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Zertifikat aus dem PKCS12-Keystore extrahieren"</string>
-    <string name="extracting_pkcs12" msgid="5687649614233029807">"Die Zertifikate werden extrahiert..."</string>
+    <string name="extracting_pkcs12" msgid="5687649614233029807">"Die Zertikate werden extrahiert..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Zertifikate aus %s extrahieren"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Zertifikat benennen"</string>
     <string name="credential_name" msgid="1974979771369744378">"Zertifikatname:"</string>
