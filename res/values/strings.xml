@@ -21,7 +21,7 @@
     <string name="pick_file_title">Pick a certificate</string>
 
     <!-- Title of dialog to enter password for pkcs12 -->
-    <string name="pkcs12_password_dialog_title">Extract from PKCS12 keystore</string>
+    <string name="pkcs12_password_dialog_title">Extract certificate</string>
     <!-- message in progress bar when waiting for extracting certs from a pkcs12 package -->
     <string name="extracting_pkcs12">Extracting...</string>
     <!-- Title of dialog to enter password for pkcs12 file -->

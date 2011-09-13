@@ -21,29 +21,24 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.security.Credentials;
-import android.security.KeyStore;
 import android.security.KeyChain;
 import android.security.KeyChain.KeyChainConnection;
-import android.security.IKeyChainService;
+import android.security.KeyStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.Serializable;
 import java.security.cert.X509Certificate;
 import java.util.LinkedHashMap;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Map;
 
 /**
@@ -68,8 +63,8 @@ public class CertInstaller extends Activity {
     // key to KeyStore
     private static final String PKEY_MAP_KEY = "PKEY_MAP";
 
-    private KeyStore mKeyStore = KeyStore.getInstance();
-    private ViewHelper mView = new ViewHelper();
+    private final KeyStore mKeyStore = KeyStore.getInstance();
+    private final ViewHelper mView = new ViewHelper();
 
     private int mState;
     private CredentialHelper mCredentials;
@@ -270,7 +265,7 @@ public class CertInstaller extends Activity {
             }
             return;
         }
-        byte[] bytes = Util.toBytes((Serializable) map);
+        byte[] bytes = Util.toBytes(map);
         if (!mKeyStore.put(PKEY_MAP_KEY, bytes)) {
             Log.w(TAG, "savePkeyMap(): failed to write pkey map");
         }
@@ -357,10 +352,12 @@ public class CertInstaller extends Activity {
     }
 
     private Dialog createNameCredentialDialog() {
-        View view = View.inflate(this, R.layout.name_credential_dialog, null);
+        ViewGroup view = (ViewGroup) View.inflate(this, R.layout.name_credential_dialog, null);
         mView.setView(view);
         mView.setText(R.id.credential_info, mCredentials.getDescription(this).toString());
-        mView.setText(R.id.credential_name, getDefaultName());
+        final EditText nameInput = (EditText) view.findViewById(R.id.credential_name);
+        nameInput.setText(getDefaultName());
+        nameInput.selectAll();
         Dialog d = new AlertDialog.Builder(this)
                 .setView(view)
                 .setTitle(R.string.name_credential_dialog_title)
@@ -421,6 +418,7 @@ public class CertInstaller extends Activity {
             implements Serializable {
         private static final long serialVersionUID = 1L;
 
+        @Override
         protected boolean removeEldestEntry(Map.Entry eldest) {
             // Note: one key takes about 1300 bytes in the keystore, so be
             // cautious about allowing more outstanding keys in the map that
@@ -434,7 +432,7 @@ public class CertInstaller extends Activity {
     }
 
     private static class Pkcs12ExtractAction implements MyAction {
-        private String mPassword;
+        private final String mPassword;
         private transient boolean hasRun;
 
         Pkcs12ExtractAction(String password) {
@@ -458,7 +456,7 @@ public class CertInstaller extends Activity {
     }
 
     private static class OnExtractionDoneAction implements MyAction {
-        private boolean mSuccess;
+        private final boolean mSuccess;
 
         OnExtractionDoneAction(boolean success) {
             mSuccess = success;
