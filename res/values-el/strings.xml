@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Πρόγραμμα εγκατάστασης πιστοποιητικών"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Επιλογή πιστοποιητικού"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Εξαγωγή από το χώρο αποθήκευσης κλειδιών PKCS12"</string>
+    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Εξαγωγή από το χώρο αποθήκευσης κλειδιών PKCS12"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Εξαγωγή..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Εξαγωγή από %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Δώστε όνομα στο πιστοποιητικό"</string>

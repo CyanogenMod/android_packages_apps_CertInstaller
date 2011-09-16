@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"憑證安裝程式"</string>
     <string name="pick_file_title" msgid="540508675168568249">"挑選憑證"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"從 PKCS12 金鑰庫擷取"</string>
+    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"從 PKCS12 金鑰庫擷取"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"擷取中..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"從 %s 擷取"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"為憑證命名"</string>
