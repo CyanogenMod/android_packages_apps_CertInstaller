@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Programma di installazione certificato"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Scegli un certificato"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Estrai da keystore PKCS12"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Estrai certificato"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Estrazione in corso..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Estrazione da %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Specifica un nome per il certificato"</string>

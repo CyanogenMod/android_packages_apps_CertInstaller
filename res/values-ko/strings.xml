@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"인증서 설치 프로그램"</string>
     <string name="pick_file_title" msgid="540508675168568249">"인증서 선택"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"PKCS12 keystore에서 추출"</string>
+    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"PKCS12 keystore에서 추출"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"추출 중..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"%s에서 추출"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"인증서 이름 지정"</string>
