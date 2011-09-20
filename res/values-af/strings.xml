@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Sertifikaatinstalleerder"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Kies \'n sertifikaat"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"Uittreksel uit PKCS12-sleutelstoor"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Ekstraheer sertifikaat"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Onttrek tans..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Uittreksel uit %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Benoem die sertifikaat"</string>

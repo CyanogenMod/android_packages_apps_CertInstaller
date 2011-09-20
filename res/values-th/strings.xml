@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"โปรแกรมติดตั้งใบรับรอง"</string>
     <string name="pick_file_title" msgid="540508675168568249">"เลือกใบรับรอง"</string>
-    <string name="pkcs12_password_dialog_title" msgid="4698023326961869428">"คลายข้อมูลจากแหล่งเก็บคีย์ PKCS12"</string>
+    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"คลายข้อมูลจากแหล่งเก็บคีย์ PKCS12"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"กำลังคลายข้อมูล..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"คลายจาก %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"ตั้งชื่อใบรับรอง"</string>
