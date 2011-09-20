@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Inštalátor certifikátov"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Vyberte certifikát"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrahovať z úložiska kľúčov PKCS12"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrahovať certifikát"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Prebieha extrahovanie..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extrahovať z %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Zadajte názov certifikátu"</string>
