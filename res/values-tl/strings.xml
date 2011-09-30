@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Installer ng Certificate"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Pumili ng certificate"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"I-extract mula sa PKCS12 keystore"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"I-extract ang certificate"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Ine-extract..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"I-extract mula sa %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Pangalanan ang certificate"</string>

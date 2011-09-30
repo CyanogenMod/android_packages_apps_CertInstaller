@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"証明書インストーラ"</string>
     <string name="pick_file_title" msgid="540508675168568249">"証明書を選択"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"PKCS12キーストアから抽出"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"証明書を抽出"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"抽出中..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"%sから抽出"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"証明書の名前を指定する"</string>
