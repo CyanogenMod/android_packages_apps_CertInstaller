@@ -18,7 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Installationsprogram för certifikat"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Välj ett certifikat"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrahera från PKCS12-nyckellager"</string>
+    <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrahera certifikat"</string>
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Extrahera ..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extrahera från %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Ange ett namn på certifikatet"</string>
