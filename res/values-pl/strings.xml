@@ -35,7 +35,7 @@
     <string name="name_empty_error" msgid="7655653930227877414">"Wprowadź nazwę."</string>
     <string name="name_char_error" msgid="4674369917792581202">"Wprowadź nazwę, która zawiera tylko litery i cyfry."</string>
     <string name="storage_error" msgid="3375395655677579149">"Nie można zapisać certyfikatu. Kliknij przycisk OK, aby ponowić próbę."</string>
-    <string name="unable_to_save_cert" msgid="864273038676458624">"Nie można zapisać certyfikatu. Magazyn danych uwierzytelniania nie został włączony lub poprawnie zainicjowany."</string>
+    <string name="unable_to_save_cert" msgid="864273038676458624">"Nie można zapisać certyfikatu. Magazyn danych logowania nie został włączony lub poprawnie zainicjowany."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Certyfikat nie został zainstalowany."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Brak certyfikatu do zainstalowania."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Certyfikat jest nieprawidłowy."</string>
