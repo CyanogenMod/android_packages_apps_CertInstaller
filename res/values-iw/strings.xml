@@ -45,6 +45,6 @@
     <string name="cert_read_error" msgid="9120813657318906215">"ההתקנה נכשלה. אין אפשרות לקרוא את קובץ האישור."</string>
     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"לא נמצא קובץ אישור באמצעי אחסון מסוג USB."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"לא נמצא קובץ אישור בכרטיס ה-SD."</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"אמצעי אחסון מסוג USB לא זמין."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"אחסון USB לא זמין."</string>
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"כרטיס SD אינו נמצא."</string>
 </resources>
