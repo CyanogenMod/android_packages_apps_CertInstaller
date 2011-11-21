@@ -25,8 +25,8 @@
     <string name="credential_name" msgid="1974979771369744378">"Tên chứng chỉ:"</string>
     <string name="credential_password" msgid="5251535810456146069">"Nhập mật khẩu để trính xuất các chứng chỉ."</string>
     <string name="credential_info" msgid="2436768402308470397">"Gói chứa:"</string>
-    <string name="p12_description" msgid="4128352087331630024">"Chứng chỉ trong kho khoá PKCS12."</string>
-    <string name="one_userkey" msgid="3500697912370644881">"một khoá người dùng"</string>
+    <string name="p12_description" msgid="4128352087331630024">"Chứng chỉ trong kho khóa PKCS12."</string>
+    <string name="one_userkey" msgid="3500697912370644881">"một khóa người dùng"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"một chứng chỉ người dùng"</string>
     <string name="one_cacrt" msgid="2667950425420663146">"một chứng chỉ CA"</string>
     <string name="n_cacrts" msgid="2141498640685639208">"%d chứng chỉ CA"</string>
