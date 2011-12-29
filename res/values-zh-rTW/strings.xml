@@ -42,7 +42,7 @@
     <string name="cert_is_added" msgid="6996557598167000500">"已安裝<xliff:g id="CREDENTIAL">%s</xliff:g>。"</string>
     <string name="cert_too_large_error" msgid="8715414972725646285">"憑證大小超過上限，因此無法安裝。"</string>
     <string name="cert_missing_error" msgid="7040527352278728220">"找不到憑證檔案，因此無法安裝。"</string>
-    <string name="cert_read_error" msgid="7353463360652419796">"憑證檔案無法讀取，因此無法安裝。"</string>
+    <string name="cert_read_error" msgid="7353463360652419796">"無法讀取憑證檔案，因此無法安裝。"</string>
     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"在 USB 儲存裝置中找不到憑證檔案。"</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在 SD 卡上找不到憑證檔案。"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"沒有可用的 USB 儲存裝置。"</string>
