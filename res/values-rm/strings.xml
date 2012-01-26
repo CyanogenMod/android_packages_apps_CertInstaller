@@ -17,34 +17,50 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Program d\'installaziun dal certificat"</string>
-    <!-- outdated translation 540508675168568249 -->     <string name="pick_file_title" msgid="4481949485108233297">"Tscherner in certificat"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrair dal keystore PKCS12"</string>
-    <!-- outdated translation 5687649614233029807 -->     <string name="extracting_pkcs12" msgid="1881267738821799771">"Ils certificats vegnan extratgs..."</string>
+    <!-- no translation found for pick_file_title (4481949485108233297) -->
+    <skip />
+    <!-- no translation found for pkcs12_password_dialog_title (5997624645207427161) -->
+    <skip />
+    <!-- no translation found for extracting_pkcs12 (1881267738821799771) -->
+    <skip />
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extrair da %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Dar in num al certificat"</string>
     <string name="credential_name" msgid="1974979771369744378">"Num dal certificat:"</string>
-    <!-- outdated translation 5251535810456146069 -->     <string name="credential_password" msgid="3520176519550993326">"Endatai il pled-clav per extrair ils certificats."</string>
+    <!-- no translation found for credential_password (3520176519550993326) -->
+    <skip />
     <string name="credential_info" msgid="2436768402308470397">"Il pachet cuntegna:"</string>
     <string name="p12_description" msgid="4128352087331630024">"Certificats en il keystore PKCS12"</string>
     <string name="one_userkey" msgid="3500697912370644881">"ina clav utilisader"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"in certificat utilisader"</string>
     <string name="one_cacrt" msgid="2667950425420663146">"in certificat dal post da certificaziun"</string>
     <string name="n_cacrts" msgid="2141498640685639208">"%d certificats dal post da certificaziun (CA)"</string>
-    <!-- outdated translation 1441470604400783036 -->     <string name="password_error" msgid="2042471639556516356">"Endatai il pled-clav correct."</string>
-    <!-- outdated translation 5805075735548023047 -->     <string name="password_empty_error" msgid="591713406761723025">"Endatai il pled-clav."</string>
-    <!-- outdated translation 7655653930227877414 -->     <string name="name_empty_error" msgid="3808800768660110354">"Endatai in num."</string>
-    <!-- outdated translation 4674369917792581202 -->     <string name="name_char_error" msgid="3176618568784938968">"Endatai in num che cuntegna mo letras e cifras."</string>
-    <!-- outdated translation 3375395655677579149 -->     <string name="storage_error" msgid="8306802455802770779">"Actualmain impussibel da memorisar il certificat. Cliccai sin OK per empruvar anc ina giada."</string>
-    <!-- outdated translation 864273038676458624 -->     <string name="unable_to_save_cert" msgid="9178604087335389686">"Impussibel da memorisar il certificat. La memoria da las infurmaziuns d\'annunzia n\'è betg activà u betg inizialisà a moda correcta."</string>
+    <!-- no translation found for password_error (2042471639556516356) -->
+    <skip />
+    <!-- no translation found for password_empty_error (591713406761723025) -->
+    <skip />
+    <!-- no translation found for name_empty_error (3808800768660110354) -->
+    <skip />
+    <!-- no translation found for name_char_error (3176618568784938968) -->
+    <skip />
+    <!-- no translation found for storage_error (8306802455802770779) -->
+    <skip />
+    <!-- no translation found for unable_to_save_cert (9178604087335389686) -->
+    <skip />
     <string name="cert_not_saved" msgid="4037698479662830270">"Il certificat n\'è betg installà."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nagin certificat per installar."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Il certificat è nunvalid."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> è installà."</string>
-    <!-- outdated translation 8806716564341320607 -->     <string name="cert_too_large_error" msgid="8715414972725646285">"L\'installaziun n\'è betg reussida. Il certificat è memia grond."</string>
-    <!-- outdated translation 4220080091005628628 -->     <string name="cert_missing_error" msgid="7040527352278728220">"L\'installaziun n\'è betg reussida. Impussibel da chattar la datoteca dal certificat."</string>
-    <!-- outdated translation 9120813657318906215 -->     <string name="cert_read_error" msgid="7353463360652419796">"L\'installaziun n\'è betg reussida. Impussibel da leger la datoteca da certificat."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Betg chattà ina datoteca da certificat sin la carta SD."</string>
+    <!-- no translation found for cert_too_large_error (8715414972725646285) -->
+    <skip />
+    <!-- no translation found for cert_missing_error (7040527352278728220) -->
+    <skip />
+    <!-- no translation found for cert_read_error (7353463360652419796) -->
+    <skip />
+    <!-- no translation found for no_cert_file_found (3555332946357131929) -->
+    <skip />
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Betg chattà ina datoteca da certificat sin la carta SD."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"La carta SD manca."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"La carta SD manca."</string>
+    <!-- no translation found for sdcard_not_present (9197143240492611196) -->
+    <skip />
+    <!-- no translation found for sdcard_not_present (3866952732541932947) -->
+    <skip />
 </resources>
