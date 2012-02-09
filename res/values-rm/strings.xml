@@ -18,7 +18,8 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Program d\'installaziun dal certificat"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Tscherner in certificat"</string>
-    <!-- outdated translation 4698023326961869428 -->     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrair dal keystore PKCS12"</string>
+    <!-- no translation found for pkcs12_password_dialog_title (5997624645207427161) -->
+    <skip />
     <string name="extracting_pkcs12" msgid="5687649614233029807">"Ils certificats vegnan extratgs..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extrair da %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Dar in num al certificat"</string>
@@ -43,8 +44,10 @@
     <string name="cert_too_large_error" msgid="8806716564341320607">"L\'installaziun n\'è betg reussida. Il certificat è memia grond."</string>
     <string name="cert_missing_error" msgid="4220080091005628628">"L\'installaziun n\'è betg reussida. Impussibel da chattar la datoteca dal certificat."</string>
     <string name="cert_read_error" msgid="9120813657318906215">"L\'installaziun n\'è betg reussida. Impussibel da leger la datoteca da certificat."</string>
-    <!-- outdated translation 1942077544887243999 -->     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Betg chattà ina datoteca da certificat sin la carta SD."</string>
+    <!-- no translation found for no_cert_file_found (3555332946357131929) -->
+    <skip />
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Betg chattà ina datoteca da certificat sin la carta SD."</string>
-    <!-- outdated translation 1567335300760018448 -->     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"La carta SD manca."</string>
+    <!-- no translation found for sdcard_not_present (9197143240492611196) -->
+    <skip />
     <string name="sdcard_not_present" product="default" msgid="1567335300760018448">"La carta SD manca."</string>
 </resources>
