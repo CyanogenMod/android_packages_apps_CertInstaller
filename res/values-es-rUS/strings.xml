@@ -35,7 +35,7 @@
     <string name="name_empty_error" msgid="7655653930227877414">"Ingresa un nombre."</string>
     <string name="name_char_error" msgid="4674369917792581202">"Ingresa un nombre que contenga sólo letras y números."</string>
     <string name="storage_error" msgid="3375395655677579149">"No es posible guardar el certificado. Haz clic en Aceptar para volver a intentarlo."</string>
-    <string name="unable_to_save_cert" msgid="864273038676458624">"No es posible guardar el certificado. El almacenamiento de la credencial no está activado o no se ha inicializado correctamente."</string>
+    <string name="unable_to_save_cert" msgid="864273038676458624">"No es posible guardar el certificado. El almacenamiento de credenciales no está activado o no se ha inicializado correctamente."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"El certificado no se ha instalado."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"No ha certificado para instalar."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"El certificado no es válido."</string>
