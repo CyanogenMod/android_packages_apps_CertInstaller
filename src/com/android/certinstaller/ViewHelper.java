@@ -24,6 +24,7 @@ import android.widget.TextView;
  */
 class ViewHelper {
     private View mView;
+    private boolean mHasEmptyError;
 
     void setView(View view) {
         mView = view;
@@ -48,5 +49,13 @@ class ViewHelper {
     void setText(int viewId, int textId) {
         TextView v = (TextView) mView.findViewById(viewId);
         if (v != null) v.setText(textId);
+    }
+
+    void setHasEmptyError(boolean hasEmptyError) {
+        mHasEmptyError = hasEmptyError;
+    }
+
+    boolean getHasEmptyError() {
+        return mHasEmptyError;
     }
 }
