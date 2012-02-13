@@ -317,6 +317,10 @@ public class CertInstaller extends Activity {
     private Dialog createPkcs12PasswordDialog() {
         View view = View.inflate(this, R.layout.password_dialog, null);
         mView.setView(view);
+        if (mView.getHasEmptyError()) {
+            mView.showError(R.string.password_empty_error);
+            mView.setHasEmptyError(false);
+        }
 
         String title = mCredentials.getName();
         title = TextUtils.isEmpty(title)
@@ -329,7 +333,8 @@ public class CertInstaller extends Activity {
                     public void onClick(DialogInterface dialog, int id) {
                         String password = mView.getText(R.id.credential_password);
                         if (TextUtils.isEmpty(password)) {
-                            mView.showError(R.string.password_empty_error);
+                            mView.setHasEmptyError(true);
+                            removeDialog(PKCS12_PASSWORD_DIALOG);
                             showDialog(PKCS12_PASSWORD_DIALOG);
                         } else {
                             mNextAction = new Pkcs12ExtractAction(password);
@@ -354,6 +359,10 @@ public class CertInstaller extends Activity {
     private Dialog createNameCredentialDialog() {
         ViewGroup view = (ViewGroup) View.inflate(this, R.layout.name_credential_dialog, null);
         mView.setView(view);
+        if (mView.getHasEmptyError()) {
+            mView.showError(R.string.name_empty_error);
+            mView.setHasEmptyError(false);
+        }
         mView.setText(R.id.credential_info, mCredentials.getDescription(this).toString());
         final EditText nameInput = (EditText) view.findViewById(R.id.credential_name);
         nameInput.setText(getDefaultName());
@@ -365,7 +374,8 @@ public class CertInstaller extends Activity {
                     public void onClick(DialogInterface dialog, int id) {
                         String name = mView.getText(R.id.credential_name);
                         if (TextUtils.isEmpty(name)) {
-                            mView.showError(R.string.name_empty_error);
+                            mView.setHasEmptyError(true);
+                            removeDialog(NAME_CREDENTIAL_DIALOG);
                             showDialog(NAME_CREDENTIAL_DIALOG);
                         } else {
                             removeDialog(NAME_CREDENTIAL_DIALOG);
