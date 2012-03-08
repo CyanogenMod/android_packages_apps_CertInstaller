@@ -251,18 +251,24 @@ class CredentialHelper {
         intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
         try {
             if (mUserKey != null) {
-                intent.putExtra(Credentials.USER_PRIVATE_KEY + mName,
-                                Credentials.convertToPem(mUserKey));
+                intent.putExtra(Credentials.EXTRA_USER_PRIVATE_KEY_NAME,
+                        Credentials.USER_PRIVATE_KEY + mName);
+                intent.putExtra(Credentials.EXTRA_USER_PRIVATE_KEY_DATA,
+                        mUserKey.getEncoded());
             }
             if (mUserCert != null) {
-                intent.putExtra(Credentials.USER_CERTIFICATE + mName,
-                                Credentials.convertToPem(mUserCert));
+                intent.putExtra(Credentials.EXTRA_USER_CERTIFICATE_NAME,
+                        Credentials.USER_CERTIFICATE + mName);
+                intent.putExtra(Credentials.EXTRA_USER_CERTIFICATE_DATA,
+                        Credentials.convertToPem(mUserCert));
             }
             if (!mCaCerts.isEmpty()) {
-                Object[] caCerts = (Object[])
-                        mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
-                intent.putExtra(Credentials.CA_CERTIFICATE + mName,
-                                Credentials.convertToPem(caCerts));
+                intent.putExtra(Credentials.EXTRA_CA_CERTIFICATES_NAME,
+                        Credentials.CA_CERTIFICATE + mName);
+                Object[] caCerts = (Object[]) mCaCerts
+                        .toArray(new X509Certificate[mCaCerts.size()]);
+                intent.putExtra(Credentials.EXTRA_CA_CERTIFICATES_DATA,
+                        Credentials.convertToPem(caCerts));
             }
             return intent;
         } catch (IOException e) {
