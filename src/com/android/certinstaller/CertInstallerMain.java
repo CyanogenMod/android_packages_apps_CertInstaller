@@ -62,8 +62,12 @@ public class CertInstallerMain extends CertFile implements Runnable {
 
         if (Credentials.INSTALL_ACTION.equals(action)) {
             Bundle bundle = intent.getExtras();
-
-            if ((bundle == null) || bundle.isEmpty()) {
+            // If bundle is empty of any actual credentials, install from external storage.
+            // Otherwise, pass extras to CertInstaller to install those credentials.
+            // Either way, we use KeyChain.EXTRA_NAME as the default name if available.
+            if (bundle == null
+                    || bundle.isEmpty()
+                    || (bundle.size() == 1 && bundle.containsKey(KeyChain.EXTRA_NAME))) {
                 if (!isSdCardPresent()) {
                     Toast.makeText(this, R.string.sdcard_not_present,
                             Toast.LENGTH_SHORT).show();
@@ -76,8 +80,9 @@ public class CertInstallerMain extends CertFile implements Runnable {
                         installFromFile(allFiles.get(0));
                         return;
                     } else {
-                        startActivityForResult(new Intent(this, CertFileList.class),
-                                               REQUEST_INSTALL_CODE);
+                        Intent newIntent = new Intent(this, CertFileList.class);
+                        newIntent.putExtras(intent);
+                        startActivityForResult(newIntent, REQUEST_INSTALL_CODE);
                         return;
                     }
                 }

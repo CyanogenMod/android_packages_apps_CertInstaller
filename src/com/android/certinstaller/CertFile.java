@@ -129,6 +129,11 @@ public class CertFile extends PreferenceActivity implements FileFilter {
     protected void installFromFile(File file) {
         Log.d(TAG, "install cert from " + file);
 
+        String fileName = file.getName();
+        Bundle bundle = getIntent().getExtras();
+        String name = ((bundle == null)
+                       ? fileName
+                       : bundle.getString(KeyChain.EXTRA_NAME, fileName));
         if (file.exists()) {
             if (file.length() < MAX_FILE_SIZE) {
                 byte[] data = Util.readFile(file);
@@ -138,7 +143,7 @@ public class CertFile extends PreferenceActivity implements FileFilter {
                     return;
                 }
                 mCertFile = file;
-                install(file.getName(), data);
+                install(fileName, name, data);
             } else {
                 Log.w(TAG, "cert file is too large: " + file.length());
                 toastError(CERT_TOO_LARGE_ERROR);
@@ -171,9 +176,9 @@ public class CertFile extends PreferenceActivity implements FileFilter {
                 Environment.MEDIA_MOUNTED);
     }
 
-    private void install(String fileName, byte[] value) {
+    private void install(String fileName, String name, byte[] value) {
         Intent intent = new Intent(this, CertInstaller.class);
-        intent.putExtra(CredentialHelper.CERT_NAME_KEY, fileName);
+        intent.putExtra(KeyChain.EXTRA_NAME, name);
         if (fileName.endsWith(Credentials.EXTENSION_PFX)
                 || fileName.endsWith(Credentials.EXTENSION_P12)) {
             intent.putExtra(KeyChain.EXTRA_PKCS12, value);

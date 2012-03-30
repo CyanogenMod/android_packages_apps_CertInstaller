@@ -24,6 +24,7 @@ import android.security.Credentials;
 import android.security.KeyChain;
 import android.security.IKeyChainService;
 import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 import com.android.org.bouncycastle.asn1.ASN1InputStream;
 import com.android.org.bouncycastle.asn1.ASN1Sequence;
@@ -54,7 +55,6 @@ import java.util.List;
  * certificates.
  */
 class CredentialHelper {
-    static final String CERT_NAME_KEY = "name";
     private static final String DATA_KEY = "data";
     private static final String CERTS_KEY = "crts";
 
@@ -77,8 +77,8 @@ class CredentialHelper {
             return;
         }
 
-        String name = bundle.getString(CERT_NAME_KEY);
-        bundle.remove(CERT_NAME_KEY);
+        String name = bundle.getString(KeyChain.EXTRA_NAME);
+        bundle.remove(KeyChain.EXTRA_NAME);
         if (name != null) {
             mName = name;
         }
@@ -95,7 +95,7 @@ class CredentialHelper {
     synchronized void onSaveStates(Bundle outStates) {
         try {
             outStates.putSerializable(DATA_KEY, mBundle);
-            outStates.putString(CERT_NAME_KEY, mName);
+            outStates.putString(KeyChain.EXTRA_NAME, mName);
             if (mUserKey != null) {
                 outStates.putByteArray(Credentials.USER_PRIVATE_KEY,
                         mUserKey.getEncoded());
@@ -115,7 +115,7 @@ class CredentialHelper {
 
     void onRestoreStates(Bundle savedStates) {
         mBundle = (HashMap) savedStates.getSerializable(DATA_KEY);
-        mName = savedStates.getString(CERT_NAME_KEY);
+        mName = savedStates.getString(KeyChain.EXTRA_NAME);
         byte[] bytes = savedStates.getByteArray(Credentials.USER_PRIVATE_KEY);
         if (bytes != null) {
             setPrivateKey(bytes);
@@ -324,7 +324,9 @@ class CredentialHelper {
             Log.d(TAG, "extracted alias = " + alias + ", entry=" + entry.getClass());
 
             if (entry instanceof PrivateKeyEntry) {
-                mName = alias;
+                if (TextUtils.isEmpty(mName)) {
+                    mName = alias;
+                }
                 return installFrom((PrivateKeyEntry) entry);
             }
         }
