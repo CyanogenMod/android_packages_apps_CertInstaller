@@ -332,15 +332,9 @@ public class CertInstaller extends Activity {
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         String password = mView.getText(R.id.credential_password);
-                        if (TextUtils.isEmpty(password)) {
-                            mView.setHasEmptyError(true);
-                            removeDialog(PKCS12_PASSWORD_DIALOG);
-                            showDialog(PKCS12_PASSWORD_DIALOG);
-                        } else {
-                            mNextAction = new Pkcs12ExtractAction(password);
-                            mNextAction.run(CertInstaller.this);
-                        }
-                    }
+                        mNextAction = new Pkcs12ExtractAction(password);
+                        mNextAction.run(CertInstaller.this);
+                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
