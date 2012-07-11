@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2009 The Android Open Source Project
+      Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +14,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="9095072584761066851">"Installatieprogramma voor certificaten"</string>
     <string name="pick_file_title" msgid="540508675168568249">"Certificaat kiezen"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Certificaat uitpakken"</string>
-    <string name="extracting_pkcs12" msgid="5687649614233029807">"Uitpakken..."</string>
+    <string name="extracting_pkcs12" msgid="5687649614233029807">"Uitpakken\u2026"</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Uitpakken vanuit %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Geef een naam op voor het certificaat"</string>
     <string name="credential_name" msgid="1974979771369744378">"Certificaatnaam:"</string>
@@ -34,7 +34,7 @@
     <string name="password_empty_error" msgid="5805075735548023047">"Voer het wachtwoord in."</string>
     <string name="name_empty_error" msgid="7655653930227877414">"Voer een naam in."</string>
     <string name="name_char_error" msgid="4674369917792581202">"Voer een naam in die alleen uit letters en cijfers bestaat."</string>
-    <string name="storage_error" msgid="3375395655677579149">"Kan het certificaat niet opslaan. Klik op \'OK\' om het opnieuw te proberen."</string>
+    <string name="storage_error" msgid="3375395655677579149">"Kan het certificaat niet opslaan. Druk op \'OK\' om het opnieuw te proberen."</string>
     <string name="unable_to_save_cert" msgid="864273038676458624">"Kan het certificaat niet opslaan. De opslag van referenties is niet ingeschakeld of niet correct geïnitialiseerd."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Het certificaat is niet geïnstalleerd."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Er is geen certificaat dat kan worden geïnstalleerd."</string>
