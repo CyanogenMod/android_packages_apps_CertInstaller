@@ -25,7 +25,7 @@
     <string name="credential_name" msgid="1974979771369744378">"نام گواهی:"</string>
     <string name="credential_password" msgid="3520176519550993326">"گذرواژه را برای استخراج گواهینامه‌ها وارد کنید."</string>
     <string name="credential_info" msgid="2436768402308470397">"این بسته شامل این موارد است:"</string>
-    <string name="p12_description" msgid="4128352087331630024">"گواهی ها در حافظه کلید PKCS12."</string>
+    <string name="p12_description" msgid="4128352087331630024">"گواهی‌ها در حافظه کلید PKCS12."</string>
     <string name="one_userkey" msgid="3500697912370644881">"یک کلید کاربری"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"یک گواهی کاربری"</string>
     <string name="one_cacrt" msgid="2667950425420663146">"در گواهی CA"</string>
