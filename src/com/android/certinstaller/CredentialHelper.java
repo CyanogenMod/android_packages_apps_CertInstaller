@@ -165,7 +165,7 @@ class CredentialHelper {
             byte[] octets = derOctetString.getOctets();
             ASN1Sequence sequence = (ASN1Sequence)
                     new ASN1InputStream(octets).readObject();
-            return new BasicConstraints(sequence).isCA();
+            return BasicConstraints.getInstance(sequence).isCA();
         } catch (IOException e) {
             return false;
         }
@@ -265,13 +265,15 @@ class CredentialHelper {
             if (!mCaCerts.isEmpty()) {
                 intent.putExtra(Credentials.EXTRA_CA_CERTIFICATES_NAME,
                         Credentials.CA_CERTIFICATE + mName);
-                Object[] caCerts = (Object[]) mCaCerts
-                        .toArray(new X509Certificate[mCaCerts.size()]);
+                X509Certificate[] caCerts
+                        = mCaCerts.toArray(new X509Certificate[mCaCerts.size()]);
                 intent.putExtra(Credentials.EXTRA_CA_CERTIFICATES_DATA,
                         Credentials.convertToPem(caCerts));
             }
             return intent;
         } catch (IOException e) {
+            throw new AssertionError(e);
+        } catch (CertificateEncodingException e) {
             throw new AssertionError(e);
         }
     }
