@@ -19,7 +19,7 @@
     <string name="app_name" msgid="9095072584761066851">"憑證安裝程式"</string>
     <string name="pick_file_title" msgid="4481949485108233297">"選擇憑證"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"擷取憑證"</string>
-    <string name="extracting_pkcs12" msgid="1881267738821799771">"擷取中..."</string>
+    <string name="extracting_pkcs12" msgid="1881267738821799771">"擷取中…"</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"從 %s 擷取"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"為憑證命名"</string>
     <string name="credential_name" msgid="1974979771369744378">"憑證名稱："</string>
