@@ -47,4 +47,6 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Không tìm thấy tệp chứng chỉ trong thẻ SD."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Bộ nhớ USB không khả dụng."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Hiện không có thẻ SD."</string>
+    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
+    <skip />
 </resources>
