@@ -47,4 +47,6 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"SD kartē netika atrasts neviens sertifikāta fails."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB krātuve nav pieejama."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD karte nav ievietota."</string>
+    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
+    <skip />
 </resources>
