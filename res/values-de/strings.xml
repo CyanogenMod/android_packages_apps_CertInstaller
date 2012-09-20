@@ -47,6 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Auf der SD-Karte wurde keine Zertifikats-Datei gefunden."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Kein USB-Speicher verfügbar"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD-Karte ist nicht vorhanden."</string>
-    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
-    <skip />
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Nur der Eigentümer dieses Geräts kann Zertifikate installieren."</string>
 </resources>
