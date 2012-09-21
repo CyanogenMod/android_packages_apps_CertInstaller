@@ -47,6 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"SD 카드에 인증서 파일이 없습니다."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB 저장소를 사용할 수 없습니다."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD 카드가 없습니다."</string>
-    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
-    <skip />
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"이 기기의 소유자만 인증서를 설치할 수 있습니다."</string>
 </resources>
