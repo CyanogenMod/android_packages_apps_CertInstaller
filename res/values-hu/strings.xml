@@ -47,6 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Nem található tanúsítványfájl az SD-kártyán."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Az USB-tár nem érhető el."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Az SD-kártya hiányzik."</string>
-    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
-    <skip />
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Csak az eszköz tulajdonosa telepíthet tanúsítványokat."</string>
 </resources>
