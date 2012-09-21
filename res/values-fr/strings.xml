@@ -47,6 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Fichier de certificat introuvable sur la carte SD"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Mémoire USB indisponible"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Carte SD manquante."</string>
-    <!-- no translation found for only_primary_user_allowed (4005084935023047716) -->
-    <skip />
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Seul le propriétaire de cet appareil peut installer des certificats."</string>
 </resources>
