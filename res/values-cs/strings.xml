@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2009 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,10 +16,10 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="9095072584761066851">"Instalátor certifikátů"</string>
+    <string name="app_name" msgid="9095072584761066851">"Instalace certifikátů"</string>
     <string name="pick_file_title" msgid="4481949485108233297">"Zvolit certifikát"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extrahovat certifikát"</string>
-    <string name="extracting_pkcs12" msgid="1881267738821799771">"Extrahování..."</string>
+    <string name="extracting_pkcs12" msgid="1881267738821799771">"Extrahování\u2026"</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extrahovat z %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Zadejte název certifikátu"</string>
     <string name="credential_name" msgid="1974979771369744378">"Název certifikátu:"</string>
@@ -39,10 +39,10 @@
     <string name="cert_not_saved" msgid="4037698479662830270">"Certifikát není nainstalován."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nebyl nalezen žádný certifikát k instalaci."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Certifikát je neplatný."</string>
-    <string name="cert_is_added" msgid="6996557598167000500">"Pověření <xliff:g id="CREDENTIAL">%s</xliff:g> bylo nainstalováno."</string>
-    <string name="cert_too_large_error" msgid="8715414972725646285">"Instalace se nezdařila, protože je soubor certifikátu příliš velký."</string>
-    <string name="cert_missing_error" msgid="7040527352278728220">"Instalace se nezdařila, protože se soubor certifikátu nepodařilo najít."</string>
-    <string name="cert_read_error" msgid="7353463360652419796">"Instalace se nezdařila, protože se soubor certifikátu nepodařilo přečíst."</string>
+    <string name="cert_is_added" msgid="6996557598167000500">"Certifikát <xliff:g id="CREDENTIAL">%s</xliff:g> byl nainstalován."</string>
+    <string name="cert_too_large_error" msgid="8715414972725646285">"Instalace se nezdařila. Soubor certifikátu je příliš velký."</string>
+    <string name="cert_missing_error" msgid="7040527352278728220">"Instalace se nezdařila. Soubor certifikátu nebyl nalezen."</string>
+    <string name="cert_read_error" msgid="7353463360652419796">"Instalace se nezdařila. Soubor certifikátu se nepodařilo přečíst."</string>
     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"V úložišti USB nebyl nalezen žádný soubor certifikátu."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Na kartě SD nebyl nalezen žádný certifikát."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Úložiště USB není připojeno."</string>
