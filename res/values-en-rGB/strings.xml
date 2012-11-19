@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"No certificate file found on the SD card."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB storage not available."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD card isn\'t present."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Only the owner of this device may install certificates."</string>
 </resources>

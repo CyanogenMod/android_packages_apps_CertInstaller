@@ -16,7 +16,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="9095072584761066851">"Certificate Installer"</string>
+    <string name="app_name" msgid="9095072584761066851">"证书安装程序"</string>
     <string name="pick_file_title" msgid="4481949485108233297">"选择证书"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"提取证书"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"正在提取..."</string>
@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在 SD 卡上找不到证书文件。"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"不存在 USB 存储设备。"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD 卡不存在。"</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"只有此设备的拥有者才能安装证书。"</string>
 </resources>

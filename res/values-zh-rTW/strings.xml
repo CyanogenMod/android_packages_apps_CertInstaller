@@ -19,7 +19,7 @@
     <string name="app_name" msgid="9095072584761066851">"憑證安裝程式"</string>
     <string name="pick_file_title" msgid="4481949485108233297">"選擇憑證"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"擷取憑證"</string>
-    <string name="extracting_pkcs12" msgid="1881267738821799771">"擷取中..."</string>
+    <string name="extracting_pkcs12" msgid="1881267738821799771">"擷取中…"</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"從 %s 擷取"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"為憑證命名"</string>
     <string name="credential_name" msgid="1974979771369744378">"憑證名稱："</string>
@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在 SD 卡上找不到憑證檔案。"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"沒有可用的 USB 儲存裝置。"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"找不到 SD 卡。"</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"只有這個裝置的擁有者可以安裝憑證。"</string>
 </resources>

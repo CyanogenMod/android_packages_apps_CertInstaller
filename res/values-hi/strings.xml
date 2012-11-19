@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"SD कार्ड में कोई प्रमाणपत्र फ़ाइल नहीं मिली."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB संग्रहण उपलब्‍ध नहीं है."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD कार्ड मौजूद नहीं है."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"केवल इस उपकरण का स्वामी ही प्रमाणपत्रों को इंस्टॉल कर सकता है."</string>
 </resources>

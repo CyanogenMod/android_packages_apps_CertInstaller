@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Ayikho ifayela yesitifiketi etholakele ekhadini le-SD"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Isitoreji se-USB asitholakali."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Ikhadi le-SD alikho."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Umnikazi kuphela wale divayisi ongafaka izitifiketi."</string>
 </resources>

@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"ምንም የምስክር ፋይል በSD ካርድ ውስጥ አልተገኘም።"</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB ማከማቻ የለም።"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD ካርድ የለም።"</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"የዚህ መሣሪያ ብቻ ነው የዕውቅና ማረጋገጫዎችን ሊጭን የሚችለው።"</string>
 </resources>

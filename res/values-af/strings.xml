@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Geen sertifikaatlêer in die SD-kaart gevind nie."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-berging nie beskikbaar nie."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD-kaart is nie daar nie."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Slegs die eienaar van hierdie toestel kan sertifikate installeer."</string>
 </resources>

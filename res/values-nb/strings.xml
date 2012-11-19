@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Fant ingen sertifikatfil på minnekortet."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-lagring ikke tilgjengelig."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Finner ikke SD-kort."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Bare eieren av denne enheten kan installere sertifikater."</string>
 </resources>

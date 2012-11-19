@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Nu s-a găsit niciun fişier certificat pe cardul SD."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Stocarea USB nedisponibilă."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Nu există card SD."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Numai proprietarul acestui dispozitiv poate instala certificate."</string>
 </resources>

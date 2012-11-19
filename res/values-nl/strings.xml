@@ -47,4 +47,5 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Geen certificaatbestand gevonden op de SD-kaart."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-opslag niet beschikbaar."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Er is geen SD-kaart geplaatst."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"Alleen de eigenaar van dit apparaat kan certificaten installeren."</string>
 </resources>
