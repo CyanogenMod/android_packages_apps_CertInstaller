@@ -132,7 +132,7 @@ public class CertInstaller extends Activity {
 
     private boolean needsKeyStoreAccess() {
         return ((mCredentials.hasKeyPair() || mCredentials.hasUserCertificate())
-                && (mKeyStore.state() != KeyStore.State.UNLOCKED));
+                && !mKeyStore.isUnlocked());
     }
 
     @Override
