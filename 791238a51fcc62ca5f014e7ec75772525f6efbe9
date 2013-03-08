@@ -1,0 +1,9 @@
+Change-Id: I9e1ccc3798ceb52a1ffcdf5faa4126a80a2fa124
+Code-Review+2: Marco Brohet <therbom@gmail.com>
+Verified+1: Marco Brohet <therbom@gmail.com>
+Code-Review+1: Thibault LEMOINE <thibaultblizz@gmail.com>
+Submitted-by: Marco Brohet <therbom@gmail.com>
+Submitted-at: Fri, 08 Mar 2013 12:42:44 -0800
+Reviewed-on: http://review.cyanogenmod.org/33233
+Project: CyanogenMod/android_packages_apps_CertInstaller
+Branch: refs/heads/gingerbread
