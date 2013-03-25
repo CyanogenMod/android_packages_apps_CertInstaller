@@ -25,19 +25,13 @@
 
         <activity android:name=".CertInstaller"
                   android:theme="@style/Transparent"
-                  android:configChanges="orientation|keyboardHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+                  android:configChanges="orientation|keyboardHidden"
+                  android:exported="false">
         </activity>
 
         <activity android:name=".CertFileList"
-                  android:configChanges="orientation|keyboardHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+                  android:configChanges="orientation|keyboardHidden"
+                  android:exported="false">
         </activity>
     </application>
 </manifest>
