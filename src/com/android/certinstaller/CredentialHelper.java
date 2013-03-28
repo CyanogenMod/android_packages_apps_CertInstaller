@@ -64,6 +64,7 @@ class CredentialHelper {
     private HashMap<String, byte[]> mBundle = new HashMap<String, byte[]>();
 
     private String mName = "";
+    private int mUid = -1;
     private PrivateKey mUserKey;
     private X509Certificate mUserCert;
     private List<X509Certificate> mCaCerts = new ArrayList<X509Certificate>();
@@ -82,6 +83,9 @@ class CredentialHelper {
         if (name != null) {
             mName = name;
         }
+
+        mUid = bundle.getInt(Credentials.EXTRA_INSTALL_AS_UID, -1);
+        bundle.remove(Credentials.EXTRA_INSTALL_AS_UID);
 
         Log.d(TAG, "# extras: " + bundle.size());
         for (String key : bundle.keySet()) {
@@ -249,6 +253,7 @@ class CredentialHelper {
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
         intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
+        intent.putExtra(Credentials.EXTRA_INSTALL_AS_UID, mUid);
         try {
             if (mUserKey != null) {
                 intent.putExtra(Credentials.EXTRA_USER_PRIVATE_KEY_NAME,
