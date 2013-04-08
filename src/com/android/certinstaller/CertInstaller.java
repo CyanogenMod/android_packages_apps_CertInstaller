@@ -25,7 +25,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.security.Credentials;
 import android.security.KeyChain;
 import android.security.KeyChain.KeyChainConnection;
@@ -84,12 +83,6 @@ public class CertInstaller extends Activity {
     @Override
     protected void onCreate(Bundle savedStates) {
         super.onCreate(savedStates);
-
-        if (UserHandle.myUserId() != UserHandle.USER_OWNER) {
-            toastErrorAndFinish(R.string.only_primary_user_allowed);
-            finish();
-            return;
-        }
 
         mCredentials = createCredentialHelper(getIntent());
 
