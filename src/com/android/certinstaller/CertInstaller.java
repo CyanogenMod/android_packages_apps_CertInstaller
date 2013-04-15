@@ -266,7 +266,7 @@ public class CertInstaller extends Activity {
             return;
         }
         byte[] bytes = Util.toBytes(map);
-        if (!mKeyStore.put(PKEY_MAP_KEY, bytes)) {
+        if (!mKeyStore.put(PKEY_MAP_KEY, bytes, KeyStore.UID_SELF, KeyStore.FLAG_ENCRYPTED)) {
             Log.w(TAG, "savePkeyMap(): failed to write pkey map");
         }
     }
