@@ -248,6 +248,14 @@ class CredentialHelper {
         return mName;
     }
 
+    void setInstallAsUid(int uid) {
+        mUid = uid;
+    }
+
+    boolean isInstallAsUidSet() {
+        return mUid != -1;
+    }
+
     Intent createSystemInstallIntent() {
         Intent intent = new Intent("com.android.credentials.INSTALL");
         // To prevent the private key from being sniffed, we explicitly spell

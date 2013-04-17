@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Process;
 import android.security.Credentials;
 import android.security.KeyChain;
 import android.security.KeyChain.KeyChainConnection;
@@ -33,7 +34,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.Serializable;
@@ -62,6 +66,10 @@ public class CertInstaller extends Activity {
 
     // key to KeyStore
     private static final String PKEY_MAP_KEY = "PKEY_MAP";
+
+    // Values for usage type spinner
+    private static final int USAGE_TYPE_SYSTEM = 0;
+    private static final int USAGE_TYPE_WIFI = 1;
 
     private final KeyStore mKeyStore = KeyStore.getInstance();
     private final ViewHelper mView = new ViewHelper();
@@ -359,6 +367,31 @@ public class CertInstaller extends Activity {
         }
         mView.setText(R.id.credential_info, mCredentials.getDescription(this).toString());
         final EditText nameInput = (EditText) view.findViewById(R.id.credential_name);
+        if (mCredentials.isInstallAsUidSet()) {
+            view.findViewById(R.id.credential_usage_group).setVisibility(View.GONE);
+        } else {
+            final Spinner usageSpinner = (Spinner) view.findViewById(R.id.credential_usage);
+
+            usageSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    switch ((int) id) {
+                        case USAGE_TYPE_SYSTEM:
+                            mCredentials.setInstallAsUid(KeyStore.UID_SELF);
+                            break;
+                        case USAGE_TYPE_WIFI:
+                            mCredentials.setInstallAsUid(Process.WIFI_UID);
+                            break;
+                        default:
+                            Log.w(TAG, "Unknown selection for scope: " + id);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+        }
         nameInput.setText(getDefaultName());
         nameInput.selectAll();
         Dialog d = new AlertDialog.Builder(this)
