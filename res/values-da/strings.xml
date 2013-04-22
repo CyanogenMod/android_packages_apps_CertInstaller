@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-lager ikke tilgængeligt."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD-kort er ikke til stede."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Kun ejeren af denne enhed kan installere certifikater."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Brug af loginoplysninger:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN og apps"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

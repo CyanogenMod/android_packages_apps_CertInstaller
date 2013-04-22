@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB bellek kullanılamıyor."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD kart yok."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Sadece bu cihazın sahibi sertifikaları yükleyebilir."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Kimlik bilgisinin kullanımı:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN ve uygulamalar"</item>
+    <item msgid="692322974985472861">"Kablosuz"</item>
+  </string-array>
 </resources>
