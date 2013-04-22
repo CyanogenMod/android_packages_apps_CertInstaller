@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Nośnik USB jest niedostępny."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Brak karty SD."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Certyfikaty może instalować tylko właściciel tego urządzenia."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Przeznaczenie tych danych logowania:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN i aplikacje"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>
