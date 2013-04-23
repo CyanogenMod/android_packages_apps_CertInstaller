@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-lagring ikke tilgjengelig."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Finner ikke SD-kort."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Bare eieren av denne enheten kan installere sertifikater."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Bruk av legitimasjon:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN og apper"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

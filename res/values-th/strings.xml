@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"ที่เก็บข้อมูล USB ใช้งานไม่ได้"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"ไม่พบการ์ด SD"</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"เฉพาะเจ้าของอุปกรณ์นี้ที่สามารถติดตั้งใบรับรอง"</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"การใช้ข้อมูลรับรอง:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN และแอป"</item>
+    <item msgid="692322974985472861">"WiFi"</item>
+  </string-array>
 </resources>

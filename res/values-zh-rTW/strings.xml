@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"沒有可用的 USB 儲存裝置。"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"找不到 SD 卡。"</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"只有這個裝置的擁有者可以安裝憑證。"</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"憑證用途："</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN 和應用程式"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>
