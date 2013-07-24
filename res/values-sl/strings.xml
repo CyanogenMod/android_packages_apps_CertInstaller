@@ -26,7 +26,7 @@
     <string name="credential_password" msgid="3520176519550993326">"Za ekstrahiranje potrdil vnesite geslo."</string>
     <string name="credential_info" msgid="2436768402308470397">"V tem paketu je:"</string>
     <string name="p12_description" msgid="4128352087331630024">"Potrdila v shrambi ključev PKCS12"</string>
-    <string name="one_userkey" msgid="3500697912370644881">"ključ enega uporabnika"</string>
+    <string name="one_userkey" msgid="3500697912370644881">"en uporabniški ključ"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"potrdilo enega uporabnika"</string>
     <string name="one_cacrt" msgid="2667950425420663146">"eno overjeno potrdilo"</string>
     <string name="n_cacrts" msgid="2141498640685639208">"%d overjenih potrdil"</string>
@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Pomnilnik USB ni na voljo."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Ni kartice SD."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Samo lastnik sme namestiti potrdila."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Uporaba poverilnice:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"Navidezno zasebno omrežje in aplikacije"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

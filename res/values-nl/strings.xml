@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-opslag niet beschikbaar."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Er is geen SD-kaart geplaatst."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Alleen de eigenaar van dit apparaat kan certificaten installeren."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Gebruik van referentiegegevens:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN en apps"</item>
+    <item msgid="692322974985472861">"Wifi"</item>
+  </string-array>
 </resources>

@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Archivio USB non disponibile."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Scheda SD non presente."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Solo il proprietario di questo dispositivo può installare certificati."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Utilizzo della credenziale:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN e app"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

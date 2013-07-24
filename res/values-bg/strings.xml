@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB хранилището не е налице."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD картата липсва."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Само собственикът на това устройство може да инсталира сертификати."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Използв. на идент. данни"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"Виртуални частни мрежи (VPN) и прилож."</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

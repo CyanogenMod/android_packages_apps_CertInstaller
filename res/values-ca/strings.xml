@@ -21,7 +21,7 @@
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Extreu el certificat"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"S\'està extraient..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Extracció de %s"</string>
-    <string name="name_credential_dialog_title" msgid="277729846491554437">"Assignació d\'un nom al certificat"</string>
+    <string name="name_credential_dialog_title" msgid="277729846491554437">"Nom del certificat"</string>
     <string name="credential_name" msgid="1974979771369744378">"Nom del certificat:"</string>
     <string name="credential_password" msgid="3520176519550993326">"Introdueix la contrasenya per extreure els certificats."</string>
     <string name="credential_info" msgid="2436768402308470397">"El paquet conté:"</string>
@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Emmagatzematge USB no disponible."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"No hi ha cap targeta SD."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Només el propietari d\'aquest dispositiu pot instal·lar certificats."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Ús de les credencials:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN i aplicacions"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

@@ -60,14 +60,28 @@ public class CertInstallerMain extends CertFile implements Runnable {
         Intent intent = getIntent();
         String action = (intent == null) ? null : intent.getAction();
 
-        if (Credentials.INSTALL_ACTION.equals(action)) {
+        if (Credentials.INSTALL_ACTION.equals(action)
+                || Credentials.INSTALL_AS_USER_ACTION.equals(action)) {
             Bundle bundle = intent.getExtras();
+
+            /*
+             * There is a special INSTALL_AS_USER action that this activity is
+             * aliased to, but you have to have a permission to call it. If the
+             * caller got here any other way, remove the extra that we allow in
+             * that INSTALL_AS_USER path.
+             */
+            if (bundle != null && !Credentials.INSTALL_AS_USER_ACTION.equals(action)) {
+                bundle.remove(Credentials.EXTRA_INSTALL_AS_UID);
+            }
+
             // If bundle is empty of any actual credentials, install from external storage.
             // Otherwise, pass extras to CertInstaller to install those credentials.
             // Either way, we use KeyChain.EXTRA_NAME as the default name if available.
             if (bundle == null
                     || bundle.isEmpty()
-                    || (bundle.size() == 1 && bundle.containsKey(KeyChain.EXTRA_NAME))) {
+                    || (bundle.size() == 1
+                        && (bundle.containsKey(KeyChain.EXTRA_NAME)
+                            || bundle.containsKey(Credentials.EXTRA_INSTALL_AS_UID)))) {
                 if (!isSdCardPresent()) {
                     Toast.makeText(this, R.string.sdcard_not_present,
                             Toast.LENGTH_SHORT).show();

@@ -21,6 +21,7 @@ import android.os.Environment;
 import android.os.FileObserver;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.security.Credentials;
 import android.util.Log;
 import android.widget.Toast;
 

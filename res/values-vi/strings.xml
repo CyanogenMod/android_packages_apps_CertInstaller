@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Bộ nhớ USB không khả dụng."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Hiện không có thẻ SD."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Chỉ chủ sở hữu thiết bị này mới có thể cài đặt các chứng chỉ."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Sử dụng bản xác thực:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN và các ứng dụng"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

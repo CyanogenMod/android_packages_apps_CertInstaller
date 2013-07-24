@@ -21,7 +21,7 @@
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Sertifikāta izgūšana"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"Notiek izvilkšana..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Izvilkšana no: %s"</string>
-    <string name="name_credential_dialog_title" msgid="277729846491554437">"Nosaukuma piešķiršana sertifikātam"</string>
+    <string name="name_credential_dialog_title" msgid="277729846491554437">"Sertifikāta nosaukšana"</string>
     <string name="credential_name" msgid="1974979771369744378">"Sertifikāta nosaukums:"</string>
     <string name="credential_password" msgid="3520176519550993326">"Ierakstiet paroli, lai izvilktu sertifikātus."</string>
     <string name="credential_info" msgid="2436768402308470397">"Pakotnē ir ietverts:"</string>
@@ -48,4 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB krātuve nav pieejama."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD karte nav ievietota."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Tikai šīs ierīces īpašnieks var instalēt sertifikātus."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Akredit. datu lietojums:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN un lietotnes"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
+  </string-array>
 </resources>

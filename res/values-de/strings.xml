@@ -40,12 +40,17 @@
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Kein zu installierendes Zertifikat"</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Das Zertifikat ist ungültig."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> ist installiert."</string>
-    <string name="cert_too_large_error" msgid="8715414972725646285">"Installation nicht möglich, da das Zertifikat zu groß ist"</string>
-    <string name="cert_missing_error" msgid="7040527352278728220">"Installation nicht möglich, da die Zertifikatdatei nicht gefunden wurde"</string>
-    <string name="cert_read_error" msgid="7353463360652419796">"Installation nicht möglich, da die Zertifikatdatei nicht gelesen werden konnte"</string>
+    <string name="cert_too_large_error" msgid="8715414972725646285">"Installation nicht möglich, weil das Zertifikat zu groß ist"</string>
+    <string name="cert_missing_error" msgid="7040527352278728220">"Installation nicht möglich, weil die Zertifikatdatei nicht gefunden wurde"</string>
+    <string name="cert_read_error" msgid="7353463360652419796">"Installation nicht möglich, weil die Zertifikatdatei nicht gelesen werden konnte"</string>
     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"Keine Zertifikatdatei auf USB-Speicher gefunden."</string>
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Auf der SD-Karte wurde keine Zertifikats-Datei gefunden."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Kein USB-Speicher verfügbar"</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD-Karte ist nicht vorhanden."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Nur der Eigentümer dieses Geräts kann Zertifikate installieren."</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Verwendung der Anmeldedaten:"</string>
+  <string-array name="credential_usage">
+    <item msgid="375085478373011304">"VPN und Apps"</item>
+    <item msgid="692322974985472861">"WLAN"</item>
+  </string-array>
 </resources>
