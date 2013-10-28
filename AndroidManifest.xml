@@ -3,8 +3,6 @@
 
     <original-package android:name="com.android.certinstaller" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <permission android:name="com.android.certinstaller.INSTALL_AS_USER"
                 android:protectionLevel="signature" />
 
@@ -22,7 +20,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="application/x-x509-ca-cert" />
                 <data android:mimeType="application/x-x509-user-cert" />
+                <data android:mimeType="application/x-x509-server-cert" />
                 <data android:mimeType="application/x-pkcs12" />
+                <data android:mimeType="application/application/x-pem-file" />
+                <data android:mimeType="application/pkix-cert" />
             </intent-filter>
         </activity>
 
@@ -37,11 +38,6 @@
 
         <activity android:name=".CertInstaller"
                   android:theme="@style/Transparent"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:exported="false">
-        </activity>
-
-        <activity android:name=".CertFileList"
                   android:configChanges="orientation|keyboardHidden"
                   android:exported="false">
         </activity>
