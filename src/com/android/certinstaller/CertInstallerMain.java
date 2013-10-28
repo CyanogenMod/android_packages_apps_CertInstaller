@@ -19,46 +19,46 @@ package com.android.certinstaller;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
+import android.provider.DocumentsContract;
 import android.security.Credentials;
 import android.security.KeyChain;
 import android.util.Log;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
+import libcore.io.IoUtils;
+import libcore.io.Streams;
+
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-
-import libcore.io.IoUtils;
 
 /**
  * The main class for installing certificates to the system keystore. It reacts
  * to the public {@link Credentials#INSTALL_ACTION} intent.
  */
-public class CertInstallerMain extends CertFile implements Runnable {
+public class CertInstallerMain extends PreferenceActivity {
+    private static final String TAG = "CertInstaller";
+
+    private static final int REQUEST_INSTALL = 1;
+    private static final int REQUEST_OPEN_DOCUMENT = 2;
+
+    private static final String[] ACCEPT_MIME_TYPES = {
+            "application/x-pkcs12",
+            "application/x-x509-ca-cert",
+            "application/x-x509-user-cert",
+            "application/x-x509-server-cert",
+            "application/x-pem-file",
+            "application/pkix-cert"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            return;
-        }
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                // don't want to call startActivityForResult() (invoked in
-                // installFromFile()) here as it makes the new activity (thus
-                // the whole display) get stuck for about 5 seconds
-                runOnUiThread(CertInstallerMain.this);
-            }
-        }).start();
-    }
+        setResult(RESULT_CANCELED);
 
-    @Override
-    public void run() {
-        Intent intent = getIntent();
-        String action = (intent == null) ? null : intent.getAction();
+        final Intent intent = getIntent();
+        final String action = intent.getAction();
 
         if (Credentials.INSTALL_ACTION.equals(action)
                 || Credentials.INSTALL_AS_USER_ACTION.equals(action)) {
@@ -74,7 +74,7 @@ public class CertInstallerMain extends CertFile implements Runnable {
                 bundle.remove(Credentials.EXTRA_INSTALL_AS_UID);
             }
 
-            // If bundle is empty of any actual credentials, install from external storage.
+            // If bundle is empty of any actual credentials, ask user to open.
             // Otherwise, pass extras to CertInstaller to install those credentials.
             // Either way, we use KeyChain.EXTRA_NAME as the default name if available.
             if (bundle == null
@@ -82,82 +82,71 @@ public class CertInstallerMain extends CertFile implements Runnable {
                     || (bundle.size() == 1
                         && (bundle.containsKey(KeyChain.EXTRA_NAME)
                             || bundle.containsKey(Credentials.EXTRA_INSTALL_AS_UID)))) {
-                if (!isSdCardPresent()) {
-                    Toast.makeText(this, R.string.sdcard_not_present,
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    List<File> allFiles = getAllCertFiles();
-                    if (allFiles.isEmpty()) {
-                        Toast.makeText(this, R.string.no_cert_file_found,
-                                Toast.LENGTH_SHORT).show();
-                    } else if (allFiles.size() == 1) {
-                        installFromFile(allFiles.get(0));
-                        return;
-                    } else {
-                        Intent newIntent = new Intent(this, CertFileList.class);
-                        newIntent.putExtras(intent);
-                        startActivityForResult(newIntent, REQUEST_INSTALL_CODE);
-                        return;
-                    }
-                }
+                final Intent openIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                openIntent.setType("*/*");
+                openIntent.putExtra(Intent.EXTRA_MIME_TYPES, ACCEPT_MIME_TYPES);
+                openIntent.putExtra(DocumentsContract.EXTRA_SHOW_ADVANCED, true);
+                startActivityForResult(openIntent, REQUEST_OPEN_DOCUMENT);
             } else {
-                Intent newIntent = new Intent(this, CertInstaller.class);
-                newIntent.putExtras(intent);
-                startActivityForResult(newIntent, REQUEST_INSTALL_CODE);
-                return;
+                final Intent installIntent = new Intent(this, CertInstaller.class);
+                installIntent.putExtras(intent);
+                startActivityForResult(installIntent, REQUEST_INSTALL);
             }
         } else if (Intent.ACTION_VIEW.equals(action)) {
-            Uri data = intent.getData();
-            String type = intent.getType();
-            if ((data != null) && (type != null)) {
-                byte[] payload = null;
-                InputStream is = null;
-                try {
-                    is = getContentResolver().openInputStream(data);
-                    ByteArrayOutputStream out = new ByteArrayOutputStream();
-                    byte[] buffer = new byte[1024];
-                    int read = 0;
-                    while ((read = is.read(buffer)) > 0) {
-                        out.write(buffer, 0, read);
-                    }
-                    out.flush();
-                    payload = out.toByteArray();
-                } catch (IOException ignored) {
-                    // Not much we can do - it will be logged below as an error.
-                } finally {
-                    IoUtils.closeQuietly(is);
-                }
-                if (payload == null) {
-                    Log.e("CertInstaller", "Unable to read stream for for certificate");
-                } else {
-                    installByType(type, payload);
-                }
-            }
+            startInstallActivity(intent.getType(), intent.getData());
         }
-        finish();
     }
 
-    private void installByType(String type, byte[] value) {
+    private void startInstallActivity(String mimeType, Uri uri) {
+        if (mimeType == null) {
+            mimeType = getContentResolver().getType(uri);
+        }
+
+        InputStream in = null;
+        try {
+            in = getContentResolver().openInputStream(uri);
+
+            final byte[] raw = Streams.readFully(in);
+            startInstallActivity(mimeType, raw);
+
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to read certificate: " + e);
+            Toast.makeText(this, R.string.cert_read_error, Toast.LENGTH_LONG).show();
+        } finally {
+            IoUtils.closeQuietly(in);
+        }
+    }
+
+    private void startInstallActivity(String mimeType, byte[] value) {
         Intent intent = new Intent(this, CertInstaller.class);
-        if ("application/x-pkcs12".equals(type)) {
+        if ("application/x-pkcs12".equals(mimeType)) {
             intent.putExtra(KeyChain.EXTRA_PKCS12, value);
-        } else if ("application/x-x509-ca-cert".equals(type)
-                || "application/x-x509-user-cert".equals(type)) {
+        } else if ("application/x-x509-ca-cert".equals(mimeType)
+                || "application/x-x509-user-cert".equals(mimeType)
+                || "application/x-x509-server-cert".equals(mimeType)
+                || "application/x-pem-file".equals(mimeType)
+                || "application/pkix-cert".equals(mimeType)) {
             intent.putExtra(KeyChain.EXTRA_CERTIFICATE, value);
         } else {
-            throw new AssertionError("Unknown type: " + type);
+            throw new IllegalArgumentException("Unknown MIME type: " + mimeType);
         }
-        startActivityForResult(intent, REQUEST_INSTALL_CODE);
+
+        startActivityForResult(intent, REQUEST_INSTALL);
     }
 
     @Override
-    protected void onInstallationDone(boolean success) {
-        super.onInstallationDone(success);
-        finish();
-    }
-
-    @Override
-    protected void onError(int errorId) {
-        finish();
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_OPEN_DOCUMENT) {
+            if (resultCode == RESULT_OK) {
+                startInstallActivity(null, data.getData());
+            } else {
+                finish();
+            }
+        } else if (requestCode == REQUEST_INSTALL) {
+            setResult(resultCode);
+            finish();
+        } else {
+            Log.w(TAG, "unknown request code: " + requestCode);
+        }
     }
 }
