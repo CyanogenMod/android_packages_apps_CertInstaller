@@ -50,7 +50,7 @@
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"केवल इस उपकरण का स्वामी ही प्रमाणपत्रों को इंस्टॉल कर सकता है."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"क्रेडेंशियल उपयोग:"</string>
   <string-array name="credential_usage">
-    <item msgid="375085478373011304">"VPN और एप्स"</item>
+    <item msgid="375085478373011304">"VPN और ऐप्स"</item>
     <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
 </resources>
