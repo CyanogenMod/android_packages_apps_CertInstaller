@@ -20,16 +20,16 @@
     <string name="pick_file_title" msgid="4481949485108233297">"اختيار شهادة"</string>
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"استخراج الشهادة"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"جارٍ الاستخراج..."</string>
-    <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"استخراج من %s"</string>
+    <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"‏استخراج من %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"اسم الشهادة"</string>
     <string name="credential_name" msgid="1974979771369744378">"اسم الشهادة:"</string>
     <string name="credential_password" msgid="3520176519550993326">"إدخال كلمة المرور لاستخراج الشهادات."</string>
     <string name="credential_info" msgid="2436768402308470397">"تحتوي الحزمة على:"</string>
-    <string name="p12_description" msgid="4128352087331630024">"الشهادات في مخزن مفاتيح PKCS12."</string>
+    <string name="p12_description" msgid="4128352087331630024">"‏الشهادات في مخزن مفاتيح PKCS12."</string>
     <string name="one_userkey" msgid="3500697912370644881">"مفتاح مستخدم واحد"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"شهادة مستخدم واحد"</string>
-    <string name="one_cacrt" msgid="2667950425420663146">"شهادة CA واحدة"</string>
-    <string name="n_cacrts" msgid="2141498640685639208">"%d شهادات CA"</string>
+    <string name="one_cacrt" msgid="2667950425420663146">"‏شهادة CA واحدة"</string>
+    <string name="n_cacrts" msgid="2141498640685639208">"‏%d شهادات CA"</string>
     <string name="password_error" msgid="2042471639556516356">"أدخل كلمة المرور الصحيحة."</string>
     <string name="password_empty_error" msgid="591713406761723025">"أدخل كلمة المرور."</string>
     <string name="name_empty_error" msgid="3808800768660110354">"اكتب اسمًا."</string>
@@ -43,10 +43,10 @@
     <string name="cert_too_large_error" msgid="8715414972725646285">"تعذر التثبيت نظرًا لأن حجم الشهادة أكبر من اللازم."</string>
     <string name="cert_missing_error" msgid="7040527352278728220">"تعذر التثبيت نظرًا لتعذر تحديد مكان ملف الشهادة."</string>
     <string name="cert_read_error" msgid="7353463360652419796">"تعذر التثبيت نظرًا لتعذر قراءة ملف الشهادة."</string>
-    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"لم يتم العثور على ملف شهادة في وحدة تخزين USB."</string>
-    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"لم يتم العثور على ملف شهادة في بطاقة SD."</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"وحدة تخزين USB غير متاحة."</string>
-    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"بطاقة SD غير موجودة."</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"‏لم يتم العثور على ملف شهادة في وحدة تخزين USB."</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"‏لم يتم العثور على ملف شهادة في بطاقة SD."</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"‏وحدة تخزين USB غير متاحة."</string>
+    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"‏بطاقة SD غير موجودة."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"يُسمح لمالك هذا الجهاز فقط تثبيت الشهادات."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"استخدام بيانات الاعتماد:"</string>
   <string-array name="credential_usage">
