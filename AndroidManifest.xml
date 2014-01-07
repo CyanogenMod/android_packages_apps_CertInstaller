@@ -10,7 +10,7 @@
                  android:allowBackup="false">
         <activity android:name=".CertInstallerMain"
                   android:theme="@style/Transparent"
-                  android:configChanges="orientation|keyboardHidden">
+                  android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.credentials.INSTALL" />
                 <category android:name="android.intent.category.DEFAULT" />
