@@ -51,6 +51,6 @@
     <string name="credential_usage_label" msgid="1513892208033156805">"Käyttöoikeustietojen käyttö:"</string>
   <string-array name="credential_usage">
     <item msgid="375085478373011304">"VPN ja sovellukset"</item>
-    <item msgid="692322974985472861">"Wifi"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
 </resources>
