@@ -16,9 +16,11 @@
 
 package com.android.certinstaller;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.preference.PreferenceActivity;
 import android.provider.DocumentsContract;
 import android.security.Credentials;
@@ -58,6 +60,12 @@ public class CertInstallerMain extends PreferenceActivity {
         super.onCreate(savedInstanceState);
 
         setResult(RESULT_CANCELED);
+
+        UserManager userManager = (UserManager) getSystemService(Context.USER_SERVICE);
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
+            finish();
+            return;
+        }
 
         final Intent intent = getIntent();
         final String action = intent.getAction();
