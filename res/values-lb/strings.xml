@@ -22,6 +22,7 @@
   <string name="n_cacrts">%d CA-Zertifikater</string>
   <string name="password_empty_error">Passwuert antippen.</string>
   <string name="name_empty_error">Numm antippen.</string>
+  <string name="cert_is_added"><xliff:g id="credential">%s</xliff:g> ass installéiert.</string>
   <string-array name="credential_usage">
     <item>VPN an Appen</item>
     <item>WLAN</item>
