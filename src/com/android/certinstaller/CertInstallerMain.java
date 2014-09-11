@@ -51,6 +51,8 @@ public class CertInstallerMain extends PreferenceActivity {
             "application/pkix-cert"
     };
 
+    private static final String INSTALL_CERT_AS_USER_CLASS = ".InstallCertAsUser";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +72,9 @@ public class CertInstallerMain extends PreferenceActivity {
              * caller got here any other way, remove the extra that we allow in
              * that INSTALL_AS_USER path.
              */
-            if (bundle != null && !Credentials.INSTALL_AS_USER_ACTION.equals(action)) {
+            String calledClass = intent.getComponent().getClassName();
+            String installAsUserClassName = getPackageName() + INSTALL_CERT_AS_USER_CLASS;
+            if (bundle != null && !installAsUserClassName.equals(calledClass)) {
                 bundle.remove(Credentials.EXTRA_INSTALL_AS_UID);
             }
 
