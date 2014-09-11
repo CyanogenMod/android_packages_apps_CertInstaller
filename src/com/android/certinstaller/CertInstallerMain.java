@@ -55,6 +55,8 @@ public class CertInstallerMain extends PreferenceActivity {
             "application/pkix-cert"
     };
 
+    private static final String INSTALL_CERT_AS_USER_CLASS = ".InstallCertAsUser";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
