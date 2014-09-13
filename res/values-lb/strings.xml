@@ -19,6 +19,7 @@
   <string name="pkcs12_password_dialog_title">Zertifikat extrahéieren</string>
   <string name="credential_name">Numm vum Zertifikat:</string>
   <string name="credential_info">Dëse Pak enthält:</string>
+  <string name="one_userkey">ee Benotzerschlëssel</string>
   <string name="n_cacrts">%d CA-Zertifikater</string>
   <string name="password_empty_error">Passwuert antippen.</string>
   <string name="name_empty_error">Numm antippen.</string>
