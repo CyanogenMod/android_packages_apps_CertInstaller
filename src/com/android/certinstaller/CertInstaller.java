@@ -44,6 +44,7 @@ import java.io.Serializable;
 import java.security.cert.X509Certificate;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.lang.RuntimeException;
 
 /**
  * Installs certificates to the system keystore.
@@ -227,8 +228,19 @@ public class CertInstaller extends Activity {
         } else {
             X509Certificate cert = mCredentials.getUserCertificate();
             if (cert != null) {
-                // find matched private key
-                String key = Util.toMd5(cert.getPublicKey().getEncoded());
+                String key = null;
+                try {
+                    /* If a WAPI cert passed to it, then cert.geyPublicKey()
+                     * will result in a RuntimeException.
+                     * Handle this error and make a hint to user that cert is
+                     * invalid.
+                     */
+                    key = Util.toMd5(cert.getPublicKey().getEncoded());
+                } catch (RuntimeException ex) {
+                    toastErrorAndFinish(R.string.invalid_cert);
+                    return;
+                }
+
                 Map<String, byte[]> map = getPkeyMap();
                 byte[] privatekey = map.get(key);
                 if (privatekey != null) {
