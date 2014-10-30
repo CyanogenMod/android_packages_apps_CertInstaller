@@ -28,8 +28,8 @@
     <string name="p12_description" msgid="4128352087331630024">"PKCS12 密钥库中的证书。"</string>
     <string name="one_userkey" msgid="3500697912370644881">"一个用户密钥"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"一个用户证书"</string>
-    <string name="one_cacrt" msgid="2667950425420663146">"一个 CA 证书"</string>
-    <string name="n_cacrts" msgid="2141498640685639208">"%d 个 CA 证书"</string>
+    <string name="one_cacrt" msgid="2667950425420663146">"1个CA证书"</string>
+    <string name="n_cacrts" msgid="2141498640685639208">"%d个CA证书"</string>
     <string name="password_error" msgid="2042471639556516356">"键入正确的密码。"</string>
     <string name="password_empty_error" msgid="591713406761723025">"键入密码。"</string>
     <string name="name_empty_error" msgid="3808800768660110354">"键入名称。"</string>
@@ -43,14 +43,14 @@
     <string name="cert_too_large_error" msgid="8715414972725646285">"无法安装该证书，因为证书尺寸过大。"</string>
     <string name="cert_missing_error" msgid="7040527352278728220">"无法安装该证书，因为找不到证书文件。"</string>
     <string name="cert_read_error" msgid="7353463360652419796">"无法安装该证书，因为无法读取证书文件。"</string>
-    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"未在 USB 存储设备中找到证书文件。"</string>
-    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在 SD 卡上找不到证书文件。"</string>
-    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"不存在 USB 存储设备。"</string>
-    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD 卡不存在。"</string>
-    <string name="only_primary_user_allowed" msgid="4005084935023047716">"只有此设备的拥有者才能安装证书。"</string>
+    <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"未在USB存储设备中找到证书文件。"</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"在SD卡上找不到证书文件。"</string>
+    <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"不存在USB存储设备。"</string>
+    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD卡不存在。"</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"只有设备的机主才能安装证书。"</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"凭据用途："</string>
   <string-array name="credential_usage">
-    <item msgid="375085478373011304">"VPN 和应用"</item>
+    <item msgid="375085478373011304">"VPN和应用"</item>
     <item msgid="692322974985472861">"WLAN"</item>
   </string-array>
 </resources>
