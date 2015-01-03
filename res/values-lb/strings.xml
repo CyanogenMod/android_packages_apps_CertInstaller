@@ -22,7 +22,7 @@
   <string name="pkcs12_file_password_dialog_title">Entpaken aus %s</string>
   <string name="name_credential_dialog_title">Numm vum Zertifikat</string>
   <string name="credential_name">Numm vum Zertifikat:</string>
-  <string name="credential_password">Gëff d\'Passwuert an, fir d\'Zertifikater z\'entpaken.</string>
+  <string name="credential_password">Passwuert aginn, fir d\'Zertifikater z\'entpaken.</string>
   <string name="credential_info">Dëse Pak enthält:</string>
   <string name="p12_description">Zertifikater am PKCS12 Schlësselspäicher.</string>
   <string name="one_userkey">ee Benotzerschlëssel</string>
@@ -32,7 +32,7 @@
   <string name="password_error">Gëff dat korrekt Passwuert an.</string>
   <string name="password_empty_error">Passwuert aginn.</string>
   <string name="name_empty_error">Gëff en Numm an.</string>
-  <string name="name_char_error">Gëff en Numm dee just Buschtawen an Zuelen enthält.</string>
+  <string name="name_char_error">Gëff en Numm an, dee just Buschtawen an Zuelen huet.</string>
   <string name="storage_error">Konnt den Zertifikat net späicheren. Dréck OK fir nees ze probéieren.</string>
   <string name="unable_to_save_cert">Konnt den Zertifikat net späicheren. Den Umellungsinformatiounsspäicher ass net aktivéiert oder net korrekt initialiséiert.</string>
   <string name="cert_not_saved">Den Zertifikat ass net installéiert.</string>
