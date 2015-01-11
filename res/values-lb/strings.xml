@@ -23,7 +23,7 @@
   <string name="name_credential_dialog_title">Numm vum Zertifikat</string>
   <string name="credential_name">Numm vum Zertifikat:</string>
   <string name="credential_password">Passwuert aginn, fir d\'Zertifikater z\'entpaken.</string>
-  <string name="credential_info">Dëse Pak enthält:</string>
+  <string name="credential_info">Dëse Pak huet:</string>
   <string name="p12_description">Zertifikater am PKCS12 Schlësselspäicher.</string>
   <string name="one_userkey">ee Benotzerschlëssel</string>
   <string name="one_usercrt">ee Benotzerzertifikat</string>
