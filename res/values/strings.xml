@@ -85,4 +85,17 @@
         <item>VPN and apps</item>
         <item>Wi-Fi</item>
     </string-array>
+
+    <string name="wifi_title">Wi-Fi Profile</string>
+    <string name="wifi_detail_title">Details for %s</string>
+    <string name="wifi_detail_label">Details</string>
+    <string name="wifi_install_label">Install</string>
+    <string name="wifi_cancel_label">Cancel</string>
+    <string name="wifi_dismiss_label">Dismiss</string>
+    <string name="wifi_no_config">None</string>
+    <string name="wifi_config_text">Name: %1$s\nFQDN: %2$s\nRoaming Consortiums: %3$s\nRealm: %4$s\nAuth method: EAP-%5$s\n</string>
+    <string name="wifi_ttls_config_text">User name: %s\n</string>
+    <string name="wifi_tls_config_text">Client certificate:\n%1$s\nKey: %2$s\n</string>
+    <string name="wifi_sim_config_text">SIM: %s\n</string>
+    <string name="wifi_trust_config_text">Trust certificate:\n%s\n</string>
 </resources>
