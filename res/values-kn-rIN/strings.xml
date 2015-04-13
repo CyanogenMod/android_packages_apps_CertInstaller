@@ -53,4 +53,28 @@
     <item msgid="375085478373011304">"VPN ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</item>
     <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
+    <!-- no translation found for wifi_title (8475811746333426489) -->
+    <skip />
+    <!-- no translation found for wifi_detail_title (3627332137252994395) -->
+    <skip />
+    <!-- no translation found for wifi_detail_label (3032151019356747583) -->
+    <skip />
+    <!-- no translation found for wifi_install_label (1449629407724323233) -->
+    <skip />
+    <!-- no translation found for wifi_cancel_label (1328748037608392134) -->
+    <skip />
+    <!-- no translation found for wifi_dismiss_label (1916684434873972698) -->
+    <skip />
+    <!-- no translation found for wifi_no_config (1835743123288916755) -->
+    <skip />
+    <!-- no translation found for wifi_config_text (8259587306773310314) -->
+    <skip />
+    <!-- no translation found for wifi_ttls_config_text (2002413183253872168) -->
+    <skip />
+    <!-- no translation found for wifi_tls_config_text (9062328536640168510) -->
+    <skip />
+    <!-- no translation found for wifi_sim_config_text (1666019954520831840) -->
+    <skip />
+    <!-- no translation found for wifi_trust_config_text (5916047381475747783) -->
+    <skip />
 </resources>
