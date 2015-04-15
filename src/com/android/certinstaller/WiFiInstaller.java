@@ -2,6 +2,7 @@ package com.android.certinstaller;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,6 +11,8 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiEnterpriseConfig;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.security.Credentials;
+import android.security.KeyStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +24,8 @@ import java.util.Collection;
 
 public class WiFiInstaller extends Activity {
 
+    private static final String TAG = "WFII";
+
     @Override
     protected void onCreate(Bundle savedStates) {
         super.onCreate(savedStates);
@@ -30,11 +35,23 @@ public class WiFiInstaller extends Activity {
         String mimeType = bundle.getString(CertInstallerMain.WIFI_CONFIG);
         byte[] data = bundle.getByteArray(CertInstallerMain.WIFI_CONFIG_DATA);
 
-        Log.d("WFII", "WiFi data for " + CertInstallerMain.WIFI_CONFIG + ": " +
+        Log.d(TAG, "WiFi data for " + CertInstallerMain.WIFI_CONFIG + ": " +
                 mimeType + " is " + (data != null ? data.length : "-"));
 
         WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         WifiConfiguration wifiConfiguration = wifiManager.buildWifiConfig(uriString, mimeType, data);
+
+        WifiEnterpriseConfig enterpriseConfig = wifiConfiguration.enterpriseConfig;
+        if (enterpriseConfig.getClientCertificate() != null ||
+                enterpriseConfig.getCaCertificate() != null) {
+            if (!KeyStore.getInstance().isUnlocked()) {
+                try {
+                    startActivity(new Intent(Credentials.UNLOCK_ACTION));
+                } catch (ActivityNotFoundException e) {
+                    Log.w(TAG, e);
+                }
+            }
+        }
         createMainDialog(wifiManager, wifiConfiguration);
     }
 
