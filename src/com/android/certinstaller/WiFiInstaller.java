@@ -24,7 +24,7 @@ import java.util.Collection;
 
 public class WiFiInstaller extends Activity {
 
-    private static final String TAG = "WFII";
+    private static final String TAG = "WifiInstaller";
 
     @Override
     protected void onCreate(Bundle savedStates) {
