@@ -104,9 +104,10 @@ public class CertInstallerMain extends PreferenceActivity {
                     || (bundle.size() == 1
                         && (bundle.containsKey(KeyChain.EXTRA_NAME)
                             || bundle.containsKey(Credentials.EXTRA_INSTALL_AS_UID)))) {
+                final String[] mimeTypes = MIME_MAPPINGS.keySet().toArray(new String[0]);
                 final Intent openIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 openIntent.setType("*/*");
-                openIntent.putExtra(Intent.EXTRA_MIME_TYPES, MIME_MAPPINGS.keySet().toArray());
+                openIntent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
                 openIntent.putExtra(DocumentsContract.EXTRA_SHOW_ADVANCED, true);
                 startActivityForResult(openIntent, REQUEST_OPEN_DOCUMENT);
             } else {
