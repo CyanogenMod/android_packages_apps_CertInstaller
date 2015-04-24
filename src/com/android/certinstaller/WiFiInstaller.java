@@ -131,7 +131,6 @@ public class WiFiInstaller extends Activity {
         builder.setPositiveButton(R.string.wifi_install_label, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.d("WFDL", "OK");
                 wifiManager.addNetwork(config);
                 wifiManager.saveConfiguration();
                 dialog.dismiss();
@@ -142,7 +141,6 @@ public class WiFiInstaller extends Activity {
         builder.setNegativeButton(R.string.wifi_cancel_label, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.d("WFDL", "Cancel");
                 dialog.dismiss();
                 finish();
             }
@@ -168,7 +166,6 @@ public class WiFiInstaller extends Activity {
                 new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.d("WFDL", "detail dismiss");
                 dialog.dismiss();
             }
         });
