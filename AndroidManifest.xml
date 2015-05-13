@@ -48,5 +48,10 @@
                   android:configChanges="orientation|keyboardHidden"
                   android:exported="false">
         </activity>
+        <activity android:name=".CredentialsInstallDialog"
+                  android:theme="@style/Transparent"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:exported="false">
+        </activity>
     </application>
 </manifest>

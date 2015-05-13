@@ -98,4 +98,11 @@
     <string name="wifi_tls_config_text">Client certificate:\n%1$s\nKey: %2$s\n</string>
     <string name="wifi_sim_config_text">SIM: %s\n</string>
     <string name="wifi_trust_config_text">Trust certificate:\n%s\n</string>
+
+    <string name="install_done_title">Credentials installed</string>
+    <string name="install_done"><xliff:g id="name">%1$s</xliff:g> credentials have been added to Wi-Fi saved networks&#46;</string>
+    <string name="done_label">DONE</string>
+    <string name="wifi_installer_detail">Install Wi-Fi credentials to connect to networks available via <xliff:g id="name">%1$s</xliff:g>&#46;</string>
+    <string name="wifi_installer_download_error">Downloaded file has problems and can\'t be installed&#46; Make sure you downloaded the file from the correct source&#46;</string>
+    <string name="wifi_installer_fail">Can\'t install Wi-Fi credentials&#46; Try downloading the file again&#46;</string>
 </resources>
