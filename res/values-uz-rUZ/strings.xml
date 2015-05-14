@@ -21,7 +21,7 @@
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"Ajratish sertifikati"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"Chiqarib olinmoqda..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"%sdan ajratish"</string>
-    <string name="name_credential_dialog_title" msgid="277729846491554437">"Sertifikat nomi"</string>
+    <string name="name_credential_dialog_title" msgid="277729846491554437">"Sertifikat nomini ko‘rsating"</string>
     <string name="credential_name" msgid="1974979771369744378">"Sertifikat nomi:"</string>
     <string name="credential_password" msgid="3520176519550993326">"Sertifikatlarni chiqarib olish uchun parolni kiriting."</string>
     <string name="credential_info" msgid="2436768402308470397">"Paket tarkibi:"</string>
@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"%d CA sertifikatlari"</string>
     <string name="password_error" msgid="2042471639556516356">"Parolni to‘g‘ri kiriting."</string>
     <string name="password_empty_error" msgid="591713406761723025">"Parolni kiriting."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"Nomni kiriting."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"Nomini kiriting."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Nom faqat harf va belgilardan iborat bo‘lishi lozim."</string>
     <string name="storage_error" msgid="8306802455802770779">"Sertifikatni saqlab bo‘lmadi. Qayta urinish uchun OK tugmasini bosing."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Sertifikatni saqlab bo‘lmadi. Hisob ma’lumotlari ombori yoqilmagan yoki to‘g‘ri ishga tushirilmagan."</string>
@@ -48,9 +48,9 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB xotira mavjud emas."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD karta mavjud emas."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Sertifikatlarni faqat ushbu qurilma egasi o‘rnata oladi."</string>
-    <string name="credential_usage_label" msgid="1513892208033156805">"Foydalansa bo‘ladigan hisob ma’lumotlari:"</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Foydalanish:"</string>
   <string-array name="credential_usage">
-    <item msgid="375085478373011304">"VPN va dasturlar"</item>
+    <item msgid="375085478373011304">"VPN va ilovalar"</item>
     <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
     <string name="wifi_title" msgid="8475811746333426489">"Wi-Fi Profili"</string>
@@ -59,10 +59,22 @@
     <string name="wifi_install_label" msgid="1449629407724323233">"O‘rnatish"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"Bekor qilish"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"Yopish"</string>
-    <string name="wifi_no_config" msgid="1835743123288916755">"Hech qaysi"</string>
+    <string name="wifi_no_config" msgid="1835743123288916755">"Yo‘q"</string>
     <string name="wifi_config_text" msgid="8259587306773310314">"Nomi: %1$s\nFQDN: %2$s\nRoaming Consortiums: %3$s\nRealm: %4$s\nTasdiqlash uslubi: EAP-%5$s\n"</string>
     <string name="wifi_ttls_config_text" msgid="2002413183253872168">"Foydalanuvchi nomi: %s\n"</string>
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Mijoz sertifikati:\n%1$s\nKey: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Ishonch sertifikati:\n%s\n"</string>
+    <!-- no translation found for install_done_title (4822989918460334497) -->
+    <skip />
+    <!-- no translation found for install_done (1522718684172097080) -->
+    <skip />
+    <!-- no translation found for done_label (5597425930652904250) -->
+    <skip />
+    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
+    <skip />
+    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
+    <skip />
 </resources>

@@ -65,4 +65,16 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Сертификат на клиент:\n%1$s\nКлуч: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"СИМ: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Сертификат на доверба:\n%s\n"</string>
+    <!-- no translation found for install_done_title (4822989918460334497) -->
+    <skip />
+    <!-- no translation found for install_done (1522718684172097080) -->
+    <skip />
+    <!-- no translation found for done_label (5597425930652904250) -->
+    <skip />
+    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
+    <skip />
+    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
+    <skip />
 </resources>
