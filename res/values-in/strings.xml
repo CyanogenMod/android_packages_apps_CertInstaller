@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Sertifikat klien:\n%1$s\nKunci: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Sertifikat kepercayaan:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Kredensial yang terpasang"</string>
+    <string name="install_done" msgid="1522718684172097080">"Kredensial <xliff:g id="NAME">%1$s</xliff:g> telah ditambahkan ke jaringan Wi-Fi yang tersimpan."</string>
+    <string name="done_label" msgid="5597425930652904250">"SELESAI"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Pasang kredensial Wi-Fi untuk menyambungkan ke jaringan yang tersedia melalui <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"File yang diunduh bermasalah dan tidak dapat dipasang. Pastkan Anda mengunduh file dari sumber yang benar."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Tidak dapat memasang kredensial Wi-Fi. Coba unduh file lagi."</string>
 </resources>

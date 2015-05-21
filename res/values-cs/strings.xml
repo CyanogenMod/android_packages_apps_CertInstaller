@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Klientský certifikát:\n%1$s\nKlíč: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certifikát důvěry:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Identifikační údaje byly nainstalovány"</string>
+    <string name="install_done" msgid="1522718684172097080">"Identifikační údaje uživatele <xliff:g id="NAME">%1$s</xliff:g> byly přidány k uloženým sítím Wi-Fi."</string>
+    <string name="done_label" msgid="5597425930652904250">"HOTOVO"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Nainstalujte identifikační údaje sítí Wi-Fi, abyste se k sítím mohli připojovat jako uživatel <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Ve staženém soubory byly zjištěny problémy a nelze jej nainstalovat. Zkontrolujte, zda jste soubor stáhli ze správného zdroje."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Identifikační údaje k síti Wi-Fi nelze nainstalovat. Zkuste soubor stáhnout znovu."</string>
 </resources>

@@ -67,4 +67,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"සේවාලාභී සහතිකය:\n%1$s\nයතුර: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"විශ්වාස සහතිකය:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"අක්තපත්‍ර ස්ථාපනය කරන ලදී"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> Wi-Fi සුරැකි ජාල වෙත අක්තපත්‍ර එක් කර ඇත."</string>
+    <string name="done_label" msgid="5597425930652904250">"නිමයි"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> හරහා ලබා ගත හැකි ජාල වෙත සම්බන්ධ වීමට Wi-Fi අක්තපත්‍ර ස්ථාපනය කරන්න."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"බාගත් ගොනුවේ ගැටලු ඇති අතර ස්ථාපනය කළ නොහැකිය. ඔබ වත්මන් මූලාශ්‍රය වෙතින් ගොනුව බාගත් බව සහතික කර ගන්න."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi අක්තපත්‍ර ස්ථාපනය කළ නොහැකිය. ගොනුව නැවත බාගැනීමට උත්සාහ කරන්න."</string>
 </resources>

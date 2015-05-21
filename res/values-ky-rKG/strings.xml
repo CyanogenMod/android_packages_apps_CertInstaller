@@ -82,4 +82,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Кардардын тастыктамасы:\n%1$s\nНегизги: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Ишеним тастыктамасы:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Эсептик дайындар орнотулду"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> эсептик дайындары Wi-Fi\'да сакталган тармактарга кошулду."</string>
+    <string name="done_label" msgid="5597425930652904250">"БҮТТҮ"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> аркылуу тармакка туташуу үчүн Wi-Fi эсептик дайындарын орнотуңуз."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Жүктөлүп алынган файлда көйгөйлөр болуп, орнотулбай калды. Файл туура булактан жүктөлүп алынганын текшериңиз."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi эсептик дайындары орнотулбай калды. Файлды кайра жүктөп көрүңүз."</string>
 </resources>

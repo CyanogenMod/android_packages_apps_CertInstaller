@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"クライアント証明書:\n%1$s\nキー: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"信用できる証明書:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"認証情報のインストール完了"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g>の認証情報をWi-Fi保存済みネットワークに追加しました。"</string>
+    <string name="done_label" msgid="5597425930652904250">"完了"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g>を経由して利用可能なネットワークに接続するにはWi-Fi認証情報をインストールしてください。"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"ダウンロードしたファイルは問題があるためインストールできません。正しいソースからファイルをダウンロードしたことをご確認ください。"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi認証情報をインストールできません。ファイルのダウンロードをもう一度お試しください。"</string>
 </resources>

@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Сертификат клиента:\n%1$s\nКлюч: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Cертификат доверия:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Установка завершена"</string>
+    <string name="install_done" msgid="1522718684172097080">"Учетные данные (<xliff:g id="NAME">%1$s</xliff:g>) добавлены в базу сохраненных сетей Wi-Fi."</string>
+    <string name="done_label" msgid="5597425930652904250">"ГОТОВО"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Чтобы подключаться к сетям Wi-Fi, доступным через <xliff:g id="NAME">%1$s</xliff:g>, установите сертификат."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Невозможно установить сертификат. Убедитесь, что вы скачали его из надежного источника."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Не удалось установить сертификат доступа к Wi-Fi. Попробуйте скачать файл ещё раз."</string>
 </resources>

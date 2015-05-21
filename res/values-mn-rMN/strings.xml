@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Клинетийн сертификат:\n%1$s\nТүлхүүр: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"СИМ: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Итгэлцлийн сертификат:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Итгэмжлэлийг суулгасан"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> итгэмжлэлийг Wi-Fi-ийн хадгалсан сүлжээнд нэмлээ."</string>
+    <string name="done_label" msgid="5597425930652904250">"ДУУСЛАА"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Боломжтой сүлжээнд холбогдохын тулд Wi-Fi-ийн итгэмжлэлийг <xliff:g id="NAME">%1$s</xliff:g>-ээр дамжуулж суулгана уу.."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Татаж авсан файл асуудалтай байгаа тул суулгах боломжгүй байна. Та энэ файлыг зөв эх сурвалжаас татсан эсэхээ шалгана уу."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi-ийн итгэмжлэлийг суулгах боломжгүй байна. Файлыг дахин татаж авна уу."</string>
 </resources>

@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"វិញ្ញាបនបត្រម៉ាស៊ីនកូន៖\n%1$s\nគន្លឺះ៖ %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"វិញ្ញាបនបត្រទុកចិត្ត៖\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"បានដំឡើងអត្តសញ្ញាណ"</string>
+    <string name="install_done" msgid="1522718684172097080">"អត្តសញ្ញាណ <xliff:g id="NAME">%1$s</xliff:g> ត្រូវបានបន្ថែមទៅបណ្តាញ Wi-Fi ដែលបានរក្សាទុក។"</string>
+    <string name="done_label" msgid="5597425930652904250">"រួចរាល់"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"ដំឡើងអត្តសញ្ញាណ Wi-Fi ដើម្បីភ្ជាប់ទៅបណ្តាញដែលមានតាមរយៈ <xliff:g id="NAME">%1$s</xliff:g>។"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"ឯកសារដែលបានទាញយកមានបញ្ហា និងមិនអាចដំឡើងបានទេ។ សូមប្រាកដថាអ្នកបានទាញយកឯកសារពីប្រភពត្រឹមត្រូវ។"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"មិនអាចដំឡើងអត្តសញ្ញាណ Wi-Fi ទេ។ សាកល្បងទាញយកឯកសារម្តងទៀត។"</string>
 </resources>

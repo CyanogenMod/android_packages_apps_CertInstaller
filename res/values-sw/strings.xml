@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Cheti cha kiteja:\n%1$s\nMsimbo: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Cheti unachokiamini:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Kitambulisho kimesakinishwa"</string>
+    <string name="install_done" msgid="1522718684172097080">"Kitambulisho cha <xliff:g id="NAME">%1$s</xliff:g> kimeongezwa kwenye mitandao iliyohifadhiwa ya Wi-Fi."</string>
+    <string name="done_label" msgid="5597425930652904250">"NIMEMALIZA"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Sakinisha kitambulisho cha Wi-Fi ili uunganishe kwenye mitandao inayopatikana kupitia <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Faili iliyopakuliwa ina matatizo na haiwezi kusakinishwa. Hakikisha kuwa ulipakua faili hiyo kutoka chanzo sahihi."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Haiwezi kusakinisha kitambulisho cha Wi-Fi. Jaribu kupakua faili tena."</string>
 </resources>

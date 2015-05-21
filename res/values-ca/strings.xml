@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Certificat del client:\n%1$s\nClau: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certificat de confiança:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Credencials instal·lades"</string>
+    <string name="install_done" msgid="1522718684172097080">"Les credencials de <xliff:g id="NAME">%1$s</xliff:g> s\'han afegit a les xarxes Wi-Fi desades."</string>
+    <string name="done_label" msgid="5597425930652904250">"FET"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Instal·la les credencials de Wi-Fi per connectar-te a les xarxes disponibles mitjançant <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"El fitxer baixat té problemes i no es pot instal·lar. Comprova que hagis baixat el fitxer de la font correcta."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"No es poden instal·lar les credencials de Wi-Fi. Prova de tornar a baixar el fitxer."</string>
 </resources>

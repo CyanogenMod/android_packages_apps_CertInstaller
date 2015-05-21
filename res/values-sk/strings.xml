@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Certifikát klienta:\n%1$s\nKľúč: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM karta: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certifikát dôveryhodnosti:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Poverenia boli nainštalované"</string>
+    <string name="install_done" msgid="1522718684172097080">"Poverenia rozhrania <xliff:g id="NAME">%1$s</xliff:g> boli pridané do uložených sietí Wi-Fi."</string>
+    <string name="done_label" msgid="5597425930652904250">"HOTOVO"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Nainštaluje poverenia siete Wi-Fi na pripojenie k sieťam dostupným prostredníctvom rozhrania <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"V stiahnutom súbore sa vyskytli problémy a nedá sa nainštalovať. Skontrolujte, či ste ho stiahli zo správneho zdroja."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Poverenia do siete Wi-Fi nie je možné nainštalovať. Skúste znova stiahnuť súbor."</string>
 </resources>

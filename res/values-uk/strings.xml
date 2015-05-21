@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Сертифікат клієнта:\n%1$s\nКлюч: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Сертифікат довіреної особи чи компанії:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Облікові дані встановлено"</string>
+    <string name="install_done" msgid="1522718684172097080">"Облікові дані для мережі \"<xliff:g id="NAME">%1$s</xliff:g>\" додано до збережених мереж Wi-Fi."</string>
+    <string name="done_label" msgid="5597425930652904250">"ГОТОВО"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Установіть облікові дані для Wi-Fi, щоб під’єднуватися до доступних мереж через мережу \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Не вдається встановити завантажений файл. Переконайтеся, що ви завантажили його з потрібного джерела."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Не вдається встановити облікові дані для Wi-Fi. Завантажте файл знову."</string>
 </resources>

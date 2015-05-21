@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"‏کلائنٹ کا سرٹیفکیٹ:\n‎%1$s\nکلید: ‎%2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"‏بھروسہ کا سرٹیفکیٹ:\n‎%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"اسنادات کو انسٹال کر دیا گیا"</string>
+    <string name="install_done" msgid="1522718684172097080">"‏<xliff:g id="NAME">%1$s</xliff:g> اسنادات کو Wi-Fi کی جانب سے محفوظ کردہ نیٹ ورکس میں شامل کر دیا گیا ہے۔"</string>
+    <string name="done_label" msgid="5597425930652904250">"ہوگیا"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"‏<xliff:g id="NAME">%1$s</xliff:g> کے ذریعہ دستیاب نیٹ ورکس سے منسلک کرنے کیلئے Wi-Fi اسنادات انسٹال کریں۔"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"ڈاؤن لوڈ کردہ فائل میں مسائل ہیں اور اسے انسٹال نہیں کیا جا سکتا ہے۔ قینی بنائیں کہ آپ نے درست ماخذ سے فائل ڈاؤن لوڈ کی ہے۔"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"‏Wi-Fi اسنادات کو ڈاؤن لوڈ نہیں کیا جا سکتا ہے۔ فائل کو دوبارہ ڈاؤن لوڈ کرنے کی کوشش کریں۔"</string>
 </resources>

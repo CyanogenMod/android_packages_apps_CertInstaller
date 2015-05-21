@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Mijoz sertifikati:\n%1$s\nKey: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Ishonch sertifikati:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"O‘rnatish tugallandi"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> hisobi ma’lumotlari saqlangan Wi-Fi tarmoqlariga qo‘shildi."</string>
+    <string name="done_label" msgid="5597425930652904250">"TAYYOR"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> orqali mavjud Wi-Fi tarmoqlariga ulanish uchun sertifikatni o‘rnating."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Yuklab olingan faylda muammo mavjud, shuning uchun uni o‘rnatib bo‘lmaydi. Fayl yuklab olingan manba to‘g‘ri ekanligiga ishonch hosil qiling."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi tarmog‘iga ulanish sertifikatini o‘rnatib bo‘lmadi. Faylni qaytadan yuklab oling."</string>
 </resources>

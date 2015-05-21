@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"‏شهادة العميل:\n%1$s\nالمفتاح: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"‏شهادة الثقة:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"بيانات الاعتماد المثبَّتة"</string>
+    <string name="install_done" msgid="1522718684172097080">"‏تمت إضافة بيانات اعتماد <xliff:g id="NAME">%1$s</xliff:g> إلى شبكات Wi-Fi المحفوظة."</string>
+    <string name="done_label" msgid="5597425930652904250">"تم"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"‏تثبيت بيانات اعتماد Wi-Fi للاتصال بالشبكات المتاحة عبر <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"الملف الذي تم تنزيله يحتوي على مشكلات ولا يمكن تثبيته. تأكد من تنزيل الملف من المصدر الصحيح."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"‏يتعذر تثبيت بيانات اعتماد Wi-Fi. يمكنك تجربة تنزيل الملف مرة أخرى."</string>
 </resources>

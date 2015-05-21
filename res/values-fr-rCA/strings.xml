@@ -65,4 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Certificat client :\n%1$s\nClé : %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM : %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certificat de confiance : \n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Données de connexion installées"</string>
+    <string name="install_done" msgid="1522718684172097080">"Les données de connexion au réseau <xliff:g id="NAME">%1$s</xliff:g> ont été ajoutés aux réseaux Wi-Fi mémorisés."</string>
+    <string name="done_label" msgid="5597425930652904250">"TERMINÉ"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Installez les données de connexion Wi-Fi pour vous connecter aux réseaux accessibles par <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Le fichier téléchargé contient des erreurs et ne peut pas être installé. Assurez-vous d\'avoir téléchargé le fichier à partir de la bonne source."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Impossible d\'installer les données de connexion Wi-Fi. Essayez de télécharger le fichier à nouveau."</string>
 </resources>
