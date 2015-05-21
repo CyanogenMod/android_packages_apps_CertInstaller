@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"క్లయింట్ ప్రమాణపత్రం:\n%1$s\nకీ: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"విశ్వాస ప్రమాణపత్రం:\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"ఆధారాలు ఇన్‌స్టాల్ చేయబడ్డాయి"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> ఆధారాలు Wi-Fi సేవ్ చేసిన నెట్‌వర్క్‌లకు జోడించబడ్డాయి."</string>
+    <string name="done_label" msgid="5597425930652904250">"పూర్తయింది"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> ద్వారా అందుబాటులో ఉన్న నెట్‌వర్క్‌లకు కనెక్ట్ చేయడానికి Wi-Fi ఆధారాలను ఇన్‌స్టాల్ చేయండి."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"డౌన్‌లోడ్ చేసిన ఫైల్‌లో సమస్యలు ఉన్నాయి, కనుక అది ఇన్‌స్టాల్ చేయబడదు. మీరు ఫైల్‌ను సరైన మూలం నుండే డౌన్‌లోడ్ చేసినట్లు నిర్ధారించుకోండి."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ఆధారాలను ఇన్‌స్టాల్ చేయడం సాధ్యపడదు. ఫైల్‌ను మళ్లీ డౌన్‌లోడ్ చేయడానికి ప్రయత్నించండి."</string>
 </resources>

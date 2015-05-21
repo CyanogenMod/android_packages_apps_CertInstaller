@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Certificat client:\n%1$s\nCheie: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certificat de încredere:\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"Datele de conectare au fost instalate"</string>
+    <string name="install_done" msgid="1522718684172097080">"Datele de conectare la <xliff:g id="NAME">%1$s</xliff:g> au fost adăugate la rețelele Wi-Fi salvate."</string>
+    <string name="done_label" msgid="5597425930652904250">"TERMINAT"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Instalați datele de conectare la Wi-Fi pentru a vă conecta la rețelele disponibile prin <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Fișierul descărcat are probleme și nu poate fi instalat. Asigurați-vă că ați descărcat fișierul din sursa corespunzătoare."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Datele de conectare la Wi-Fi nu pot fi instalate. Încercați să descărcați din nou fișierul."</string>
 </resources>

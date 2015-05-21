@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"ใบรับรองไคลเอ็นต์:\n%1$s\nคีย์: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"ซิม: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"ใบรับรองที่น่าเชื่อถือ:\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"ติดตั้งข้อมูลรับรองแล้ว"</string>
+    <string name="install_done" msgid="1522718684172097080">"เพิ่มข้อมูลรับรองของ <xliff:g id="NAME">%1$s</xliff:g> ไปยังเครือข่าย Wi-Fi ที่บันทึกไว้แล้ว"</string>
+    <string name="done_label" msgid="5597425930652904250">"เสร็จสิ้น"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"ติดตั้งข้อมูลรับรอง Wi-Fi เพื่อเชื่อมต่อกับเครือข่ายที่ให้บริการผ่าน <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"ไฟล์ที่ดาวน์โหลดมามีปัญหาและไม่สามารถติดตั้งได้ โปรดตรวจสอบว่าคุณได้ดาวน์โหลดไฟล์จากแหล่งที่มาที่ถูกต้อง"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"ไม่สามารถติดตั้งข้อมูลรับรอง Wi-Fi โปรดลองดาวน์โหลดไฟล์อีกครั้ง"</string>
 </resources>
