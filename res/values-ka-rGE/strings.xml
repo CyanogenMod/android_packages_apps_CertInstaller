@@ -67,16 +67,10 @@
     <!-- String.format failed for translation -->
     <!-- no translation found for wifi_trust_config_text (5916047381475747783) -->
     <skip />
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"ავტორიზაციის მონაცემები დაყენებულია"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> ავტორიზაციის მონაცემები დაემატა შენახულ Wi-Fi ქსელებს."</string>
+    <string name="done_label" msgid="5597425930652904250">"შესრულდა"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"დააინსტალიერეთ Wi-Fi ავტორიზაციის მონაცემები <xliff:g id="NAME">%1$s</xliff:g>-ის საშუალებით ხელმისაწვდომ ქსელებთან დასაკავშირებლად."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"გადმოწერილ ფაილს პრობლემები აქვს და ვერ დაინსტალირდება. დარწმუნდით, რომ ფაილი სწორი წყაროდან გადმოწერეთ."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ავტორიზაციის მონაცემები ვერ დაყენდება. ფაილის გადმოწერა ხელახლა სცადეთ."</string>
 </resources>

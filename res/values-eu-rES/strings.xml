@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Bezeroaren ziurtagiria:\n%1$s\nGakoa: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM txartela: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Fidatu ziurtagiri honetan:\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"Instalatu dira kredentzialak"</string>
+    <string name="install_done" msgid="1522718684172097080">"Gehitu dira <xliff:g id="NAME">%1$s</xliff:g> kredentzialak gordetako Wi-Fi sareetan."</string>
+    <string name="done_label" msgid="5597425930652904250">"EGINDA"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Instalatu Wi-Fi kredentzialak <xliff:g id="NAME">%1$s</xliff:g> bidez erabilgarri dauden sareetara konektatzeko."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Deskargatutako fitxategiak arazoak ditu eta ezin da instalatu. Ziurtatu iturburu zuzenetik deskargatu duzula fitxategia."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Ezin dira instalatu Wi-Fi kredentzialak. Saiatu fitxategia berriro deskargatzen."</string>
 </resources>

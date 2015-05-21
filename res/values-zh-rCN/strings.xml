@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"客户端证书：\n%1$s\n密钥：%2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM：%s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"信任证书：\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"已安装凭据"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g>凭据已添加到 WLAN 已保存的网络。"</string>
+    <string name="done_label" msgid="5597425930652904250">"完成"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"安装 WLAN 凭据即可通过<xliff:g id="NAME">%1$s</xliff:g>连接到可用网络。"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"下载的文件存在问题，无法安装。请确保您是从正确的来源下载文件。"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"无法安装 WLAN 凭据。请尝试重新下载文件。"</string>
 </resources>

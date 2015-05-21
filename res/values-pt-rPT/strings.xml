@@ -65,16 +65,10 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Certificado de cliente:\n%1$s\nChave: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Certificado de confiança:\n%s\n"</string>
-    <!-- no translation found for install_done_title (4822989918460334497) -->
-    <skip />
-    <!-- no translation found for install_done (1522718684172097080) -->
-    <skip />
-    <!-- no translation found for done_label (5597425930652904250) -->
-    <skip />
-    <!-- no translation found for wifi_installer_detail (63879632832701669) -->
-    <skip />
-    <!-- no translation found for wifi_installer_download_error (5429453090956277692) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail (894483173306576331) -->
-    <skip />
+    <string name="install_done_title" msgid="4822989918460334497">"Credenciais instaladas"</string>
+    <string name="install_done" msgid="1522718684172097080">"As credenciais de <xliff:g id="NAME">%1$s</xliff:g> foram adicionadas às redes Wi-Fi guardadas."</string>
+    <string name="done_label" msgid="5597425930652904250">"CONCLUÍDO"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Instale as credenciais de Wi-Fi para estabelecer ligação às redes disponíveis através do <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"O ficheiro transferido tem problemas e não pode ser instalado. Certifique-se de que transferiu o ficheiro da origem correta."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Não é possível instalar as credenciais de Wi-Fi. Tente transferir o ficheiro novamente."</string>
 </resources>
