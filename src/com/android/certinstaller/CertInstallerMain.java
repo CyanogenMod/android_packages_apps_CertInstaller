@@ -69,8 +69,6 @@ public class CertInstallerMain extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.d("WFII", "Created!");
-
         setResult(RESULT_CANCELED);
 
         UserManager userManager = (UserManager) getSystemService(Context.USER_SERVICE);
