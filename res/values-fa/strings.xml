@@ -47,7 +47,7 @@
     <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"‏هیچ فایل گواهی در کارت SD یافت نشد."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"‏حافظهٔ USB موجود نیست."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"‏کارت SD موجود نیست."</string>
-    <string name="only_primary_user_allowed" msgid="4005084935023047716">"فقط مالک این دستگاه می‌تواند گواهی‌ها را نصب نماید."</string>
+    <string name="only_primary_user_allowed" msgid="4005084935023047716">"فقط مالک این دستگاه می‌تواند مجوزها را نصب کند."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"استفاده از اطلاعات کاربری:"</string>
   <string-array name="credential_usage">
     <item msgid="375085478373011304">"‏VPN و برنامه‌ها"</item>

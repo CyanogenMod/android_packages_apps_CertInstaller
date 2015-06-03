@@ -44,9 +44,9 @@
     <string name="cert_missing_error" msgid="7040527352278728220">"Inštalácia zlyhala, pretože sa nepodarilo nájsť súbor s certifikátom."</string>
     <string name="cert_read_error" msgid="7353463360652419796">"Inštalácia zlyhala, pretože sa nepodarilo prečítať súbor s certifikátom."</string>
     <string name="no_cert_file_found" product="nosdcard" msgid="3555332946357131929">"V ukladacom priestore USB nebol nájdený žiadny súbor certifikátu."</string>
-    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Na karte SD nebol nájdený žiadny certifikát."</string>
+    <string name="no_cert_file_found" product="default" msgid="1942077544887243999">"Na SD karte nebol nájdený žiadny certifikát."</string>
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"Ukl. priestor USB je nedostup."</string>
-    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Karta SD nie je k dispozícii."</string>
+    <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"SD karta nie je k dispozícii."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Certifikáty môže inštalovať iba vlastník tohto zariadenia."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"Použitie poverení:"</string>
   <string-array name="credential_usage">
