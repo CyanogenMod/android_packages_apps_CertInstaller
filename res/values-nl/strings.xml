@@ -35,7 +35,7 @@
     <string name="name_empty_error" msgid="3808800768660110354">"Typ een naam."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Typ een naam die alleen letters en cijfers bevat."</string>
     <string name="storage_error" msgid="8306802455802770779">"Kan het certificaat niet opslaan. Raak \'OK\' aan om het opnieuw te proberen."</string>
-    <string name="unable_to_save_cert" msgid="9178604087335389686">"Kan het certificaat niet opslaan. De opslag van referenties is niet ingeschakeld of niet correct geïnitialiseerd."</string>
+    <string name="unable_to_save_cert" msgid="9178604087335389686">"Kan het certificaat niet opslaan. Opslag van certificaatgegevens is niet ingeschakeld of niet correct geïnitialiseerd."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Het certificaat is niet geïnstalleerd."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Er is geen certificaat dat kan worden geïnstalleerd."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Het certificaat is ongeldig."</string>
@@ -48,7 +48,7 @@
     <string name="sdcard_not_present" product="nosdcard" msgid="9197143240492611196">"USB-opslag niet beschikbaar."</string>
     <string name="sdcard_not_present" product="default" msgid="3866952732541932947">"Er is geen SD-kaart geplaatst."</string>
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Alleen de eigenaar van dit apparaat kan certificaten installeren."</string>
-    <string name="credential_usage_label" msgid="1513892208033156805">"Gebruik van referentiegegevens:"</string>
+    <string name="credential_usage_label" msgid="1513892208033156805">"Gebruik van certificaatgegevens:"</string>
   <string-array name="credential_usage">
     <item msgid="375085478373011304">"VPN en apps"</item>
     <item msgid="692322974985472861">"Wifi"</item>
