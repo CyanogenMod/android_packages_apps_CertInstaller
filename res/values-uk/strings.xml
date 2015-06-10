@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"%d сертифікати ЦА"</string>
     <string name="password_error" msgid="2042471639556516356">"Введіть правильний пароль."</string>
     <string name="password_empty_error" msgid="591713406761723025">"Введіть пароль."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"Введіть ім’я."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"Введіть назву."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Введіть назву, яка містить лише літери та цифри."</string>
     <string name="storage_error" msgid="8306802455802770779">"Не вдалося зберегти сертифікат. Торкніться \"OK\", щоб повторити спробу."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Не вдалося зберегти сертифікат. Сховище облікових даних не ввімкнено або не ініціалізовано належним чином."</string>
@@ -50,7 +50,7 @@
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Лише власник цього пристрою може встановлювати сертифікати."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"Використання облікових даних:"</string>
   <string-array name="credential_usage">
-    <item msgid="375085478373011304">"Мережа VPN і програми"</item>
+    <item msgid="375085478373011304">"Мережа VPN і додатки"</item>
     <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
     <string name="wifi_title" msgid="8475811746333426489">"Профіль мережі Wi-Fi"</string>
