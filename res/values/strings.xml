@@ -105,4 +105,7 @@
     <string name="wifi_installer_detail">Install Wi-Fi credentials to connect to networks available via <xliff:g id="name">%1$s</xliff:g>&#46;</string>
     <string name="wifi_installer_download_error">Downloaded file has problems and can\'t be installed&#46; Make sure you downloaded the file from the correct source&#46;</string>
     <string name="wifi_installer_fail">Can\'t install Wi-Fi credentials&#46; Try downloading the file again&#46;</string>
+    <string name="wifi_installer_fail_no_wifi_title">Installation cancelled</string>
+    <string name="wifi_installer_fail_title">Installation Failed</string>
+    <string name="wifi_installer_fail_no_wifi">Turn on Wi-Fi and try again&#46;</string>
 </resources>
