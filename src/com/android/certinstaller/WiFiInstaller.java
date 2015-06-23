@@ -90,8 +90,15 @@ public class WiFiInstaller extends Activity {
                     new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    if(mWifiManager.addNetwork(mWifiConfiguration) != -1
-                            && mWifiManager.saveConfiguration()) {
+                    boolean success;
+                    try {
+                        success = mWifiManager.addNetwork(mWifiConfiguration) != -1
+                                && mWifiManager.saveConfiguration();
+                    }
+                    catch (RuntimeException rte) {
+                        success = false;
+                    }
+                    if(success) {
                         Intent intent = new Intent(getApplicationContext(),
                                 CredentialsInstallDialog.class);
                         intent.putExtra(NETWORK_NAME, mWifiConfiguration.providerFriendlyName);
@@ -115,7 +122,7 @@ public class WiFiInstaller extends Activity {
                     dialog.dismiss();
                     finish();
                 }
-            });
+                    });
         } else {
             text.setText(getResources().getString(R.string.wifi_installer_download_error));
             builder.setPositiveButton(R.string.done_label, new DialogInterface.OnClickListener() {
