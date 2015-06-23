@@ -48,12 +48,16 @@ public class CredentialsInstallDialog extends Activity {
         Bundle bundle = getIntent().getExtras();
         int installState = getIntent().getIntExtra(INSTALL_STATE, 0);
         TextView text = (TextView) layout.findViewById(R.id.credential_installed_content);
-        if (installState == 1) {
+        if (installState == WiFiInstaller.INSTALL_SUCCESS) {
             String networkName = bundle.getString(NETWORK_NAME);
             text.setText(String.format(getResources().getString(R.string.install_done), networkName));
             builder.setTitle(getResources().getString(R.string.install_done_title));
-        } else {
+        } else if (installState == WiFiInstaller.INSTALL_FAIL){
             text.setText(getResources().getString(R.string.wifi_installer_fail));
+            builder.setTitle(R.string.wifi_installer_fail_title);
+        } else if (installState == WiFiInstaller.INSTALL_FAIL_NO_WIFI) {
+            text.setText(getResources().getString(R.string.wifi_installer_fail_no_wifi));
+            builder.setTitle(R.string.wifi_installer_fail_no_wifi_title);
         }
         builder.setPositiveButton(R.string.done_label, new DialogInterface.OnClickListener() {
             @Override

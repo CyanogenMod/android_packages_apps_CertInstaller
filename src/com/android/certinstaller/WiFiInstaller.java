@@ -27,6 +27,9 @@ public class WiFiInstaller extends Activity {
     private static final String TAG = "WifiInstaller";
     private static final String NETWORK_NAME = "network_name";
     private static final String INSTALL_STATE = "install_state";
+    public static final int INSTALL_SUCCESS = 2;
+    public static final int INSTALL_FAIL = 1;
+    public static final int INSTALL_FAIL_NO_WIFI = 0;
     WifiConfiguration mWifiConfiguration;
     WifiManager mWifiManager;
     boolean doNotInstall;
@@ -102,12 +105,16 @@ public class WiFiInstaller extends Activity {
                         Intent intent = new Intent(getApplicationContext(),
                                 CredentialsInstallDialog.class);
                         intent.putExtra(NETWORK_NAME, mWifiConfiguration.providerFriendlyName);
-                        intent.putExtra(INSTALL_STATE, 1);
+                        intent.putExtra(INSTALL_STATE, INSTALL_SUCCESS);
                         startActivity(intent);
                     } else {
                         Intent intent = new Intent(getApplicationContext(),
                                 CredentialsInstallDialog.class);
-                        intent.putExtra(INSTALL_STATE, 0);
+                        if (!mWifiManager.isWifiEnabled()) {
+                            intent.putExtra(INSTALL_STATE, INSTALL_FAIL_NO_WIFI);
+                        } else {
+                            intent.putExtra(INSTALL_STATE, INSTALL_FAIL);
+                        }
                         startActivity(intent);
                     }
                     dialog.dismiss();
