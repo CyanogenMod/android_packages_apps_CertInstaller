@@ -71,4 +71,10 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> orqali mavjud Wi-Fi tarmoqlariga ulanish uchun sertifikatni o‘rnating."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Yuklab olingan faylda muammo mavjud, shuning uchun uni o‘rnatib bo‘lmaydi. Fayl yuklab olingan manba to‘g‘ri ekanligiga ishonch hosil qiling."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi tarmog‘iga ulanish sertifikatini o‘rnatib bo‘lmadi. Faylni qaytadan yuklab oling."</string>
+    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
+    <skip />
 </resources>

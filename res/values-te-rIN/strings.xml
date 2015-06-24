@@ -71,4 +71,10 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> ద్వారా అందుబాటులో ఉన్న నెట్‌వర్క్‌లకు కనెక్ట్ చేయడానికి Wi-Fi ఆధారాలను ఇన్‌స్టాల్ చేయండి."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"డౌన్‌లోడ్ చేసిన ఫైల్‌లో సమస్యలు ఉన్నాయి, కనుక అది ఇన్‌స్టాల్ చేయబడదు. మీరు ఫైల్‌ను సరైన మూలం నుండే డౌన్‌లోడ్ చేసినట్లు నిర్ధారించుకోండి."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ఆధారాలను ఇన్‌స్టాల్ చేయడం సాధ్యపడదు. ఫైల్‌ను మళ్లీ డౌన్‌లోడ్ చేయడానికి ప్రయత్నించండి."</string>
+    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
+    <skip />
 </resources>
