@@ -71,4 +71,10 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Instalirajte vjerodajnice Wi-Fi-ja da biste se povezivali s mrežama dostupnim putem <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Na preuzetoj datoteci ima problema, pa je nije moguće instalirati. Provjerite jeste li preuzeli datoteku iz točnog izvora."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Instaliranje vjerodajnica Wi-Fi-ja nije uspjelo. Ponovo pokušajte preuzeti datoteku."</string>
+    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
+    <skip />
 </resources>

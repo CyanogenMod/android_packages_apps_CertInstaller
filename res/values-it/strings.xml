@@ -36,10 +36,10 @@
     <string name="name_char_error" msgid="3176618568784938968">"Digita un nome contenente soltanto lettere e numeri."</string>
     <string name="storage_error" msgid="8306802455802770779">"Impossibile salvare il certificato. Tocca OK per riprovare."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Impossibile salvare il certificato. L\'archivio credenziali non è attivo o non è stato inizializzato correttamente."</string>
-    <string name="cert_not_saved" msgid="4037698479662830270">"Il certificato non è installato."</string>
+    <string name="cert_not_saved" msgid="4037698479662830270">"Il certificato non è stato installato."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nessun certificato da installare."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Il certificato non è valido."</string>
-    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> è installato."</string>
+    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> installato."</string>
     <string name="cert_too_large_error" msgid="8715414972725646285">"Installazione impossibile: dimensioni del certificato troppo grandi."</string>
     <string name="cert_missing_error" msgid="7040527352278728220">"Installazione impossibile: file del certificato non trovato."</string>
     <string name="cert_read_error" msgid="7353463360652419796">"Installazione impossibile: file del certificato non leggibile."</string>
@@ -71,4 +71,10 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Installa le credenziali Wi-Fi <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Il file scaricato ha problemi e non può essere installato. Assicurati di aver scaricato il file dalla fonte corretta."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Impossibile installare le credenziali Wi-Fi. Prova a scaricare nuovamente il file."</string>
+    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
+    <skip />
 </resources>

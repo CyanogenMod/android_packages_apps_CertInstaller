@@ -71,4 +71,10 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> द्वारे उपलब्ध असलेल्या नेटवर्कशी कनेक्‍ट करण्यासाठी वाय-फाय क्रेडेन्शियल स्थापित करा."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"डाउनलोड केलेल्या फाइलमध्‍ये समस्या आहेत आणि स्थापित केली जाऊ शकत नाही. आपण योग्य स्त्रोतावरून फाईल डाउनलोड केली हे सुनिश्चित करा."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"वाय-फाय क्रेडेन्शियल स्थापित करू शकत नाही. फाईल डाउनलोड करण्‍याचा पुन्हा प्रयत्न करा."</string>
+    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
+    <skip />
+    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
+    <skip />
 </resources>
