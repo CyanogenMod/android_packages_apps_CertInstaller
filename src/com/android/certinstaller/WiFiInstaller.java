@@ -101,7 +101,7 @@ public class WiFiInstaller extends Activity {
                     catch (RuntimeException rte) {
                         success = false;
                     }
-                    if(success) {
+                    if (success) {
                         Intent intent = new Intent(getApplicationContext(),
                                 CredentialsInstallDialog.class);
                         intent.putExtra(NETWORK_NAME, mWifiConfiguration.providerFriendlyName);
