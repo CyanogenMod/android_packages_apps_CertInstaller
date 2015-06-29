@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> ilə əlçatan şəbəkələrə qoşulmaq üçün Wi-Fi etimadnaməsini quraşdırın."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Endirilmiş fayllarda problem var və quraşdırıla bilməz. Faylı düzgün mənbədən endirdiyinizə əmin olun."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi məlumatlarını quraşdırmaq olmur. Faylı yenidən endirməyə cəhd edin."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Quraşdırma ləğv edildi"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Quraşdırıla bilməz"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Wi-Fi\'ı yandırın və yenidən cəhd edin."</string>
 </resources>

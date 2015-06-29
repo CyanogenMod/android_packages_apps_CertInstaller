@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> ಮೂಲಕ ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್‌ಗಳಿಗೆ ಸಂಪರ್ಕಪಡಿಸಲು Wi-Fi ರುಜುವಾತುಗಳನ್ನು ಸ್ಥಾಪಿಸಿ."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಫೈಲ್ ಸಮಸ್ಯೆಗಳನ್ನು ಹೊಂದಿವೆ ಹಾಗೂ ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ನೀವು ಸರಿಯಾದ ಮೂಲದಿಂದ ಫೈಲ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿರುವಿರಾ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ರುಜುವಾತುಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮತ್ತೆ ಫೈಲ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"ಸ್ಥಾಪಿಸುವಿಕೆ ರದ್ದು ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"ವೈ-ಫೈ ಆನ್ ಮಾಡಿ ಹಾಗೂ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."</string>
 </resources>

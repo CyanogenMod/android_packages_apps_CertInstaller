@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Εγκαταστήστε διαπιστευτήρια Wi-Fi για να συνδεθείτε σε δίκτυα που είναι διαθέσιμα μέσω του <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Υπάρχουν προβλήματα με το ληφθέν αρχείο και δεν μπορεί να εγκατασταθεί. Βεβαιωθείτε ότι κατεβάσατε το αρχείο από τη σωστή πηγή."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Δεν είναι δυνατή η εγκατάσταση διαπιστευτηρίων Wi-Fi. Δοκιμάστε να κατεβάσετε ξανά το αρχείο."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Η εγκατάσταση ακυρώθηκε"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Δεν είναι δυνατή η εγκατάσταση"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Ενεργοποιήστε το Wi-Fi και δοκιμάστε ξανά."</string>
 </resources>

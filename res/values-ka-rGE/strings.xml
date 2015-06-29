@@ -73,10 +73,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"დააინსტალიერეთ Wi-Fi ავტორიზაციის მონაცემები <xliff:g id="NAME">%1$s</xliff:g>-ის საშუალებით ხელმისაწვდომ ქსელებთან დასაკავშირებლად."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"გადმოწერილ ფაილს პრობლემები აქვს და ვერ დაინსტალირდება. დარწმუნდით, რომ ფაილი სწორი წყაროდან გადმოწერეთ."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ავტორიზაციის მონაცემები ვერ დაყენდება. ფაილის გადმოწერა ხელახლა სცადეთ."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"ინსტალაცია გაუქმდა"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"ინსტალაცია ვერ ხერხდება"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"ჩართეთ Wi-Fi და ხელახლა სცადეთ."</string>
 </resources>
