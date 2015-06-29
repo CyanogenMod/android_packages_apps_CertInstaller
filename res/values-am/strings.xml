@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"በ<xliff:g id="NAME">%1$s</xliff:g> በኩል ወደ  የሚገኙ አውታረ መረቦች ለማገናኘት የWi-Fi ምስክርነቶችን ይጫኑ።"</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"የወረደው ፋይል ችግሮች አሉበት እና ሊጫን አይችልም። ፋይሉን ከትክክለኛው ምንጭ እንዳወረዱት እርግጠኛ ይሁኑ።"</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"የWi-Fi ምስክርነቶችን መጫን አይቻልም። ፋይሉን እንደገና ማውረድ ይሞክሩ።"</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"መጫን ተትቷል"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"መጫን አይቻልም"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Wi-Fi ያብሩ እና እንደገና ይሞክሩ።"</string>
 </resources>

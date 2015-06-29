@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Wi-Fi 사용자 인증 정보를 설치하여 <xliff:g id="NAME">%1$s</xliff:g>을(를) 통해 사용할 수 있는 네트워크에 연결합니다."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"다운로드한 파일에 문제가 발생하여 설치할 수 없습니다. 파일을 올바른 소스에서 다운로드했는지 확인하세요."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi 사용자 인증 정보를 설치할 수 없습니다. 파일을 다시 다운로드하세요."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"설치 취소됨"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"설치할 수 없음"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Wi-Fi를 켜고 다시 시도"</string>
 </resources>

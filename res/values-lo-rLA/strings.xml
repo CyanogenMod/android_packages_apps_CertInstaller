@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"ຕິດ​ຕັ້ງ​ຂໍ້​ມູນ​ປະ​ຈຳ​ຕົວ Wi-Fi ເພື່ອ​ເຊື່ອມ​ຕໍ່​ກັບ​ເຄືອ​ຂ່າຍ​ທີ່​ມີ​ຢູ່​ຜ່ານ <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"ໄຟ​ລ​໌​ທີ່​ດາວ​ໂຫຼດ​ໄວ້​ມີ​ບັນ​ຫາ ແລະ​ບໍ່​ສາ​ມາດ​ຕິດ​ຕັ້ງ​ໄດ້. ເບິ່ງ​ໃຫ້​ແນ່​ໃຈ​ວ່າ ທ່ານ​ດາວ​ໂຫຼດໄຟ​ລ໌ມາ​ຈາກ​ແຫຼ່ງ​ທີ່​ຖືກ​ຕ້ອງ​ແລ້ວ."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"ບໍ່​ສາ​ມາດ​ຕິດ​ຕັ້ງ​ຂໍ້​ມູນ​ປະ​ຈຳ​ໂຕ Wi-Fi ໄດ້. ລອງ​ດາວ​ໂຫຼດ​ໄຟ​ລ໌​ອີກ."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"ການ​ຕິດ​ຕັ້ງ​ຍົກ​ເລີກ​ແລ້ວ"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"ບໍ່​ສາ​ມາດ​ຕິດ​ຕັ້ງ​ໄດ້"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"ເປີດ Wi-Fi ແລະ​ລອງ​ໃໝ່​ອີກ."</string>
 </resources>

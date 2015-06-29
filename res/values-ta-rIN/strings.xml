@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> வழியாகக் கிடைக்கும் நெட்வொர்க்குகளுடன் இணைக்க, வைஃபை நற்சான்றிதழை நிறுவவும்."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"இறக்கப்பட்ட கோப்பில் சிக்கல்கள் உள்ளதால், அதை நிறுவ முடியாது. சரியான மூலத்திலிருந்து கோப்பை இறக்கியதை உறுதிப்படுத்திக்கொள்ளவும்."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"வைஃபை நற்சான்றிதழை நிறுவ முடியவில்லை. கோப்பை மீண்டும் இறக்க முயற்சிக்கவும்."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"நிறுவுதல் ரத்துசெய்யப்பட்டது"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"நிறுவ முடியவில்லை"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"வைஃபையை இயக்கி, மீண்டும் முயற்சிக்கவும்."</string>
 </resources>

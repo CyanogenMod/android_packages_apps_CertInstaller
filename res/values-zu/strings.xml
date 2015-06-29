@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Faka ukuqinisekisa kwe-Wi-Fi ukuze uxhume kumanethiwekhi atholakalayo nge-<xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Ifayela elilandiwe linezinkinga futhi alikwazi ukufakwa. Qinisekisa ukuthi ulande ifayela kusuka kumthombo olungile."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Ayikwazi ukufaka ukuqinisekisa kwe-Wi-Fi. Zama ukulanda ifayela futhi."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Ukufaka kukhanseliwe"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Ayikwazi ukufaka"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Vula i-Wi-Fi uphinde uzame futhi."</string>
 </resources>

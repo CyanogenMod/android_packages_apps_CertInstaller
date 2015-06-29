@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"Installera Wi-Fi-användaruppgifter och anslut till nätverk som är tillgängliga via <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"Det går inte att installera den nedladdade filen på grund av problem med den. Kontrollera att du laddade ned filen från rätt källa."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Det går inte att installera användaruppgifter för Wi-Fi. Testa att ladda ned filen igen."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Installationen avbröts"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Det gick inte att installera"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Aktivera Wi-Fi och försök igen."</string>
 </resources>

@@ -73,10 +73,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> හරහා ලබා ගත හැකි ජාල වෙත සම්බන්ධ වීමට Wi-Fi අක්තපත්‍ර ස්ථාපනය කරන්න."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"බාගත් ගොනුවේ ගැටලු ඇති අතර ස්ථාපනය කළ නොහැකිය. ඔබ වත්මන් මූලාශ්‍රය වෙතින් ගොනුව බාගත් බව සහතික කර ගන්න."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi අක්තපත්‍ර ස්ථාපනය කළ නොහැකිය. ගොනුව නැවත බාගැනීමට උත්සාහ කරන්න."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"ස්ථාපනය අවලංගු කරන ලදී"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"ස්ථාපනය කළ නොහැකිය"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Wi-Fi සක්‍රිය කර නැවත උත්සාහ කරන්න."</string>
 </resources>

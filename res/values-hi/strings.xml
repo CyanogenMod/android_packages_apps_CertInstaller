@@ -71,10 +71,7 @@
     <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> के द्वारा उपलब्ध नेटवर्क से कनेक्ट करने के लिए वाई-फ़ाई प्रमाणिकता इंस्टॉल करें."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"डाउनलोड की गई फ़ाइल में समस्या है और उसे इंस्टॉल नहीं किया जा सकता. सुनिश्चित करें कि आपने सही स्रोत से फ़ाइल डाउनलोड की है."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"वाई-फ़ाई प्रमाणिकता को इंस्टॉल नहीं कर सकते. फ़ाइल को पुनः डाउनलोड करने का प्रयास करें."</string>
-    <!-- no translation found for wifi_installer_fail_no_wifi_title (4818558444206100567) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_title (7664103808601748088) -->
-    <skip />
-    <!-- no translation found for wifi_installer_fail_no_wifi (2044576439984209921) -->
-    <skip />
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"इंस्‍टॉलेशन रोका गया"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"इंस्‍टॉल नहीं किया जा सकता"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"वाई-फ़ाई चालू करें और पुनः प्रयास करें."</string>
 </resources>
