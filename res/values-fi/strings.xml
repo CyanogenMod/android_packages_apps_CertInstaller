@@ -61,7 +61,7 @@
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"Hylkää"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"Ei mitään"</string>
     <string name="wifi_config_text" msgid="8259587306773310314">"Nimi: %1$s\nFQDN: %2$s\nRoaming-kumppanit: %3$s\nAlue: %4$s\nTodennustapa: EAP-%5$s\n"</string>
-    <string name="wifi_ttls_config_text" msgid="2002413183253872168">"Käyttäjänimi: %s\n"</string>
+    <string name="wifi_ttls_config_text" msgid="2002413183253872168">"Käyttäjätunnus: %s\n"</string>
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Käyttöoikeusvarmenne:\n%1$s\nAvain: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Luotettu varmenne:\n%s\n"</string>
