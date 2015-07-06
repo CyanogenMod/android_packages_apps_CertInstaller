@@ -36,10 +36,10 @@
     <string name="name_char_error" msgid="3176618568784938968">"Zadajte názov, ktorý obsahuje iba písmená a čísla."</string>
     <string name="storage_error" msgid="8306802455802770779">"Certifikát sa nepodarilo uložiť. Dotknite sa tlačidla OK a skúste to znova."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Certifikát sa nepodarilo uložiť. Úložisko poverení nie je povolené alebo nie je správne inicializované."</string>
-    <string name="cert_not_saved" msgid="4037698479662830270">"Certifikát nie je nainštalovaný."</string>
+    <string name="cert_not_saved" msgid="4037698479662830270">"Certifikát nie je nainštalovaný"</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nebol nájdený žiadny certifikát na inštaláciu."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"Certifikát je neplatný."</string>
-    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> bol nainštalovaný."</string>
+    <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> bol nainštalovaný"</string>
     <string name="cert_too_large_error" msgid="8715414972725646285">"Inštalácia zlyhala, pretože súbor certifikátu je príliš veľký."</string>
     <string name="cert_missing_error" msgid="7040527352278728220">"Inštalácia zlyhala, pretože sa nepodarilo nájsť súbor s certifikátom."</string>
     <string name="cert_read_error" msgid="7353463360652419796">"Inštalácia zlyhala, pretože sa nepodarilo prečítať súbor s certifikátom."</string>

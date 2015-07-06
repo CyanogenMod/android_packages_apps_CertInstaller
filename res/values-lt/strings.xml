@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"%d CA sertifikatai"</string>
     <string name="password_error" msgid="2042471639556516356">"Įveskite teisingą slaptažodį."</string>
     <string name="password_empty_error" msgid="591713406761723025">"Įveskite slaptažodį."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"Įveskite vardą."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"Įveskite pavadinimą."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Įveskite pavadinimą, sudarytą tik iš raidžių ir skaičių."</string>
     <string name="storage_error" msgid="8306802455802770779">"Nepavyko išsaugoti sertifikato. Jei norite bandyti iš naujo, palieskite „Gerai“."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Nepavyko išsaugoti sertifikato. Kredencialų atmintinė neįgalinta arba netinkamai inicijuota."</string>
