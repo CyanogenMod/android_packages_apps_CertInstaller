@@ -21,7 +21,7 @@
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"استخراج گواهی"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"در حال استخراج..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"‏اجرا از %s"</string>
-    <string name="name_credential_dialog_title" msgid="277729846491554437">"نامگذاری گواهی"</string>
+    <string name="name_credential_dialog_title" msgid="277729846491554437">"نام‌گذاری گواهی"</string>
     <string name="credential_name" msgid="1974979771369744378">"نام گواهی:"</string>
     <string name="credential_password" msgid="3520176519550993326">"گذرواژه را برای استخراج گواهینامه‌ها وارد کنید."</string>
     <string name="credential_info" msgid="2436768402308470397">"این بسته شامل این موارد است:"</string>
@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"‏%d گواهی CA"</string>
     <string name="password_error" msgid="2042471639556516356">"گذرواژه صحیح را تایپ کنید."</string>
     <string name="password_empty_error" msgid="591713406761723025">"گذرواژه را تایپ کنید."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"نامی را تایپ کنید."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"نامی تایپ کنید."</string>
     <string name="name_char_error" msgid="3176618568784938968">"نامی را که فقط شامل عدد و نویسه باشد تایپ کنید."</string>
     <string name="storage_error" msgid="8306802455802770779">"گواهی‌نامه ذخیره نشد. برای سعی مجدد \"تأیید\" را لمس کنید."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"گواهی‌نامه ذخیره نشد. محل ذخیره اطلاعات کاربری فعال نیست یا به درستی راه‌اندازی نشده است."</string>
