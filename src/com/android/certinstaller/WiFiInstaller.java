@@ -21,6 +21,9 @@ import android.widget.TextView;
 import java.security.PrivateKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class WiFiInstaller extends Activity {
 
@@ -75,6 +78,40 @@ public class WiFiInstaller extends Activity {
         createMainDialog();
     }
 
+    public static List<String> splitDomain(String domain) {
+        if (domain.endsWith(".")) {
+            domain = domain.substring(0, domain.length() - 1);
+        }
+
+        String[] labels = domain.toLowerCase().split("\\.");
+        LinkedList<String> labelList = new LinkedList<>();
+        for (String label : labels) {
+            labelList.addFirst(label);
+        }
+
+        return labelList;
+    }
+
+    public static boolean sameBaseDomain(List<String> arg1, String domain) {
+        if (domain == null) {
+            return false;
+        }
+
+        List<String> arg2 = splitDomain(domain);
+        if (arg2.isEmpty()) {
+            return false;
+        }
+        Iterator<String> l1 = arg1.iterator();
+        Iterator<String> l2 = arg2.iterator();
+
+        while(l1.hasNext() && l2.hasNext()) {
+            if (!l1.next().equals(l2.next())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private void createMainDialog() {
         Resources res = getResources();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -93,6 +130,13 @@ public class WiFiInstaller extends Activity {
                     new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    List<String> newDomain = splitDomain(mWifiConfiguration.FQDN);
+                    for (WifiConfiguration config : mWifiManager.getConfiguredNetworks()) {
+                        if (sameBaseDomain(newDomain, config.FQDN)) {
+                            mWifiManager.removeNetwork(config.networkId);
+                            break;
+                        }
+                    }
                     boolean success;
                     try {
                         success = mWifiManager.addNetwork(mWifiConfiguration) != -1
