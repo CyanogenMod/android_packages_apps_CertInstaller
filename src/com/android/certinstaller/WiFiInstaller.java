@@ -68,6 +68,7 @@ public class WiFiInstaller extends Activity {
                 }
             }
         } else {
+            Log.w(TAG, "failed to build wifi configuration");
             doNotInstall = true;
         }
     }
@@ -143,6 +144,7 @@ public class WiFiInstaller extends Activity {
                                 && mWifiManager.saveConfiguration();
                     }
                     catch (RuntimeException rte) {
+                        Log.w(TAG, "Caught exception while installing wifi config: " + rte, rte);
                         success = false;
                     }
                     if (success) {
