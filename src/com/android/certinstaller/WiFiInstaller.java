@@ -17,6 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.os.AsyncTask;
 
 import java.security.PrivateKey;
 import java.security.interfaces.RSAPrivateKey;
@@ -131,40 +133,55 @@ public class WiFiInstaller extends Activity {
                     new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    List<String> newDomain = splitDomain(mWifiConfiguration.FQDN);
-                    for (WifiConfiguration config : mWifiManager.getConfiguredNetworks()) {
-                        if (sameBaseDomain(newDomain, config.FQDN)) {
-                            mWifiManager.removeNetwork(config.networkId);
-                            break;
+                    final boolean wifiEnabled = mWifiManager.isWifiEnabled();
+                    if (wifiEnabled) {
+                        Toast.makeText(WiFiInstaller.this, getString(R.string.wifi_installing_label),
+                                Toast.LENGTH_LONG).show();
+                    }
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            boolean success = false;
+                            if (wifiEnabled) {
+                                List<String> newDomain = splitDomain(mWifiConfiguration.FQDN);
+                                for (WifiConfiguration config :
+                                        mWifiManager.getConfiguredNetworks()) {
+                                    if (sameBaseDomain(newDomain, config.FQDN)) {
+                                        mWifiManager.removeNetwork(config.networkId);
+                                        break;
+                                    }
+                                }
+                                try {
+                                    success = mWifiManager.addNetwork(mWifiConfiguration) != -1
+                                            && mWifiManager.saveConfiguration();
+                                }
+                                catch (RuntimeException rte) {
+                                    Log.w(TAG, "Caught exception while installing wifi config: " +
+                                            rte, rte);
+                                    success = false;
+                                }
+                            }
+                            if (success) {
+                                Intent intent = new Intent(getApplicationContext(),
+                                        CredentialsInstallDialog.class);
+                                intent.putExtra(NETWORK_NAME,
+                                        mWifiConfiguration.providerFriendlyName);
+                                intent.putExtra(INSTALL_STATE, INSTALL_SUCCESS);
+                                startActivity(intent);
+                            } else {
+                                Intent intent = new Intent(getApplicationContext(),
+                                        CredentialsInstallDialog.class);
+                                if (!wifiEnabled) {
+                                    intent.putExtra(INSTALL_STATE, INSTALL_FAIL_NO_WIFI);
+                                } else {
+                                    intent.putExtra(INSTALL_STATE, INSTALL_FAIL);
+                                }
+                                startActivity(intent);
+                            }
+                            finish();
                         }
-                    }
-                    boolean success;
-                    try {
-                        success = mWifiManager.addNetwork(mWifiConfiguration) != -1
-                                && mWifiManager.saveConfiguration();
-                    }
-                    catch (RuntimeException rte) {
-                        Log.w(TAG, "Caught exception while installing wifi config: " + rte, rte);
-                        success = false;
-                    }
-                    if (success) {
-                        Intent intent = new Intent(getApplicationContext(),
-                                CredentialsInstallDialog.class);
-                        intent.putExtra(NETWORK_NAME, mWifiConfiguration.providerFriendlyName);
-                        intent.putExtra(INSTALL_STATE, INSTALL_SUCCESS);
-                        startActivity(intent);
-                    } else {
-                        Intent intent = new Intent(getApplicationContext(),
-                                CredentialsInstallDialog.class);
-                        if (!mWifiManager.isWifiEnabled()) {
-                            intent.putExtra(INSTALL_STATE, INSTALL_FAIL_NO_WIFI);
-                        } else {
-                            intent.putExtra(INSTALL_STATE, INSTALL_FAIL);
-                        }
-                        startActivity(intent);
-                    }
+                    });
                     dialog.dismiss();
-                    finish();
                 }
             });
 
@@ -175,7 +192,7 @@ public class WiFiInstaller extends Activity {
                     dialog.dismiss();
                     finish();
                 }
-                    });
+            });
         } else {
             text.setText(getResources().getString(R.string.wifi_installer_download_error));
             builder.setPositiveButton(R.string.done_label, new DialogInterface.OnClickListener() {
