@@ -57,7 +57,7 @@
     <string name="wifi_detail_title" msgid="3627332137252994395">"%s ਲਈ ਵੇਰਵੇ"</string>
     <string name="wifi_detail_label" msgid="3032151019356747583">"ਵੇਰਵੇ"</string>
     <string name="wifi_install_label" msgid="1449629407724323233">"ਸਥਾਪਿਤ ਕਰੋ"</string>
-    <string name="wifi_installing_label" msgid="8387393993627129025">"ਸਥਾਪਿਤ ਕਰ ਰਿਹਾ ਹੈ"</string>
+    <string name="wifi_installing_label" msgid="8387393993627129025">"ਇੰਸਟੌਲ ਕਰ ਰਿਹਾ ਹੈ"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"ਰੱਦ ਕਰੋ"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"ਬਰਖਾਸਤ ਕਰੋ"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"ਕੋਈ ਨਹੀਂ"</string>
