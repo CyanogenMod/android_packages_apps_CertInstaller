@@ -34,7 +34,7 @@
     <string name="password_empty_error" msgid="591713406761723025">"Introduceţi parola."</string>
     <string name="name_empty_error" msgid="3808800768660110354">"Introduceţi un nume."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Introduceţi un nume care conţine doar litere și numere."</string>
-    <string name="storage_error" msgid="8306802455802770779">"Nu se poate salva certificatul. Atingeţi OK pentru a încerca din nou."</string>
+    <string name="storage_error" msgid="8306802455802770779">"Nu se poate salva certificatul. Atingeți OK pentru a încerca din nou."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Nu se poate salva certificatul. Spaţiul de stocare a certificatelor nu este activat sau nu este corect iniţializat."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Certificatul nu este instalat."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Niciun certificat de instalat."</string>
