@@ -228,17 +228,21 @@ public class CertInstaller extends Activity {
             X509Certificate cert = mCredentials.getUserCertificate();
             if (cert != null) {
                 // find matched private key
-                String key = Util.toMd5(cert.getPublicKey().getEncoded());
-                Map<String, byte[]> map = getPkeyMap();
-                byte[] privatekey = map.get(key);
-                if (privatekey != null) {
-                    Log.d(TAG, "found matched key: " + privatekey);
-                    map.remove(key);
-                    savePkeyMap(map);
+                try {
+                    String key = Util.toMd5(cert.getPublicKey().getEncoded());
+                    Map<String, byte[]> map = getPkeyMap();
+                    byte[] privatekey = map.get(key);
+                    if (privatekey != null) {
+                        Log.d(TAG, "found matched key: " + privatekey);
+                        map.remove(key);
+                        savePkeyMap(map);
 
-                    mCredentials.setPrivateKey(privatekey);
-                } else {
-                    Log.d(TAG, "didn't find matched private key: " + key);
+                        mCredentials.setPrivateKey(privatekey);
+                    } else {
+                        Log.d(TAG, "didn't find matched private key: " + key);
+                    }
+                } catch (RuntimeException e) {
+                    Log.i(TAG, "Possibly invalid cert " + e);
                 }
             }
             nameCredential();
