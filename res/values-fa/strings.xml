@@ -21,7 +21,7 @@
     <string name="pkcs12_password_dialog_title" msgid="5997624645207427161">"استخراج گواهی"</string>
     <string name="extracting_pkcs12" msgid="1881267738821799771">"در حال استخراج..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"‏اجرا از %s"</string>
-    <string name="name_credential_dialog_title" msgid="277729846491554437">"نامگذاری گواهی"</string>
+    <string name="name_credential_dialog_title" msgid="277729846491554437">"نام‌گذاری گواهی"</string>
     <string name="credential_name" msgid="1974979771369744378">"نام گواهی:"</string>
     <string name="credential_password" msgid="3520176519550993326">"گذرواژه را برای استخراج گواهینامه‌ها وارد کنید."</string>
     <string name="credential_info" msgid="2436768402308470397">"این بسته شامل این موارد است:"</string>
@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"‏%d گواهی CA"</string>
     <string name="password_error" msgid="2042471639556516356">"گذرواژه صحیح را تایپ کنید."</string>
     <string name="password_empty_error" msgid="591713406761723025">"گذرواژه را تایپ کنید."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"نامی را تایپ کنید."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"نامی تایپ کنید."</string>
     <string name="name_char_error" msgid="3176618568784938968">"نامی را که فقط شامل عدد و نویسه باشد تایپ کنید."</string>
     <string name="storage_error" msgid="8306802455802770779">"گواهی‌نامه ذخیره نشد. برای سعی مجدد \"تأیید\" را لمس کنید."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"گواهی‌نامه ذخیره نشد. محل ذخیره اطلاعات کاربری فعال نیست یا به درستی راه‌اندازی نشده است."</string>
@@ -57,6 +57,7 @@
     <string name="wifi_detail_title" msgid="3627332137252994395">"‏جزئیات برای %s"</string>
     <string name="wifi_detail_label" msgid="3032151019356747583">"جزئیات"</string>
     <string name="wifi_install_label" msgid="1449629407724323233">"نصب"</string>
+    <string name="wifi_installing_label" msgid="8387393993627129025">"در حال نصب"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"لغو"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"رد کردن"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"هیچ‌کدام"</string>
@@ -67,7 +68,7 @@
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"‏گواهی قابل اعتماد:\n%s\n"</string>
     <string name="install_done_title" msgid="4822989918460334497">"اعتبارنامه‌ها نصب شد"</string>
     <string name="install_done" msgid="1522718684172097080">"‏اعتبارنامه‌های <xliff:g id="NAME">%1$s</xliff:g> به شبکه‌های ذخیره شده Wi-Fi اضافه شد."</string>
-    <string name="done_label" msgid="5597425930652904250">"انجام شد"</string>
+    <string name="done_label" msgid="5597425930652904250">"تمام"</string>
     <string name="wifi_installer_detail" msgid="63879632832701669">"‏اعتبارنامه‌های Wi-Fi را نصب کنید تا به شبکه‌هایی که از طریق <xliff:g id="NAME">%1$s</xliff:g> در دسترسند متصل شوید."</string>
     <string name="wifi_installer_download_error" msgid="5429453090956277692">"فایل دانلود شده مشکل دارد و نمی‌تواند نصب شود. مطمئن شوید که فایل را از منبع درستی دانلود کرده‌اید."</string>
     <string name="wifi_installer_fail" msgid="894483173306576331">"‏نصب اعتبارنامه‌های Wi-Fi انجام نشد. دوباره فایل را دانلود کنید."</string>
