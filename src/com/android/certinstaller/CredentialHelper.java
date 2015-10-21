@@ -18,6 +18,7 @@ package com.android.certinstaller;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.security.Credentials;
@@ -256,11 +257,16 @@ class CredentialHelper {
         return mUid != -1;
     }
 
-    Intent createSystemInstallIntent() {
+    Intent createSystemInstallIntent(final Context context) {
         Intent intent = new Intent("com.android.credentials.INSTALL");
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
-        intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
+        if (!isWear(context)) {
+            intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
+        } else {
+            intent.setClassName("com.google.android.apps.wearable.settings",
+                    "com.google.android.clockwork.settings.CredentialStorage");
+        }
         intent.putExtra(Credentials.EXTRA_INSTALL_AS_UID, mUid);
         try {
             if (mUserKey != null) {
@@ -364,5 +370,9 @@ class CredentialHelper {
         Log.d(TAG, "# ca certs extracted = " + mCaCerts.size());
 
         return true;
+    }
+
+    private static boolean isWear(final Context context) {
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WATCH);
     }
 }

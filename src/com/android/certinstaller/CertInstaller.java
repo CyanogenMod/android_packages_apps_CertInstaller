@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -394,6 +395,7 @@ public class CertInstaller extends Activity {
         }
         nameInput.setText(getDefaultName());
         nameInput.selectAll();
+        final Context appContext = getApplicationContext();
         Dialog d = new AlertDialog.Builder(this)
                 .setView(view)
                 .setTitle(R.string.name_credential_dialog_title)
@@ -411,7 +413,7 @@ public class CertInstaller extends Activity {
                             // install everything to system keystore
                             try {
                                 startActivityForResult(
-                                        mCredentials.createSystemInstallIntent(),
+                                        mCredentials.createSystemInstallIntent(appContext),
                                         REQUEST_SYSTEM_INSTALL_CODE);
                             } catch (ActivityNotFoundException e) {
                                 Log.w(TAG, "systemInstall(): " + e);
