@@ -23,17 +23,17 @@
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Zertifikate aus %s extrahieren"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Zertifikat benennen"</string>
     <string name="credential_name" msgid="1974979771369744378">"Zertifikatname:"</string>
-    <string name="credential_password" msgid="3520176519550993326">"Geben Sie das Passwort zum Extrahieren der Zertifikate ein."</string>
+    <string name="credential_password" msgid="3520176519550993326">"Gib das Passwort zum Extrahieren der Zertifikate ein."</string>
     <string name="credential_info" msgid="2436768402308470397">"Das Paket enthält Folgendes:"</string>
     <string name="p12_description" msgid="4128352087331630024">"Zertifikate im PKCS12-Keystore"</string>
     <string name="one_userkey" msgid="3500697912370644881">"ein Nutzerschlüssel"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"ein Nutzerzertifikat"</string>
     <string name="one_cacrt" msgid="2667950425420663146">"ein CA-Zertifikat"</string>
     <string name="n_cacrts" msgid="2141498640685639208">"%d CA-Zertifikate"</string>
-    <string name="password_error" msgid="2042471639556516356">"Geben Sie das richtige Passwort ein."</string>
-    <string name="password_empty_error" msgid="591713406761723025">"Geben Sie das Passwort ein."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"Geben Sie einen Namen ein."</string>
-    <string name="name_char_error" msgid="3176618568784938968">"Geben Sie einen Namen ein, der ausschließlich aus Buchstaben und Zahlen besteht."</string>
+    <string name="password_error" msgid="2042471639556516356">"Gib das richtige Passwort ein."</string>
+    <string name="password_empty_error" msgid="591713406761723025">"Gib das Passwort ein."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"Gib einen Namen ein."</string>
+    <string name="name_char_error" msgid="3176618568784938968">"Gib einen Namen ein, der ausschließlich aus Buchstaben und Zahlen besteht."</string>
     <string name="storage_error" msgid="8306802455802770779">"Zertifikat konnte nicht gespeichert werden. Zum Wiederholen auf \"OK\" tippen"</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Das Zertifikat konnte nicht gespeichert werden. Der Speicher für die Anmeldeinformationen wurde nicht aktiviert oder falsch initialisiert."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Das Zertifikat ist nicht installiert."</string>
@@ -57,6 +57,7 @@
     <string name="wifi_detail_title" msgid="3627332137252994395">"Details für %s"</string>
     <string name="wifi_detail_label" msgid="3032151019356747583">"Details"</string>
     <string name="wifi_install_label" msgid="1449629407724323233">"Installieren"</string>
+    <string name="wifi_installing_label" msgid="8387393993627129025">"Installation"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"Abbrechen"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"Schließen"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"Keine"</string>
@@ -65,4 +66,13 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"Clientzertifikat:\n%1$s\nSchlüssel: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Vertrauenswürdiges Zertifikat:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"Anmeldedaten installiert"</string>
+    <string name="install_done" msgid="1522718684172097080">"Die Anmeldedaten für <xliff:g id="NAME">%1$s</xliff:g> wurden zu den gespeicherten WLANs hinzugefügt."</string>
+    <string name="done_label" msgid="5597425930652904250">"Fertig"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"Installiere WLAN-Anmeldedaten, um eine Verbindung mit Netzwerken herzustellen, die über <xliff:g id="NAME">%1$s</xliff:g> verfügbar sind."</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"Die heruntergeladene Datei enthält Fehler und kann nicht installiert werden. Vergewissere dich, dass du die Datei von der korrekten Quelle heruntergeladen hast."</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Die WLAN-Anmeldedaten können nicht installiert werden. Lade die Datei erneut herunter."</string>
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Installation abgebrochen"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Installation nicht möglich"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Aktiviere WLAN und versuche es erneut."</string>
 </resources>
