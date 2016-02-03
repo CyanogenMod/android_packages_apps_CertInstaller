@@ -57,6 +57,7 @@
     <string name="wifi_detail_title" msgid="3627332137252994395">"%s ਲਈ ਵੇਰਵੇ"</string>
     <string name="wifi_detail_label" msgid="3032151019356747583">"ਵੇਰਵੇ"</string>
     <string name="wifi_install_label" msgid="1449629407724323233">"ਸਥਾਪਿਤ ਕਰੋ"</string>
+    <string name="wifi_installing_label" msgid="8387393993627129025">"ਇੰਸਟੌਲ ਕਰ ਰਿਹਾ ਹੈ"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"ਰੱਦ ਕਰੋ"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"ਬਰਖਾਸਤ ਕਰੋ"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"ਕੋਈ ਨਹੀਂ"</string>
@@ -65,4 +66,13 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"ਕਲਾਇੰਟ ਸਰਟੀਫਿਕੇਟ:\n%1$s\nਕੁੰਜੀ: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"ਟਰੱਸਟ ਸਰਟੀਫਿਕੇਟ:\n%s\n"</string>
+    <string name="install_done_title" msgid="4822989918460334497">"ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਸਥਾਪਿਤ ਹੋ ਗਿਆ"</string>
+    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> ਕ੍ਰੀਡੈਂਸ਼ੀਅਲਾਂ ਨੂੰ Wi-Fi ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਨੈੱਟਵਰਕਾਂ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ ਹੈ।"</string>
+    <string name="done_label" msgid="5597425930652904250">"ਹੋ ਗਿਆ"</string>
+    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> ਰਾਹੀਂ ਉਪਲਬਧ ਨੈੱਟਵਰਕਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ Wi-Fi ਨੂੰ ਸਥਾਪਿਤ ਕਰੋ।"</string>
+    <string name="wifi_installer_download_error" msgid="5429453090956277692">"ਡਾਉਨਲੋਡ ਕੀਤੀ ਫ਼ਾਈਲ ਵਿੱਚ ਸਮੱਸਿਆਵਾਂ ਹਨ ਅਤੇ ਸਥਾਪਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ ਸਹੀ ਸਰੋਤ ਤੋਂ ਫ਼ਾਈਲ ਨੂੰ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ।"</string>
+    <string name="wifi_installer_fail" msgid="894483173306576331">"Wi-Fi ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਸਥਾਪਿਤ ਨਹੀਂ ਕਰ ਸਕਦਾ ਹੈ। ਫ਼ਾਈਲ ਨੂੰ ਦੁਬਾਰਾ ਡਾਉਨਲੋਡ ਕਰਨਾ ਅਜ਼ਮਾਓ।"</string>
+    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"ਇੰਸਟੌਲੇਸ਼ਨ ਰੱਦ ਕੀਤੀ"</string>
+    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"ਇੰਸਟੌਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"</string>
+    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Wi‑Fi ਚਾਲੂ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
 </resources>
