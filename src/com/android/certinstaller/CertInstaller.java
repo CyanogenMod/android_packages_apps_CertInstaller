@@ -102,7 +102,11 @@ public class CertInstaller extends Activity {
                 toastErrorAndFinish(R.string.no_cert_to_saved);
                 finish();
             } else if (mCredentials.hasPkcs12KeyStore()) {
-                showDialog(PKCS12_PASSWORD_DIALOG);
+                if (mCredentials.hasPassword()) {
+                    showDialog(PKCS12_PASSWORD_DIALOG);
+                } else {
+                    new Pkcs12ExtractAction("").run(this);
+                }
             } else {
                 MyAction action = new InstallOthersAction();
                 if (needsKeyStoreAccess()) {

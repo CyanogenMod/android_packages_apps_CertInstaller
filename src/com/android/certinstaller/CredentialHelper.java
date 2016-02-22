@@ -323,22 +323,30 @@ class CredentialHelper {
         return true;
     }
 
+    boolean hasPassword() {
+        if (!hasPkcs12KeyStore()) {
+            return false;
+        }
+        try {
+            return loadPkcs12Internal(new PasswordProtection(new char[] {})) == null;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
     boolean extractPkcs12(String password) {
         try {
-            return extractPkcs12Internal(password);
+            return extractPkcs12Internal(new PasswordProtection(password.toCharArray()));
         } catch (Exception e) {
             Log.w(TAG, "extractPkcs12(): " + e, e);
             return false;
         }
     }
 
-    private boolean extractPkcs12Internal(String password)
+    private boolean extractPkcs12Internal(PasswordProtection password)
             throws Exception {
         // TODO: add test about this
-        java.security.KeyStore keystore = java.security.KeyStore.getInstance("PKCS12");
-        PasswordProtection passwordProtection = new PasswordProtection(password.toCharArray());
-        keystore.load(new ByteArrayInputStream(getData(KeyChain.EXTRA_PKCS12)),
-                      passwordProtection.getPassword());
+        java.security.KeyStore keystore = loadPkcs12Internal(password);
 
         Enumeration<String> aliases = keystore.aliases();
         if (!aliases.hasMoreElements()) {
@@ -347,7 +355,7 @@ class CredentialHelper {
 
         while (aliases.hasMoreElements()) {
             String alias = aliases.nextElement();
-            KeyStore.Entry entry = keystore.getEntry(alias, passwordProtection);
+            KeyStore.Entry entry = keystore.getEntry(alias, password);
             Log.d(TAG, "extracted alias = " + alias + ", entry=" + entry.getClass());
 
             if (entry instanceof PrivateKeyEntry) {
@@ -358,6 +366,14 @@ class CredentialHelper {
             }
         }
         return true;
+    }
+
+    private java.security.KeyStore loadPkcs12Internal(PasswordProtection password)
+            throws Exception {
+        java.security.KeyStore keystore = java.security.KeyStore.getInstance("PKCS12");
+        keystore.load(new ByteArrayInputStream(getData(KeyChain.EXTRA_PKCS12)),
+                      password.getPassword());
+        return keystore;
     }
 
     private synchronized boolean installFrom(PrivateKeyEntry entry) {
