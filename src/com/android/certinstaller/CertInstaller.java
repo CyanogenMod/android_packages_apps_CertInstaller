@@ -181,7 +181,8 @@ public class CertInstaller extends Activity {
                 Toast.makeText(this, getString(R.string.cert_is_added,
                         mCredentials.getName()), Toast.LENGTH_LONG).show();
 
-                if (mCredentials.hasCaCerts()) {
+                if (mCredentials.hasCaCerts()
+                        && mCredentials.getInstallAsUid() == KeyStore.UID_SELF) {
                     // more work to do, don't finish just yet
                     new InstallCaCertsToKeyChainTask().execute();
                     return;
