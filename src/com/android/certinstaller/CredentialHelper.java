@@ -100,6 +100,7 @@ class CredentialHelper {
         try {
             outStates.putSerializable(DATA_KEY, mBundle);
             outStates.putString(KeyChain.EXTRA_NAME, mName);
+            outStates.putInt(Credentials.EXTRA_INSTALL_AS_UID, mUid);
             if (mUserKey != null) {
                 outStates.putByteArray(Credentials.USER_PRIVATE_KEY,
                         mUserKey.getEncoded());
@@ -120,6 +121,7 @@ class CredentialHelper {
     void onRestoreStates(Bundle savedStates) {
         mBundle = (HashMap) savedStates.getSerializable(DATA_KEY);
         mName = savedStates.getString(KeyChain.EXTRA_NAME);
+        mUid = savedStates.getInt(Credentials.EXTRA_INSTALL_AS_UID, -1);
         byte[] bytes = savedStates.getByteArray(Credentials.USER_PRIVATE_KEY);
         if (bytes != null) {
             setPrivateKey(bytes);
@@ -254,6 +256,10 @@ class CredentialHelper {
 
     boolean isInstallAsUidSet() {
         return mUid != -1;
+    }
+
+    int getInstallAsUid() {
+        return mUid;
     }
 
     Intent createSystemInstallIntent() {
