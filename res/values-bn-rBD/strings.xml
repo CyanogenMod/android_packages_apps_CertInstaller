@@ -34,7 +34,6 @@
     <string name="password_empty_error" msgid="591713406761723025">"পাসওয়ার্ডটি টাইপ করুন৷"</string>
     <string name="name_empty_error" msgid="3808800768660110354">"একটি নাম টাইপ করুন৷"</string>
     <string name="name_char_error" msgid="3176618568784938968">"এমন একটি নাম লিখুন যাতে কেবলমাত্র অক্ষর ও সংখ্যা থাকবে৷"</string>
-    <string name="storage_error" msgid="8306802455802770779">"শংসাপত্রটির সংরক্ষণ করা যায়নি৷ আবার চেষ্টা করতে \'ওকে\' স্পর্শ করুন৷"</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"শংসাপত্রটির সংরক্ষণ করা যায়নি৷ প্রমাণপত্রের সংগ্রহস্থল সক্ষম করা নেই অথবা যথাযথভাবে শুরু করা হয়নি৷"</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"শংসাপত্র ইনস্টল করা হয়নি৷"</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"ইনস্টল করার জন্য কোনো শংসাপত্র নেই৷"</string>

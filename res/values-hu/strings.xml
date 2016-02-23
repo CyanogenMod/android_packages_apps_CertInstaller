@@ -34,7 +34,6 @@
     <string name="password_empty_error" msgid="591713406761723025">"Írja be a jelszót."</string>
     <string name="name_empty_error" msgid="3808800768660110354">"Írjon be egy nevet."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Csak betűket és számokat tartalmazó nevet adjon meg."</string>
-    <string name="storage_error" msgid="8306802455802770779">"Nem sikerült menteni a tanúsítványt. Érintse meg az OK lehetőséget az újrapróbáláshoz."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Nem lehet menteni a tanúsítványt. A hitelesítési adatok tárolója nincs engedélyezve vagy megfelelően inicializálva."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"A tanúsítvány nincs telepítve."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Nincs telepíthető tanúsítvány."</string>

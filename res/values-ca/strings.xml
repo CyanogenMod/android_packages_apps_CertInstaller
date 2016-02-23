@@ -34,7 +34,6 @@
     <string name="password_empty_error" msgid="591713406761723025">"Escriu la contrasenya."</string>
     <string name="name_empty_error" msgid="3808800768660110354">"Escriu un nom."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Escriu un nom que contingui només lletres i xifres."</string>
-    <string name="storage_error" msgid="8306802455802770779">"No s\'ha pogut desar el certificat. Toca D\'acord per tornar-ho a provar."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"No s\'ha pogut desar el certificat. L\'emmagatzematge de credencials no està activat o bé no s\'ha inicialitzat correctament."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"El certificat no està instal·lat."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"No hi ha cap certificat per instal·lar."</string>
