@@ -34,7 +34,6 @@
     <string name="password_empty_error" msgid="591713406761723025">"I-type ang password."</string>
     <string name="name_empty_error" msgid="3808800768660110354">"Mag-type ng pangalan."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Mag-type ng pangalan na naglalaman lamang ng mga titik at numero."</string>
-    <string name="storage_error" msgid="8306802455802770779">"Hindi mai-save ang certificate. Pindutin ang OK upang subukang muli."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Hindi mai-save ang certificate. Hindi pinagana o maayos na nasimulan ang storage ng kredensyal."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Hindi naka-install ang certificate."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"Walang ii-install na certificate."</string>
