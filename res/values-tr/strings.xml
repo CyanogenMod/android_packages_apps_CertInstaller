@@ -57,7 +57,6 @@
     <string name="wifi_detail_title" msgid="3627332137252994395">"%s ayrıntıları"</string>
     <string name="wifi_detail_label" msgid="3032151019356747583">"Ayrıntılar"</string>
     <string name="wifi_install_label" msgid="1449629407724323233">"Yükle"</string>
-    <string name="wifi_installing_label" msgid="8387393993627129025">"Yükleniyor"</string>
     <string name="wifi_cancel_label" msgid="1328748037608392134">"İptal"</string>
     <string name="wifi_dismiss_label" msgid="1916684434873972698">"Kapat"</string>
     <string name="wifi_no_config" msgid="1835743123288916755">"Yok"</string>
@@ -66,13 +65,4 @@
     <string name="wifi_tls_config_text" msgid="9062328536640168510">"İstemci sertifikası:\n%1$s\nAnahtar: %2$s\n"</string>
     <string name="wifi_sim_config_text" msgid="1666019954520831840">"SIM: %s\n"</string>
     <string name="wifi_trust_config_text" msgid="5916047381475747783">"Güven sertifikası:\n%s\n"</string>
-    <string name="install_done_title" msgid="4822989918460334497">"Kimlik bilgileri yüklendi"</string>
-    <string name="install_done" msgid="1522718684172097080">"<xliff:g id="NAME">%1$s</xliff:g> kimlik bilgileri kayıtlı kablosuz ağlara eklendi."</string>
-    <string name="done_label" msgid="5597425930652904250">"BİTTİ"</string>
-    <string name="wifi_installer_detail" msgid="63879632832701669">"<xliff:g id="NAME">%1$s</xliff:g> aracılığıyla kullanılabilen ağlara bağlanmak için kablosuz kimlik bilgilerini yükleyin."</string>
-    <string name="wifi_installer_download_error" msgid="5429453090956277692">"İndirilen dosyada sorunlar var ve yüklenemiyor. Dosyayı doğru kaynaktan indirdiğinizden emin olun."</string>
-    <string name="wifi_installer_fail" msgid="894483173306576331">"Kablosuz kimlik bilgileri yüklenemiyor. Dosyayı tekrar indirmeyi deneyin."</string>
-    <string name="wifi_installer_fail_no_wifi_title" msgid="8358191074828840533">"Yükleme işlemi iptal edildi"</string>
-    <string name="wifi_installer_fail_title" msgid="5547079779067835479">"Yüklenemiyor"</string>
-    <string name="wifi_installer_fail_no_wifi" msgid="2044576439984209921">"Kablosuz bağlantıyı açın ve tekrar deneyin."</string>
 </resources>
