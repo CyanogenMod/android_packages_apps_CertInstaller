@@ -108,6 +108,7 @@ public class CertInstallerMain extends PreferenceActivity {
                 final Intent openIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 openIntent.setType("*/*");
                 openIntent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+                openIntent.putExtra(DocumentsContract.EXTRA_SHOW_ADVANCED, true);
                 startActivityForResult(openIntent, REQUEST_OPEN_DOCUMENT);
             } else {
                 final Intent installIntent = new Intent(this, CertInstaller.class);
