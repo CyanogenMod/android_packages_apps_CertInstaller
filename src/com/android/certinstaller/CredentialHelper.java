@@ -303,7 +303,7 @@ class CredentialHelper {
         }
     }
 
-    boolean installCaCertsToKeyChain(IKeyChainService keyChainService) {
+    boolean installVpnAndAppsTrustAnchors(IKeyChainService keyChainService) {
         for (X509Certificate caCert : mCaCerts) {
             byte[] bytes = null;
             try {
@@ -396,5 +396,27 @@ class CredentialHelper {
 
     private static boolean isWear(final Context context) {
         return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WATCH);
+    }
+
+    /**
+     * Returns whether this credential contains CA certificates to be used as trust anchors
+     * for VPN and apps.
+     */
+    public boolean includesVpnAndAppsTrustAnchors() {
+        if (!hasCaCerts()) {
+            return false;
+        }
+        if (getInstallAsUid() != android.security.KeyStore.UID_SELF) {
+            // VPN and Apps trust anchors can only be installed under UID_SELF
+            return false;
+        }
+
+        if (mUserKey != null) {
+            // We are installing a key pair for client authentication, its CA
+            // should have nothing to do with VPN and apps trust anchors.
+            return false;
+        } else {
+            return true;
+        }
     }
 }

@@ -185,10 +185,9 @@ public class CertInstaller extends Activity {
                 Toast.makeText(this, getString(R.string.cert_is_added,
                         mCredentials.getName()), Toast.LENGTH_LONG).show();
 
-                if (mCredentials.hasCaCerts()
-                        && mCredentials.getInstallAsUid() == KeyStore.UID_SELF) {
+                if (mCredentials.includesVpnAndAppsTrustAnchors()) {
                     // more work to do, don't finish just yet
-                    new InstallCaCertsToKeyChainTask().execute();
+                    new InstallVpnAndAppsTrustAnchorsTask().execute();
                     return;
                 }
                 setResult(RESULT_OK);
@@ -202,13 +201,14 @@ public class CertInstaller extends Activity {
         finish();
     }
 
-    private class InstallCaCertsToKeyChainTask extends AsyncTask<Void, Void, Boolean> {
+    private class InstallVpnAndAppsTrustAnchorsTask extends AsyncTask<Void, Void, Boolean> {
 
         @Override protected Boolean doInBackground(Void... unused) {
             try {
                 KeyChainConnection keyChainConnection = KeyChain.bind(CertInstaller.this);
                 try {
-                    return mCredentials.installCaCertsToKeyChain(keyChainConnection.getService());
+                    return mCredentials.installVpnAndAppsTrustAnchors(
+                            keyChainConnection.getService());
                 } finally {
                     keyChainConnection.close();
                 }
