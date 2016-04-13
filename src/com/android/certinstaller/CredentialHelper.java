@@ -16,11 +16,13 @@
 
 package com.android.certinstaller;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.security.Credentials;
 import android.security.KeyChain;
 import android.security.IKeyChainService;
@@ -31,6 +33,8 @@ import com.android.org.bouncycastle.asn1.ASN1InputStream;
 import com.android.org.bouncycastle.asn1.ASN1Sequence;
 import com.android.org.bouncycastle.asn1.DEROctetString;
 import com.android.org.bouncycastle.asn1.x509.BasicConstraints;
+import com.android.org.conscrypt.TrustedCertificateStore;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.security.KeyFactory;
@@ -268,7 +272,7 @@ class CredentialHelper {
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
         if (!isWear(context)) {
-            intent.setClassName("com.android.settings", "com.android.settings.CredentialStorage");
+            intent.setClassName(Util.SETTINGS_PACKAGE, "com.android.settings.CredentialStorage");
         } else {
             intent.setClassName("com.google.android.apps.wearable.settings",
                     "com.google.android.clockwork.settings.CredentialStorage");
@@ -303,7 +307,9 @@ class CredentialHelper {
         }
     }
 
-    boolean installVpnAndAppsTrustAnchors(IKeyChainService keyChainService) {
+    boolean installVpnAndAppsTrustAnchors(Context context, IKeyChainService keyChainService) {
+        final TrustedCertificateStore trustedCertificateStore = new TrustedCertificateStore();
+        final DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
         for (X509Certificate caCert : mCaCerts) {
             byte[] bytes = null;
             try {
@@ -318,6 +324,15 @@ class CredentialHelper {
                     Log.w(TAG, "installCaCertsToKeyChain(): " + e);
                     return false;
                 }
+
+                String alias = trustedCertificateStore.getCertificateAlias(caCert);
+                if (alias == null) {
+                    Log.e(TAG, "alias is null");
+                    return false;
+                }
+
+                // Since the cert is installed by real user, the cert is approved by the user
+                dpm.approveCaCert(alias, UserHandle.myUserId(), true);
             }
         }
         return true;
