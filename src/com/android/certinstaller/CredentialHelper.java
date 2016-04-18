@@ -259,7 +259,6 @@ class CredentialHelper {
         return mUid != -1;
     }
 
-
     int getInstallAsUid() {
         return mUid;
     }
