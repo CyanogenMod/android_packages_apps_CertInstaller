@@ -19,6 +19,7 @@ package com.android.certinstaller;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.KeyguardManager;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -61,6 +62,7 @@ public class CertInstaller extends Activity {
     private static final int PROGRESS_BAR_DIALOG = 3;
 
     private static final int REQUEST_SYSTEM_INSTALL_CODE = 1;
+    private static final int REQUEST_CONFIRM_CREDENTIALS = 2;
 
     // key to states Bundle
     private static final String NEXT_ACTION_KEY = "na";
@@ -101,19 +103,17 @@ public class CertInstaller extends Activity {
             if (!mCredentials.containsAnyRawData()) {
                 toastErrorAndFinish(R.string.no_cert_to_saved);
                 finish();
-            } else if (mCredentials.hasPkcs12KeyStore()) {
-                if (mCredentials.hasPassword()) {
-                    showDialog(PKCS12_PASSWORD_DIALOG);
-                } else {
-                    new Pkcs12ExtractAction("").run(this);
-                }
             } else {
-                MyAction action = new InstallOthersAction();
-                if (needsKeyStoreAccess()) {
-                    sendUnlockKeyStoreIntent();
-                    mNextAction = action;
+                if (mCredentials.hasCaCerts()) {
+                    KeyguardManager keyguardManager = getSystemService(KeyguardManager.class);
+                    Intent intent = keyguardManager.createConfirmDeviceCredentialIntent(null, null);
+                    if (intent == null) { // No screenlock
+                        onScreenlockOk();
+                    } else {
+                        startActivityForResult(intent, REQUEST_CONFIRM_CREDENTIALS);
+                    }
                 } else {
-                    action.run(this);
+                    onScreenlockOk();
                 }
             }
         } else {
@@ -182,8 +182,8 @@ public class CertInstaller extends Activity {
         if (requestCode == REQUEST_SYSTEM_INSTALL_CODE) {
             if (resultCode == RESULT_OK) {
                 Log.d(TAG, "credential is added: " + mCredentials.getName());
-                Toast.makeText(this, getString(R.string.cert_is_added,
-                        mCredentials.getName()), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.cert_is_added, mCredentials.getName()),
+                        Toast.LENGTH_LONG).show();
 
                 if (mCredentials.includesVpnAndAppsTrustAnchors()) {
                     // more work to do, don't finish just yet
@@ -195,10 +195,34 @@ public class CertInstaller extends Activity {
                 Log.d(TAG, "credential not saved, err: " + resultCode);
                 toastErrorAndFinish(R.string.cert_not_saved);
             }
+        } else if (requestCode == REQUEST_CONFIRM_CREDENTIALS) {
+            if (resultCode == RESULT_OK) {
+                onScreenlockOk();
+                return;
+            }
+            // Fail to confirm credentials. Let it finish
         } else {
             Log.w(TAG, "unknown request code: " + requestCode);
         }
         finish();
+    }
+
+    private void onScreenlockOk() {
+        if (mCredentials.hasPkcs12KeyStore()) {
+            if (mCredentials.hasPassword()) {
+                showDialog(PKCS12_PASSWORD_DIALOG);
+            } else {
+                new Pkcs12ExtractAction("").run(this);
+            }
+        } else {
+            MyAction action = new InstallOthersAction();
+            if (needsKeyStoreAccess()) {
+                sendUnlockKeyStoreIntent();
+                mNextAction = action;
+            } else {
+                action.run(this);
+            }
+        }
     }
 
     private class InstallVpnAndAppsTrustAnchorsTask extends AsyncTask<Void, Void, Boolean> {
@@ -207,7 +231,7 @@ public class CertInstaller extends Activity {
             try {
                 KeyChainConnection keyChainConnection = KeyChain.bind(CertInstaller.this);
                 try {
-                    return mCredentials.installVpnAndAppsTrustAnchors(
+                    return mCredentials.installVpnAndAppsTrustAnchors(CertInstaller.this,
                             keyChainConnection.getService());
                 } finally {
                     keyChainConnection.close();
