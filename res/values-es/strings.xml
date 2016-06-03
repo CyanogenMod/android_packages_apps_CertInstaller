@@ -28,7 +28,7 @@
     <string name="p12_description" msgid="4128352087331630024">"Certificados del almacén de claves PKCS12"</string>
     <string name="one_userkey" msgid="3500697912370644881">"una clave de usuario"</string>
     <string name="one_usercrt" msgid="7690798336332403106">"un certificado de usuario"</string>
-    <string name="one_cacrt" msgid="2667950425420663146">"un certificado CA"</string>
+    <string name="one_cacrt" msgid="2667950425420663146">"un certificado de CA"</string>
     <string name="n_cacrts" msgid="2141498640685639208">"%d certificados de CA"</string>
     <string name="password_error" msgid="2042471639556516356">"Escribe la contraseña correcta."</string>
     <string name="password_empty_error" msgid="591713406761723025">"Escribe la contraseña."</string>

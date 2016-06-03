@@ -50,7 +50,7 @@
     <string name="credential_usage_label" msgid="1513892208033156805">"प्रमाणपत्रको प्रयोग:"</string>
   <string-array name="credential_usage">
     <item msgid="375085478373011304">"VPN र अनुप्रयोगहरू"</item>
-    <item msgid="692322974985472861">"वाइफाइ"</item>
+    <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
     <string name="wifi_title" msgid="8475811746333426489">"Wi-Fi प्रोफाइल"</string>
     <string name="wifi_detail_title" msgid="3627332137252994395">"%s को लागि विवरणहरू"</string>
