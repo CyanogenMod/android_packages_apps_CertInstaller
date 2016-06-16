@@ -370,14 +370,21 @@ class CredentialHelper {
 
         while (aliases.hasMoreElements()) {
             String alias = aliases.nextElement();
-            KeyStore.Entry entry = keystore.getEntry(alias, password);
-            Log.d(TAG, "extracted alias = " + alias + ", entry=" + entry.getClass());
+            if (keystore.isKeyEntry(alias)) {
+                KeyStore.Entry entry = keystore.getEntry(alias, password);
+                Log.d(TAG, "extracted alias = " + alias + ", entry=" + entry.getClass());
 
-            if (entry instanceof PrivateKeyEntry) {
-                if (TextUtils.isEmpty(mName)) {
-                    mName = alias;
+                if (entry instanceof PrivateKeyEntry) {
+                    if (TextUtils.isEmpty(mName)) {
+                        mName = alias;
+                    }
+                    return installFrom((PrivateKeyEntry) entry);
                 }
-                return installFrom((PrivateKeyEntry) entry);
+            } else {
+                // KeyStore.getEntry with non-null ProtectionParameter can only be invoked on
+                // PrivateKeyEntry or SecretKeyEntry.
+                // See https://docs.oracle.com/javase/8/docs/api/java/security/KeyStore.html
+                Log.d(TAG, "Skip non-key entry, alias = " + alias);
             }
         }
         return true;
