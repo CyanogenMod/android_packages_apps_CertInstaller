@@ -76,5 +76,27 @@
     <item>VPN y aplicaciones</item>
     <item>Wi-Fi</item>
   </string-array>
+  <string name="wifi_title">Perfil Wi-Fi</string>
+  <string name="wifi_detail_title">Detalles pa %s</string>
+  <string name="wifi_detail_label">Detalles</string>
+  <string name="wifi_install_label">Instalar</string>
   <!-- Toast message to be displayed when installing Hotspot 2.0 credentials [CHAR LIMIT=40] -->
+  <string name="wifi_installing_label">Instalando</string>
+  <string name="wifi_cancel_label">Encaboxar</string>
+  <string name="wifi_dismiss_label">Descartar</string>
+  <string name="wifi_no_config">Nenguna</string>
+  <string name="wifi_config_text">Nome: %1$s\nFQDN: %2$s\nRoaming Consortiums: %3$s\nRealm: %4$s\nMétodu d\'autenticación: EAP-%5$s\n</string>
+  <string name="wifi_ttls_config_text">Nome d\'usuariu: %s\n</string>
+  <string name="wifi_tls_config_text">Certificáu de veceru:\n%1$s\nClave: %2$s\n</string>
+  <string name="wifi_sim_config_text">SIM: %s\n</string>
+  <string name="wifi_trust_config_text">Certificáu de confianza:\n%s\n</string>
+  <string name="install_done_title">Instaláronse les credenciales</string>
+  <string name="install_done">Amestáronse credenciales de <xliff:g id="NAME">%1$s</xliff:g> a les redes Wi-Fi guardaes.</string>
+  <string name="done_label">FECHO</string>
+  <string name="wifi_installer_detail">Instala credenciales Wi-Fi pa coneutate a les redes disponibles per aciu de <xliff:g id="name">%1$s</xliff:g>.</string>
+  <string name="wifi_installer_download_error">El ficheru baxáu tien problemes y nun pue instalase. Asegúrate que baxares el ficheru dende la fonte correuta.</string>
+  <string name="wifi_installer_fail">Nun puen instalase les credenciales Wi-Fi. Tenta de baxar el ficheru de nueves.</string>
+  <string name="wifi_installer_fail_no_wifi_title">Encaboxóse la instalación</string>
+  <string name="wifi_installer_fail_title">Nun pue instalase</string>
+  <string name="wifi_installer_fail_no_wifi">Prendi\'l Wi-fi y volvi tentalo.</string>
 </resources>
