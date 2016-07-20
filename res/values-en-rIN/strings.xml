@@ -35,7 +35,7 @@
     <string name="name_empty_error" msgid="3808800768660110354">"Type a name."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Type a name that contains only letters and numbers."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Couldn\'t save the certificate. The credential storage isn\'t enabled or properly initialised."</string>
-    <string name="cert_not_saved" msgid="4037698479662830270">"The certificate is not installed."</string>
+    <string name="cert_not_saved" msgid="4037698479662830270">"Failed to install certificate."</string>
     <string name="no_cert_to_saved" msgid="5708884372817309068">"No certificate to install."</string>
     <string name="invalid_cert" msgid="7704228670980743590">"The certificate is invalid."</string>
     <string name="cert_is_added" msgid="6996557598167000500">"<xliff:g id="CREDENTIAL">%s</xliff:g> is installed."</string>

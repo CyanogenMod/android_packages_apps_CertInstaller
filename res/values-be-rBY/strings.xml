@@ -22,7 +22,7 @@
     <string name="extracting_pkcs12" msgid="1881267738821799771">"Выманне..."</string>
     <string name="pkcs12_file_password_dialog_title" msgid="8102721384767269510">"Выпіска з %s"</string>
     <string name="name_credential_dialog_title" msgid="277729846491554437">"Дайце назву сертыфікату"</string>
-    <string name="credential_name" msgid="1974979771369744378">"Імя сертыфіката:"</string>
+    <string name="credential_name" msgid="1974979771369744378">"Назва сертыфіката:"</string>
     <string name="credential_password" msgid="3520176519550993326">"Увядзіце пароль, каб атрымаць сертыфікаты."</string>
     <string name="credential_info" msgid="2436768402308470397">"Пакет змяшчае:"</string>
     <string name="p12_description" msgid="4128352087331630024">"Сертыфікаты ў сховішчы ключоў PKCS12."</string>
@@ -32,7 +32,7 @@
     <string name="n_cacrts" msgid="2141498640685639208">"Сертыфікаты ЦС: %d"</string>
     <string name="password_error" msgid="2042471639556516356">"Увядзіце правільны пароль."</string>
     <string name="password_empty_error" msgid="591713406761723025">"Увядзіце пароль."</string>
-    <string name="name_empty_error" msgid="3808800768660110354">"Увядзіце імя."</string>
+    <string name="name_empty_error" msgid="3808800768660110354">"Увядзіце назву."</string>
     <string name="name_char_error" msgid="3176618568784938968">"Увядзіце імя, якое змяшчае толькі літары і лічбы."</string>
     <string name="unable_to_save_cert" msgid="9178604087335389686">"Немагчыма захаваць сертыфікат. Сховішча ўліковых дадзеных не ўключана або няправільна ініцыялізавана."</string>
     <string name="cert_not_saved" msgid="4037698479662830270">"Сертыфікат не ўсталяваны."</string>
@@ -49,7 +49,7 @@
     <string name="only_primary_user_allowed" msgid="4005084935023047716">"Сертыфiкаты можа ўсталёўваць толькi ўладальнiк гэтай прылады."</string>
     <string name="credential_usage_label" msgid="1513892208033156805">"Выкарыстанне ўліковых дадзеных:"</string>
   <string-array name="credential_usage">
-    <item msgid="375085478373011304">"VPN і прыкладанні"</item>
+    <item msgid="375085478373011304">"VPN і праграмы"</item>
     <item msgid="692322974985472861">"Wi-Fi"</item>
   </string-array>
     <string name="wifi_title" msgid="8475811746333426489">"Профіль Wi-Fi"</string>
